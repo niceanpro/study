@@ -95,7 +95,9 @@ Text Objects
 
 	* Create surrou­ndings
 		ysiw) add surrou­nding () to inner word
+		ysiW) add surrou­nding () to inner connected words in spaces
 		yss] add surrou­nding [] to whole line, without leading whitespace
+		ysp<p> add surrou­nding <p> to whole paragraph, without leading whitespace
 
 	* Visual mode ( 추가만 가능 )
 		S" surround selected text with "
@@ -196,13 +198,6 @@ Text Objects
 	:%s/\<foo\>/bar/gc   Change only whole words exactly matching 'foo' to 'bar'; ask for confirmation.  
 	:g/^baz/s/foo/bar/g	Change each 'foo' to 'bar' in each line starting with 'baz'.  
  
-	daw                                   : delete word
-	daW                                   : delete contiguous non whitespace
-	di<   yi<  ci<                        : Delete/Yank/Change HTML tag contents
-	da<   ya<  ca<                        : Delete/Yank/Change whole HTML tag
-	dat   dit                             : Delete HTML tag pair
-	diB   daB  yiB yaB                    : Empty a function {}, {} 부분을 삭제 혹은 yank
-	das                                   : delete a sentence
 	d/fred/                                :delete until fred 라인 전까지
 	d/fred                                 :delete until fred 문자 전까지
 	y/fred/                                :yank until fred
@@ -441,7 +436,7 @@ ctrl + shift + \ : 블럭주석 제거
 	"#  alternate file name
 	:reg 레지터스터의 내용물 표시
 	"xy visual mode에서 선택 후 레지스터 x로 복사
-	"xp 레지스터 x의 내용물 붙여넣기
+	"xp 레지스터 x의 내용물 붙여넣기   예: "0p  0번 레지스터 내용 붙여넣기(명령어 모드)
 	"Xy 레지스터 x에 편집기내용 yank해서 추가(대문자)하기
 	"Xd 레지스터 x에 편집기내용 delete해서 추가하기
 	:s/foo/\=@x/(i,I,g,c,n) (visual studio에서 가능)
@@ -451,6 +446,7 @@ ctrl + shift + \ : 블럭주석 제거
 	:g/fred/y A | :let @*=@a    : put into paste buffer
 	:let @a=''|g/Barratt/y A |:let @*=@a
 	:reg 	레지스터 내용 보기
+
 
 
 ** Eclipse에서만...
@@ -532,6 +528,8 @@ ctrl + shift + \ : 블럭주석 제거
 	<leader> + l : 라인 이동
 	<leader> + d : 열려있는 Tab에 있는 문서간 이동	
 
+    vim에서 사용하는 key
+       hklyuiopnm,qwertzxcvbasdgjf;
 
 
 * Tab 
@@ -543,7 +541,6 @@ ctrl + shift + \ : 블럭주석 제거
   - :tab1 b.txt : b.txt가 존재하면 열고 없으면 error
   - :tabnew b.txt : 새로운 탭에 b.txt가 존재하면 열고 없으면 new
 	ctrl + n : 새창
-	ctrl + shift + n : 폴더 만들기 
 
 
 ** 다중 창 ( window )
@@ -609,8 +606,8 @@ ctrl + shift + \ : 블럭주석 제거
 		--	수직 분할에서 창의 크기를 최대화
 	
 
-	CTRL-w [N]+ :res[ize] +N 창의 크기를 N행 만큼 증가
-	CTRL-w [N]- :res[ize] -N 창의 크기를 N행 만큼 감소
+	CTRL-w [N]+ :res[ize] +N 창의 크기를 N행 만큼 증가    in vscode 프로그램의 폰트 크기늘림
+	CTRL-w [N]- :res[ize] -N 창의 크기를 N행 만큼 감소	in vscode 프로그램의 폰트 크기줄임
 
 
 	CTRL-w [N]> 창의 크기를 오른쪽으로 N칸 만큼 증가
@@ -1434,12 +1431,11 @@ Regexp Operator Precedence
 	Pick the second block: ctrl-v move P <esc>
 ----------------------------------------
 " text objects :h text-objects                                     [C]
-	daw                                   : delete word
 	daW                                   : delete contiguous non whitespace
 	di<   yi<  ci<                        : Delete/Yank/Change HTML tag contents
 	da<   ya<  ca<                        : Delete/Yank/Change whole HTML tag
 	dat   dit                             : Delete HTML tag pair
-	diB   daB  yiB yaB                    : Empty a function {}, {} 부분을 삭제 혹은 yank
+	diB   daB                             : Empty a function {}
 	das                                   : delete a sentence
 ----------------------------------------
 " _vimrc essentials
@@ -1953,4 +1949,419 @@ named group
 \S : space이외
 \d : 숫자
 \D : 숫자 이외
+
+
+
+
+
+
+******** Zen Cording ********
+CSS
+Flexbox
+	d:f display: flex
+	ai:c align-items: center
+	ai:fs align-items: flex-start
+	ai:fe align-items: flex-end
+	jc:c justify-content: center
+	jc:fs justify-content: flex-start
+	jc:fe justify-content: flex-end
+	jc:sa justify-content: space-around
+	jc:sb justify-content: space-between
+	fx flex
+	fxg flex-grow
+	fxsh flex-shrink
+	fxw flex-wrap
+	fxd flex-direction
+	fxd:c flex-direction: column
+	as:c align-self: center
+	as:fs align-self: flex-start
+	as:fe align-self: flex-end
+Fonts
+	fs font-size
+	ff font-family
+	fw font-weight
+Color
+	c color
+	c:ra color rgba
+	op opacity
+Padding
+	p padding
+	pr padding-right
+	pl padding-left
+	pt padding-top
+	pb padding-bottom
+Margin
+	m margin
+	mr margin-right
+	ml margin-left
+	mt margin-top
+	mb margin-bottom
+Display
+	d:ib display: inline-block
+	d:i display: inline
+	d:n display: none
+	d:b display: block
+Visibility
+	v:h visibility: hidden	
+Overflow
+	ov:h overflow: hidden
+	ov:v overflow: visible
+	ov:s overflow: scroll
+	ov:a overflow: auto
+	ovx:h overflow-x: hidden
+	ovx:v overflow-x: visible
+	ovx:s overflow-x: scroll
+	ovx:a overflow-x: auto
+	ovy:h verflow-y: hidden
+	ovy:v overflow-y: visible
+	ovy:s overflow-y: scroll
+	ovy:a overflow-y: auto
+Cursor
+	cur:p cursor: pointer
+Position
+	pos:r position: relative
+	pos:a position: absolute
+	pos:s position: static
+	pos:f position: fixed
+Width && Height
+	w width
+	maw max-width
+	miw min-width
+	h height
+	mah max-height
+	mih min-height
+
+
+
+HTML
+    div
+    <div></div>
+
+    .container
+    <div class="container"></div>
+
+    #mainContent
+    <div id="mainContent"></div>
+
+    div>h1
+    <div>
+      <h1></h1>
+    </div>
+
+    div>div>h1
+    <div>
+      <div>
+        <h1></h1>
+      </div>
+    </div>
+
+    ul.wrap>li*4
+    <ul class="wrap">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    ul.wrap>li#item$*4
+    <ul class="wrap">
+      <li id="item1"></li>
+      <li id="item2"></li>
+      <li id="item3"></li>
+      <li id="item4"></li>
+    </ul>
+
+    ul.wrap>li#item$$*4
+    <ul class="wrap">
+      <li id="item01"></li>
+      <li id="item02"></li>
+      <li id="item03"></li>
+      <li id="item04"></li>
+    </ul>
+
+    ul.wrap>li#item$$.col-md-4*4
+    <ul class="wrap">
+      <li id="item01" class="col-md-4"></li>
+      <li id="item02" class="col-md-4"></li>
+      <li id="item03" class="col-md-4"></li>
+      <li id="item04" class="col-md-4"></li>
+    </ul>
+
+    ul.wrap>li#item$$.col-md-4*4>h2
+    <ul class="wrap">
+      <li id="item01" class="col-md-4">
+        <h2></h2>
+      </li>
+      <li id="item02" class="col-md-4">
+        <h2></h2>
+      </li>
+      <li id="item03" class="col-md-4">
+        <h2></h2>
+      </li>
+      <li id="item04" class="col-md-4">
+        <h2></h2>
+      </li>
+    </ul>
+
+    ul.wrap>li#item$$.col-md-4*4>h2+p
+    <ul class="wrap">
+      <li id="item01" class="col-md-4">
+        <h2></h2>
+        <p></p>
+      </li>
+      <li id="item02" class="col-md-4">
+        <h2></h2>
+        <p></p>
+      </li>
+      <li id="item03" class="col-md-4">
+        <h2></h2>
+        <p></p>
+      </li>
+      <li id="item04" class="col-md-4">
+        <h2></h2>
+        <p></p>
+      </li>
+    </ul>
+
+    ul.wrap>li#item$$.col-md-4*4>h2{안녕}+p
+    <ul class="wrap">
+      <li id="item01" class="col-md-4">
+        <h2>안녕</h2>
+        <p></p>
+      </li>
+      <li id="item02" class="col-md-4">
+        <h2>안녕</h2>
+        <p></p>
+      </li>
+      <li id="item03" class="col-md-4">
+        <h2>안녕</h2>
+        <p></p>
+      </li>
+      <li id="item04" class="col-md-4">
+        <h2>안녕</h2>
+        <p></p>
+      </li>
+    </ul>
+
+    ul.wrap>li#item$$.col-md-4*4>h2{안녕}+p{반갑습니다.}
+    <ul class="wrap">
+      <li id="item01" class="col-md-4">
+        <h2>안녕</h2>
+        <p>반갑습니다.</p>
+      </li>
+      <li id="item02" class="col-md-4">
+        <h2>안녕</h2>
+        <p>반갑습니다.</p>
+      </li>
+      <li id="item03" class="col-md-4">
+        <h2>안녕</h2>
+        <p>반갑습니다.</p>
+      </li>
+      <li id="item04" class="col-md-4">
+        <h2>안녕</h2>
+        <p>반갑습니다.</p>
+      </li>
+    </ul>
+
+    ul.wrap>li#item$$.col-md-4*4>h2{안녕 $$}+p{반갑습니다. $}
+    <ul class="wrap">
+      <li id="item01" class="col-md-4">
+        <h2>안녕 01</h2>
+        <p>반갑습니다. 1</p>
+      </li>
+      <li id="item02" class="col-md-4">
+        <h2>안녕 02</h2>
+        <p>반갑습니다. 2</p>
+      </li>
+      <li id="item03" class="col-md-4">
+        <h2>안녕 03</h2>
+        <p>반갑습니다. 3</p>
+      </li>
+      <li id="item04" class="col-md-4">
+        <h2>안녕 04</h2>
+        <p>반갑습니다. 4</p>
+      </li>
+    </ul>
+
+    lorem2 Lorem, ipsum. lorem3 Lorem, ipsum dolor. lorem Lorem ipsum dolor sit
+    amet consectetur adipisicing elit. Animi dicta adipisci nihil sequi,
+    provident eum minus illum corrupti fugit! Nulla impedit ducimus laudantium
+    molestias, quae itaque velit quas modi aliquam. div>p*3>lorem
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
+        eligendi. Nihil ducimus perspiciatis eum beatae, eos labore. Delectus
+        non eveniet alias, nisi sit velit aliquam consectetur adipisci, unde
+        ullam sunt.
+      </p>
+      <p>
+        Rerum, dicta molestias neque nemo facilis quaerat doloremque fugit,
+        sapiente sit exercitationem rem! Inventore iste excepturi dolor
+        perspiciatis esse natus aliquam nisi culpa ducimus labore, quae vitae
+        eveniet nam odit.
+      </p>
+      <p>
+        Nostrum, eius sapiente? Magnam aliquid sunt consectetur aspernatur eos,
+        iure nostrum unde earum, debitis reiciendis ab. Quia magnam ab ducimus
+        amet eius libero dolores voluptates eum. Explicabo cupiditate placeat
+        iure?
+      </p>
+    </div>
+
+    ul.wrap>li#item$$.col-md-4*4>h2{Caption $$}+p>lorem
+    <ul class="wrap">
+      <li id="item01" class="col-md-4">
+        <h2>Caption 01</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
+          iure doloremque atque aliquam a? Earum tenetur laborum eaque vel,
+          perspiciatis enim praesentium dolorem, laudantium minus facilis
+          exercitationem voluptas aperiam asperiores.
+        </p>
+      </li>
+      <li id="item02" class="col-md-4">
+        <h2>Caption 02</h2>
+        <p>
+          Qui similique ipsum beatae non iure quod, commodi nihil odit eaque
+          fuga animi libero distinctio sunt iusto quaerat suscipit ratione magni
+          provident? Nemo dolorum porro aliquam velit delectus molestias beatae?
+        </p>
+      </li>
+      <li id="item03" class="col-md-4">
+        <h2>Caption 03</h2>
+        <p>
+          Quae ipsa illum pariatur ut ullam culpa, unde maiores quisquam
+          voluptatem sapiente delectus quam beatae dignissimos consequuntur
+          velit explicabo, debitis distinctio nulla atque voluptatum non
+          tempora, earum placeat. Fugit, eius.
+        </p>
+      </li>
+      <li id="item04" class="col-md-4">
+        <h2>Caption 04</h2>
+        <p>
+          Aliquid debitis nesciunt aliquam eveniet? Illo, a impedit est aliquid
+          eos aliquam aspernatur recusandae at facilis. Quia neque mollitia
+          similique, necessitatibus id, ea eveniet, porro rerum ipsa maxime sint
+          repudiandae?
+        </p>
+      </li>
+    </ul>
+
+    div[title]
+    <div title=""></div>
+
+    input [type="text" placeholder="입력영역"] input
+    <div type="text" placeholder="입력영역"></div>
+
+    div>h2+p^h3
+    <div>
+      <h2></h2>
+      <p></p>
+    </div>
+    <h3></h3>
+
+    footer>div>h2+p^h3
+    <footer>
+      <div>
+        <h2></h2>
+        <p></p>
+      </div>
+      <h3></h3>
+    </footer>
+
+    footer>div>h2+p^^h3
+    <footer>
+      <div>
+        <h2></h2>
+        <p></p>
+      </div>
+    </footer>
+    <h3></h3>
+
+    div>(header>p)+section>(ul>li*2)
+    <div>
+      <header>
+        <p></p>
+      </header>
+      <section>
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
+    </div>
+
+    div>(header>p)+section>(ul>li*2)+footer>(h4>span)
+    <div>
+      <header>
+        <p></p>
+      </header>
+      <section>
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+        <footer>
+          <h4><span></span></h4>
+        </footer>
+      </section>
+    </div>
+
+
+
+
+ html:5				html5 doctype 이 정의됩니다. 
+
+ link:CSS			<link rel="stylesheet" href="style.css"> 
+
+
+ script:script		<script src=""></script> 
+
+ a:link				<a href="http://"></a> 
+
+ a:mail 			<a href="mailto:"></a> 
+
+ iframe, iframe		<iframe src="" frameborder="0"></iframe> 
+
+ map+ 				<map name=""> 
+
+    				<area shape="" coords="" href="" alt="">
+
+					</map>
+
+ form:get 			<form action="" method="get"></form>
+
+ form:post 			<form action="" method="post"></form> 
+
+ fset 				<fieldset></fieldset> 
+
+ leg 				<legend></legend> 
+
+ input:h 			<input type="hidden" name=""> 
+
+ input:t 			<input type="text" name="" id=""> 
+
+ input:email 		<input type="email" name="" id=""> 
+
+ input:p 			<input type="password" name="" id=""> 
+
+ input:c 			<input type="checkbox" name="" id=""> 
+
+ input:r 			<input type="radio" name="" id=""> 
+
+ input:f 			<input type="file" name="" id=""> 
+
+ input:s 			<input type="submit" value=""> 
+
+ input:i 			<input type="image" src="" alt=""> 
+
+ input:b 			<input type="button" value=""> 
+
+ select+ 			<select name="" id="">
+
+    					<option value=""></option>
+
+					</select>
+
+
 
