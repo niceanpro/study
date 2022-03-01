@@ -1,0 +1,12 @@
+Installing from the downloaded ZIP file Sbuster.zip
+---------------------------------------------------
+
+Run the file "Install.exe" from a temporary
+directory and install to a hard drive of your
+choice.
+
+You must have IDAPI installed, and set up an Alias
+called "Academic" defined that points to the 
+X:\SBUSTER\DATA directory.  See Readme.txt
+for further instructions (launches by default 
+after Install).

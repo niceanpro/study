@@ -1,0 +1,96 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{9114DC18-036A-4BC1-93DD-CD8F0307C38A}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="compo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MenuTest\TrMenu.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ActionMenuTest\ActionMenu.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ActionManager\ActionManager.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Memo\Memo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Memo2\Memo2.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="compo">
+        <MSBuild Projects="compo.dproj"/>
+    </Target>
+    <Target Name="compo:Clean">
+        <MSBuild Projects="compo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="compo:Make">
+        <MSBuild Projects="compo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TrMenu">
+        <MSBuild Projects="MenuTest\TrMenu.dproj"/>
+    </Target>
+    <Target Name="TrMenu:Clean">
+        <MSBuild Projects="MenuTest\TrMenu.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TrMenu:Make">
+        <MSBuild Projects="MenuTest\TrMenu.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ActionMenu">
+        <MSBuild Projects="ActionMenuTest\ActionMenu.dproj"/>
+    </Target>
+    <Target Name="ActionMenu:Clean">
+        <MSBuild Projects="ActionMenuTest\ActionMenu.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ActionMenu:Make">
+        <MSBuild Projects="ActionMenuTest\ActionMenu.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ActionManager">
+        <MSBuild Projects="ActionManager\ActionManager.dproj"/>
+    </Target>
+    <Target Name="ActionManager:Clean">
+        <MSBuild Projects="ActionManager\ActionManager.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ActionManager:Make">
+        <MSBuild Projects="ActionManager\ActionManager.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Memo">
+        <MSBuild Projects="Memo\Memo.dproj"/>
+    </Target>
+    <Target Name="Memo:Clean">
+        <MSBuild Projects="Memo\Memo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Memo:Make">
+        <MSBuild Projects="Memo\Memo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Memo2">
+        <MSBuild Projects="Memo2\Memo2.dproj"/>
+    </Target>
+    <Target Name="Memo2:Clean">
+        <MSBuild Projects="Memo2\Memo2.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Memo2:Make">
+        <MSBuild Projects="Memo2\Memo2.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="compo;TrMenu;ActionMenu;ActionManager;Memo;Memo2"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="compo:Clean;TrMenu:Clean;ActionMenu:Clean;ActionManager:Clean;Memo:Clean;Memo2:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="compo:Make;TrMenu:Make;ActionMenu:Make;ActionManager:Make;Memo:Make;Memo2:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

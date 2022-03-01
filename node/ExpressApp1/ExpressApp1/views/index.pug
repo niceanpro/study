@@ -1,0 +1,12 @@
+﻿extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	h1= '안재환'
+	h1= title
+	- for(var x = 0; x < 3; x++)
+		li item
+	- var list= ["Uno", "Dos", "Tres", "anpro", "Cinco", "Seis"]
+	each item in list
+		li= item

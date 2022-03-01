@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>scratch canvas step 04</title>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+	
+	/*
+	#step_01
+	-레이아웃 구성
+	
+	#step_02
+	-커버이미지 캔버스에 그리기
+	
+	#step_03
+	-당첨 또는 꽝을 결정해서 해당 결과 이미지 로드하기
+	
+	#step_04
+	-globalCompositeOperation을 이용해 캔버스의 그림 지우기
+	*/
+	
+	
+	$( document ).ready( function( event ) {
+		
+		var $coverCanvas;
+		var $coverImg;
+		var coverContext;
+		var isWin;
+		var lineStartX, lineStartY;
+		
+		loadCover();
+		
+		function loadCover(){
+			$coverImg = $( "<img></img>")
+			$coverImg.attr( "src", "img/cover.png" );
+			$coverImg.bind( "load", startup );
+		}
+		
+		function startup(){
+			$coverCanvas = $( "#coverCanvas" );
+			coverContext = $coverCanvas[ 0 ].getContext( "2d" );
+			coverContext.drawImage( $coverImg[ 0 ], 0, 0 );
+			coverContext.lineWidth = "20";
+			coverContext.lineCap = "round";
+			
+			isWin = Math.round( Math.random() );
+			var resultURL = ( isWin == 1 ) ? "img/result_win.png" : "img/result_lose.png";
+			$( "#resultImg" ).attr( "src", resultURL );
+			
+			$coverCanvas.bind( "mousedown", startDraw );
+		}
+		
+		function startDraw( event ){
+			lineStartX = event.clientX;
+			lineStartY = event.clientY;
+			$coverCanvas.bind( "mousemove", draw );
+			$coverCanvas.bind( "mouseup", stopDraw );
+		}
+		
+		function draw( event ){
+			var x = event.clientX;
+			var y = event.clientY;
+			coverContext.globalCompositeOperation = "destination-out";
+			coverContext.beginPath();
+			coverContext.moveTo( lineStartX, lineStartY );
+			coverContext.lineTo( x, y );
+			coverContext.stroke();
+			coverContext.closePath();
+			lineStartX = x;
+			lineStartY = y;
+		}
+		
+		function stopDraw( event ){
+			$coverCanvas.unbind( "mousemove", draw );
+			$coverCanvas.unbind( "mouseup", stopDraw );
+		}
+    });
+    
+</script>
+<style type="text/css">
+
+*{ margin:0; padding:0; position: absolute; }
+
+</style>
+</head>
+<body>
+	<div>
+		<img width="500" height="300" id="resultImg"/>
+		<canvas width="500" height="300" id="coverCanvas"></canvas>
+    </div>
+</body>
+</html>

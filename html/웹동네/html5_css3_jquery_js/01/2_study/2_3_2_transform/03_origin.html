@@ -1,0 +1,47 @@
+<!document html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>origin</title>
+		<style>
+			/*wrapper:점선 표시를 위한*/
+			.wrapper{
+				width:140px;
+				height:50px;		
+				border:1px dashed #bbb;
+				margin:140px;
+			}
+			.trans01{				
+				width:140px;
+				height:50px;
+				background-color:rgb(204, 204, 204);
+			}
+			.trans02{
+				width:140px;
+				height:50px;
+				background-color:rgb(204, 204, 204);	
+				-webkit-transform:rotate(20deg);
+			}
+			.trans03{
+				width:140px;
+				height:50px;
+				background-color:rgb(204, 204, 204);
+				-webkit-transform:rotate(20deg);
+				-webkit-transform-origin: 0% 0%;
+			}
+			.trans04{
+				width:140px;
+				height:50px;
+				background-color:rgb(204, 204, 204);	
+				-webkit-transform:rotate(20deg);
+				-webkit-transform-origin: 100% 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper"><div class="trans01"></div></div>
+		<div class="wrapper"><div class="trans02"></div></div>
+		<div class="wrapper"><div class="trans03"></div></div>
+		<div class="wrapper"><div class="trans04"></div></div>
+	</body>
+</html>

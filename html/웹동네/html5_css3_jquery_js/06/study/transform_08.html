@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS3 TRASITION MENU</title>
+        <style>
+            /*
+             1단계 - html 구조 잡기
+             2단계 - css 초기화 하기
+             3단계 - skew 클래스화 하기, html에 skew class 지정하기,  menuTitleBox 모양 만들기
+             4단계 - mainMenu 레이아웃 잡기
+             5단계 - sideMenu 레이아웃 잡기
+             6단계 - 메뉴들 over 효과 적용하기
+             7단계 - open,close 버튼 만들기
+             8단계 - open,close 버튼 토글화 하기
+             */
+            * {
+                margin: 0;
+                padding: 0
+            }
+            img {
+                border: none
+            }
+            ul, ol, li {
+                list-style: none
+            }
+            a {
+                text-decoration: none;
+                color: #fff;
+                font-weight: bold
+            }
+            body {
+                font-size: 12px;
+                font-family: "Arial", Sans-serif;
+                color: #333;
+            }
+
+            .skew50 {
+                -webkit-transform: skew(-50deg);
+            }
+            .un_skew50 {
+                -webkit-transform: skew(50deg);
+            }
+
+            #menu_container {
+                position: relative;
+                left: 0px;
+                top: 385px;
+            }
+
+            #menuTitleBox {
+                overflow: hidden;
+                position: absolute;
+                left: -180px;
+                top: 20px;
+                width: 330px;
+                height: 280px;
+                z-index: 100;
+            }
+
+            #menuTitleBox > div {
+                position: relative;
+                width: 500px;
+                height: 215px;
+                background: url(./images/bg_title1.jpg) no-repeat 5px 0;
+            }
+            #menuTitleBox div.title {
+                position: absolute;
+                top: 33px;
+                left: 200px;
+                width: 82px;
+                height: 90px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #fff;
+            }
+
+            #menuListBox {
+                overflow: hidden;
+                position: absolute;
+                top: 20px;
+                left: 188px;
+                height: 215px;
+                border-right: 1px solid #2bd3ff;
+                background: #000;
+            }
+
+            #menuListBox #mainMenu {
+                display: inline-block;
+                position: relative;
+                width: 672px;
+                vertical-align: top;
+            }
+
+            #menuListBox #mainMenu li {
+
+                display: inline-block;
+                position: relative;
+                vertical-align: top;
+                width: 195px;
+                height: 215px;
+                line-height: 215px;
+                background: #000;
+                border-right: 1px solid #000f5f;
+                cursor: pointer;
+            }
+
+            #menuListBox #mainMenu .menu1 {
+                background: url(./images/menu01.jpg) no-repeat 0 0;
+            }
+            #menuListBox #mainMenu .menu2 {
+                background: url(./images/menu02.jpg) no-repeat 0 0;
+            }
+            #menuListBox #mainMenu .menu3 {
+                background: url(./images/menu03.jpg) no-repeat 0 0;
+            }
+
+            #menuListBox #mainMenu li span {
+                display: inline-block;
+                position: relative;
+                width: 117px;
+                margin: 0 0 0 36px;
+                padding: 10px;
+                vertical-align: middle;
+                line-height: 15px;
+                -webkit-transform: skew(50deg);
+            }
+
+            #menuListBox #sideMenu {
+                display: inline-block;
+                position: relative;
+                margin: 0 0 0 -87px;
+                vertical-align: top;
+                background: url(./images/menu04.jpg) no-repeat 0 0;
+            }
+
+            #menuListBox #sideMenu li {
+                position: relative;
+                width: 185px;
+                height: 71px;
+                border-bottom: 1px solid #0066ff;
+                line-height: 71px;
+                cursor: pointer;
+            }
+            #menuListBox #sideMenu li span {
+                display: inline-block;
+                position: relative;
+                width: 112px;
+                margin: 0 0 0 36px;
+                padding: 10px;
+                vertical-align: middle;
+                line-height: 15px;
+                -webkit-transform: skew(50deg);
+            }
+            #menuListBox #sideMenu li a {
+                margin: 0 0 0 10px;
+            }
+
+            #menuListBox #mainMenu li:hover, #menuListBox #sideMenu li:hover {
+                background: #000;
+            }
+
+            input {
+                display: none;
+            }
+
+            label {
+                position: absolute;
+                height: 20px;
+                width: 315px;
+                text-align: center;
+                background: #e1e1e1;
+                color: #000;
+                cursor: pointer;
+                line-height: 20px;
+                z-index: 1000;
+            }
+
+            label.openBtn {
+                top: 0px;
+            }
+            label.closeBtn {
+                top: 0px;
+                background: #282828;
+                color: #fff;
+            }
+
+            input.openInput:checked ~ label.openBtn,
+            input.closeInput:checked ~
+            label.closeBtn {
+                color: white;
+                z-index: -100;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="menu_container">
+            <div id="menuTitleBox" class="skew50">
+                <div class="un_skew50">
+                    <div class="title">
+                        CSS3 TRASITION MENU
+                    </div>
+                </div>
+            </div>
+
+            <input id="select1" name="radioMenu" type="radio" class="openInput" checked="" />
+            <label for="select1" class="openBtn">Open Menu</label>
+
+            <input id="select2" name="radioMenu" type="radio" class="closeInput">
+            <label for="select2" class="closeBtn">Close Menu</label>
+
+            <nav id="menuListBox" class="skew50">
+                <ul id="mainMenu">
+                    <li  class="menu1">
+                        <span><a href="#">Books</a></span>
+                    </li><li class="menu2">
+                        <span><a href="#">Fashion</a></span>
+                    </li><li class="menu3">
+                        <span><a href="#">Nature</a></span>
+                    </li>
+                </ul>
+                <ul id="sideMenu">
+                    <li>
+                        <span><a href="#">About Me</a></span>
+                    </li><li>
+                        <span><a href="#">Services</a></span>
+                    </li><li>
+                        <span><a href="#">Contacts</a></span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </body>
+</html>
+

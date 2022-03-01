@@ -1,0 +1,18 @@
+better Align
+bookmarks
+c#
+css peek
+debugger for chrome
+ESLint
+File Peek
+Fold Plus
+HTML CSS Support
+HTML Snippets
+JavaScript (ES6) code snippet
+jshint
+Live Server
+Python
+SQL Server
+Vim
+vscode-icons
+Vue Peek

@@ -1,0 +1,61 @@
+{
+  "name": "crud-sample",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@vue/cli": "^4.5.15",
+    "axios": "^0.21.4",
+    "bootstrap-vue": "^2.21.2",
+    "core-js": "^3.6.5",
+    "file-saver": "^2.0.5",
+    "jquery": "^3.6.0",
+    "node-sass": "^6.0.1",
+    "npm": "^8.1.4",
+    "qrcode": "^1.5.0",
+    "sass-loader": "^10.2.0",
+    "scss": "^0.2.4",
+    "signature_pad": "^4.0.0",
+    "vue": "^2.6.14",
+    "vue-qrcode": "^1.0.0",
+    "vue-qrcode-reader": "^3.1.0",
+    "vue-router": "^3.5.2",
+    "vue-sidebar-menu": "^4.8.1",
+    "vue-signature": "^2.5.4",
+    "vue-signature-pad": "^3.0.1",
+    "vuex": "^3.6.2",
+    "xlsx": "^0.17.4"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "^4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

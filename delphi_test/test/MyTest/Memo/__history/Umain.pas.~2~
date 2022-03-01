@@ -1,0 +1,54 @@
+unit Umain;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls,
+  Vcl.Ribbon, Vcl.StdActns, Vcl.ExtActns, System.Actions, Vcl.ActnList,
+  Vcl.ImgList, Vcl.RibbonLunaStyleActnCtrls;
+
+type
+  TMainForm = class(TForm)
+    ActionManager1: TActionManager;
+    ImageList1: TImageList;
+    EditCut1: TEditCut;
+    EditCopy1: TEditCopy;
+    EditPaste1: TEditPaste;
+    EditSelectAll1: TEditSelectAll;
+    EditUndo1: TEditUndo;
+    EditDelete1: TEditDelete;
+    FormatRichEditBold1: TRichEditBold;
+    FormatRichEditItalic1: TRichEditItalic;
+    FormatRichEditUnderline1: TRichEditUnderline;
+    FormatRichEditAlignLeft1: TRichEditAlignLeft;
+    FormatRichEditAlignRight1: TRichEditAlignRight;
+    FormatRichEditAlignCenter1: TRichEditAlignCenter;
+    FileOpen1: TFileOpen;
+    FileSaveAs1: TFileSaveAs;
+    FileExit1: TFileExit;
+    New_Action: TAction;
+    About_Action: TAction;
+    Top_Action: TAction;
+    Ribbon1: TRibbon;
+    RibbonPage1: TRibbonPage;
+    RibbonPage2: TRibbonPage;
+    RibbonGroup1: TRibbonGroup;
+    RibbonGroup2: TRibbonGroup;
+    RibbonGroup3: TRibbonGroup;
+    RibbonGroup4: TRibbonGroup;
+    RibbonGroup5: TRibbonGroup;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  MainForm: TMainForm;
+
+implementation
+
+{$R *.dfm}
+
+end.

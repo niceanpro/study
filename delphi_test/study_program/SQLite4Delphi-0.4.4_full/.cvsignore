@@ -1,0 +1,10 @@
+*.~*
+*.dcu
+*.ddp
+*.exe
+*.db
+*.mdb
+*.dti
+*.dll
+help
+pasdoc_log.txt

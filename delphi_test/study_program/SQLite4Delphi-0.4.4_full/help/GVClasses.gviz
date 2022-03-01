@@ -1,0 +1,13 @@
+DiGraph Classes {
+  TSLCustomFun -> TComponent
+  TSLFunction -> TSLCustomFun
+  TSLFun_RecNo -> TSLFunction
+  TSLDatabase -> TComponent
+  TSLDataSet -> TDataSet
+  TDBInfo -> TObject
+  TIdxField -> TObject
+  TIdxInfo -> TObject
+  TSLEngine -> TObject
+  TTblField -> TObject
+  TTblInfo -> TObject
+}

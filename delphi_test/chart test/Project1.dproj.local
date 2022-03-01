@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.878,=C:\Users\changjun\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.492,=C:\Users\changjun\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.621,C:\Users\changjun\Documents\RAD Studio\Projects\Unit1.dfm=E:\delphi_연습\chart test\Unit1.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.594,C:\Users\changjun\Documents\RAD Studio\Projects\Project1.dproj=E:\delphi_연습\chart test\Project1.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.697,=C:\Users\changjun\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.621,C:\Users\changjun\Documents\RAD Studio\Projects\Unit1.pas=E:\delphi_연습\chart test\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

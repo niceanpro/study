@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset=utf-8 />
+  <title>:checked 선택자</title>
+  <style>
+input#select1:checked ~ label.men {
+ background:blue;
+ color:white;
+}
+input#select2:checked ~ label.women {
+ background:red;
+ color:white;
+}
+</style>
+  </head>
+  <body>
+<input id="select1" name="sex" type="radio">
+<label for="select1" class="men">남성</label>
+<input id="select2" name="sex" type="radio">
+<label for="select2" class="women">여성</label>
+</body>
+</html>

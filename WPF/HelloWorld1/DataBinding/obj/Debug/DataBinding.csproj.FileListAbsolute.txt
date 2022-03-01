@@ -1,0 +1,5 @@
+D:\study\WPF\HelloWorld1\DataBinding\obj\Debug\DataBinding.csprojResolveAssemblyReference.cache
+D:\study\WPF\HelloWorld1\DataBinding\obj\Debug\MainWindow.g.cs
+D:\study\WPF\HelloWorld1\DataBinding\obj\Debug\App.g.cs
+D:\study\WPF\HelloWorld1\DataBinding\obj\Debug\DataBinding_MarkupCompile.cache
+D:\study\WPF\HelloWorld1\DataBinding\obj\Debug\DataBinding_MarkupCompile.lref

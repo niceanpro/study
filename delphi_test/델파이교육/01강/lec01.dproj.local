@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.613,D:\delphi_test\test\Project1.dproj=D:\delphi_test\델파이교육\01강\lec01.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.281,D:\delphi_test\델파이교육\01강\Unit4.dfm=D:\delphi_test\델파이교육\01강\utest4.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.087,=D:\delphi_test\델파이교육\01강\Unit2.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.215,D:\delphi_test\델파이교육\01강\Unit2.pas=D:\delphi_test\델파이교육\01강\utest2.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.202,=D:\delphi_test\델파이교육\01강\Unit3.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.049,=D:\delphi_test\test\AppletModule1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.215,D:\delphi_test\델파이교육\01강\Unit2.dfm=D:\delphi_test\델파이교육\01강\utest2.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.013,D:\delphi_test\델파이교육\01강\Unit3.pas=D:\delphi_test\델파이교육\01강\utest3.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.433,D:\delphi_test\test\Unit1.dfm=D:\delphi_test\델파이교육\01강\utest1.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.373,=D:\delphi_test\test\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.546,=D:\delphi_test\델파이교육\01강\utest4.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.281,D:\delphi_test\델파이교육\01강\Unit4.pas=D:\delphi_test\델파이교육\01강\utest4.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.013,D:\delphi_test\델파이교육\01강\Unit3.dfm=D:\delphi_test\델파이교육\01강\utest3.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.103,D:\delphi_test\델파이교육\01강\utest4.pas=</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.099,=D:\delphi_test\델파이교육\01강\Unit4.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.433,D:\delphi_test\test\Unit1.pas=D:\delphi_test\델파이교육\01강\utest1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.020,=D:\delphi_test\test\ServerContainerUnit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.022,=D:\delphi_test\test\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.237,=D:\delphi_test\test\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

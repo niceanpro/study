@@ -1,0 +1,60 @@
+<!document html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>01_그림자가 있는 배너</title>
+		<style>
+            /* <body>에 대한 속성 */
+           
+            body {
+                text-align:center;
+                font:14px Arial, sans-serif; /*폰트 속성을 하나로 묶어서 사용 할 수 있습니다*/
+                background:#ddd;
+            }
+            
+            
+            /* .wrapper에 대한 속성 */
+           
+            .wrapper {
+                position:relative; /*상대적으로 위치하게 합니다*/
+                z-index:1; /*z-index가 1이므로 body 위에 있게 됩니다*/
+                width:600px;
+                padding:20px; /*안쪽 여백을 상, 하, 좌, 우 모두 20px로 적용합니다*/
+                margin:0 auto; /*위, 아래 바깥여백은 0으로, 좌우를 auto로 줌으로써 가운데 정렬을 합니다*/
+                background:#fff;
+            }
+            
+            .wrapper:after {
+                content:"";
+                display:block;
+                clear:both;
+                visibility:hidden;
+                height:0;
+                font-size:0;
+            }
+            
+            
+            /* 공통으로 사용할 그림자 효과에 대한 속성 */
+            
+            .shadow {
+                position:relative;
+                float:left;
+                width:40%;
+                height:50px;
+                padding:1em;
+                margin:2em 10px 4em;
+                background:#fff;
+                /*0(그림자의 수평 거리) 1px(수직 거리) 4px(흐림 정도) rgba(그림자 색상,투명도)*/
+                -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3); 
+            }
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<!--이 안에 배너를 만들게 됩니다-->
+			<div class="shadow lifted">
+				<p>Lifted corners</p>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!document html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>box-shadow</title>
+		<style>
+			.shadow01{				
+				width:140px;
+				height:100px;
+				background-color:rgb(204, 204, 204);
+				margin-bottom:50px;
+				/* 수평거리:3px | 수직거리:3px | 그림자경계:5px | 색상 */
+				-webkit-box-shadow: 3px 3px 5px #777;
+			}
+			.shadow02{				
+				width:140px;
+				height:100px;
+				background-color:rgb(204, 204, 204);
+				margin-bottom:50px;
+				/* 수평거리:3px | 수직거리:3px | 그림자경계:5px | 그림자확장:6px(배너보다 그림자가 6px 커짐) | 색상 */
+				-webkit-box-shadow: 3px 3px 5px 6px #777;
+			}
+			.shadow03{
+				width:140px;
+				height:100px;
+				background-color:rgb(204, 204, 204);	
+				margin-bottom:50px;
+				/* inset:내부그림자 | 수평거리:0 | 수직위치:0 | 그림자경계:10px | 색상 */
+				-webkit-box-shadow: inset 0 0 10px #000;
+			}
+			.shadow04{
+				width:140px;
+				height:100px;
+				background-color:rgb(204, 204, 204);	
+				/* 수평거리:0 | 수직위치:8px | 그림자경계:10px | 그림자확장:-6px(배너보다 -6px 작아짐) | 색상 */
+				-webkit-box-shadow: 0 8px 6px -6px #000;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="shadow01"></div>
+		<div class="shadow02"></div>
+		<div class="shadow03"></div>
+		<div class="shadow04"></div>
+	</body>
+</html>

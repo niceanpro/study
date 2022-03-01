@@ -1,0 +1,750 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="PasDoc 0.8.7">
+<TITLE>SLUnit: Class TSLDataSet</TITLE>
+<LINK rel="StyleSheet" href="Help Project.css">
+</HEAD>
+<BODY bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor="e0e0e0">
+<TD><A href="AllUnits.html"><CENTER>Units</CENTER></A></TD>
+<TD><A href="ClassHierarchy.html"><CENTER>Class Hierarchy</CENTER></A></TD>
+<TD><A href="AllClasses.html"><CENTER>Classes, Interfaces and Objects</CENTER></A></TD>
+<TD><A href="AllTypes.html"><CENTER>Types</CENTER></A></TD>
+<TD><A href="AllVariables.html"><CENTER>Variables</CENTER></A></TD>
+<TD><A href="AllConstants.html"><CENTER>Constants</CENTER></A></TD>
+<TD><A href="AllFunctions.html"><CENTER>Functions and Procedures</CENTER></A></TD>
+<TD><A href="AllIdentifiers.html"><CENTER>Identifiers</CENTER></A></TD>
+<TD><A href="GVUses.html"><CENTER></CENTER></A></TD>
+<TD><A href="GVClasses.html"><CENTER></CENTER></A></TD>
+</TR>
+</TABLE>
+<A name="TSLDataSet"></A><H1>Class TSLDataSet</H1>
+<H2>Unit</H2>
+<A href="SLUnit.html">SLUnit</A><BR><H2>Declaration</H2>
+<P><CODE>type TSLDataSet = class()</CODE></P><H2>Description</H2>
+TDataSet descendant<H2>Methods</H2>
+<H3>Overview</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><CODE>function <A href="SLUnit.TSLDataSet.html#AllocRecordBuffer"><B>AllocRecordBuffer</B></A>: PChar; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLUnit.TSLDataSet.html#BookmarkValid"><B>BookmarkValid</B></A>(Bookmark: TBookmark): Boolean; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLUnit.TSLDataSet.html#CompareBookmarks"><B>CompareBookmarks</B></A>(Bookmark1, Bookmark2: TBookmark): Integer; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>constructor <A href="SLUnit.TSLDataSet.html#Create"><B>Create</B></A> (AOwner: TComponent); override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>destructor <A href="SLUnit.TSLDataSet.html#Destroy"><B>Destroy</B></A>; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#ExecSQL"><B>ExecSQL</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#FreeRecordBuffer"><B>FreeRecordBuffer</B></A> (var Buffer: PChar); override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#GetBookmarkData"><B>GetBookmarkData</B></A> (Buffer: PChar; Data: Pointer); override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>function <A href="SLUnit.TSLDataSet.html#GetBookmarkFlag"><B>GetBookmarkFlag</B></A> (Buffer: PChar): TBookmarkFlag; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>function <A href="SLUnit.TSLDataSet.html#GetCanModify"><B>GetCanModify</B></A>: Boolean; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLUnit.TSLDataSet.html#GetFieldData"><B>GetFieldData</B></A> (Field: TField; Buffer: Pointer; NativeFormat: Boolean): Boolean; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>function <A href="SLUnit.TSLDataSet.html#GetRecNo"><B>GetRecNo</B></A>: Integer; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>function <A href="SLUnit.TSLDataSet.html#GetRecord"><B>GetRecord</B></A> (Buffer: PChar; GetMode: TGetMode; DoCheck: Boolean): TGetResult; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>function <A href="SLUnit.TSLDataSet.html#GetRecordCount"><B>GetRecordCount</B></A>: Integer; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>function <A href="SLUnit.TSLDataSet.html#GetRecordSize"><B>GetRecordSize</B></A>: Word; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#InternalAddRecord"><B>InternalAddRecord</B></A> (Buffer: Pointer; Append: Boolean); override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#InternalCancel"><B>InternalCancel</B></A>; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#InternalClose"><B>InternalClose</B></A>; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#InternalDelete"><B>InternalDelete</B></A>; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#InternalFirst"><B>InternalFirst</B></A>; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#InternalGotoBookmark"><B>InternalGotoBookmark</B></A> (Bookmark: Pointer); override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#InternalHandleException"><B>InternalHandleException</B></A>; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#InternalInitFieldDefs"><B>InternalInitFieldDefs</B></A>; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#InternalInitRecord"><B>InternalInitRecord</B></A> (Buffer: PChar); override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#InternalLast"><B>InternalLast</B></A>; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#InternalOpen"><B>InternalOpen</B></A>; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#InternalPost"><B>InternalPost</B></A>; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#InternalSetToRecord"><B>InternalSetToRecord</B></A> (Buffer: PChar); override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>function <A href="SLUnit.TSLDataSet.html#IsCursorOpen"><B>IsCursorOpen</B></A>: Boolean; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#Loaded"><B>Loaded</B></A>; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#SetBookmarkData"><B>SetBookmarkData</B></A> (Buffer: PChar; Data: Pointer); override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#SetBookmarkFlag"><B>SetBookmarkFlag</B></A> (Buffer: PChar; Value: TBookmarkFlag); override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#SetFieldData"><B>SetFieldData</B></A>(Field: TField; Buffer: Pointer); overload; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#SetFieldData"><B>SetFieldData</B></A> (Field: TField; Buffer: Pointer; NativeFormat: Boolean); overload; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLDataSet.html#SetRecNo"><B>SetRecNo</B></A> (Value: Integer); override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLUnit.TSLDataSet.html#UpdateStatus"><B>UpdateStatus</B></A>: TUpdateStatus; override;</CODE></TD>
+</TR>
+</TABLE>
+<H3>Description</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="AllocRecordBuffer"></A><CODE>function <B>AllocRecordBuffer</B>: PChar; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="BookmarkValid"></A><CODE>function <B>BookmarkValid</B>(Bookmark: TBookmark): Boolean; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="CompareBookmarks"></A><CODE>function <B>CompareBookmarks</B>(Bookmark1, Bookmark2: TBookmark): Integer; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Create"></A><CODE>constructor <B>Create</B> (AOwner: TComponent); override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Destroy"></A><CODE>destructor <B>Destroy</B>; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="ExecSQL"></A><CODE>procedure <B>ExecSQL</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="FreeRecordBuffer"></A><CODE>procedure <B>FreeRecordBuffer</B> (var Buffer: PChar); override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="GetBookmarkData"></A><CODE>procedure <B>GetBookmarkData</B> (Buffer: PChar; Data: Pointer); override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="GetBookmarkFlag"></A><CODE>function <B>GetBookmarkFlag</B> (Buffer: PChar): TBookmarkFlag; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="GetCanModify"></A><CODE>function <B>GetCanModify</B>: Boolean; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="GetFieldData"></A><CODE>function <B>GetFieldData</B> (Field: TField; Buffer: Pointer; NativeFormat: Boolean): Boolean; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="GetRecNo"></A><CODE>function <B>GetRecNo</B>: Integer; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="GetRecord"></A><CODE>function <B>GetRecord</B> (Buffer: PChar; GetMode: TGetMode; DoCheck: Boolean): TGetResult; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="GetRecordCount"></A><CODE>function <B>GetRecordCount</B>: Integer; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="GetRecordSize"></A><CODE>function <B>GetRecordSize</B>: Word; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="InternalAddRecord"></A><CODE>procedure <B>InternalAddRecord</B> (Buffer: Pointer; Append: Boolean); override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="InternalCancel"></A><CODE>procedure <B>InternalCancel</B>; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="InternalClose"></A><CODE>procedure <B>InternalClose</B>; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="InternalDelete"></A><CODE>procedure <B>InternalDelete</B>; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="InternalFirst"></A><CODE>procedure <B>InternalFirst</B>; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="InternalGotoBookmark"></A><CODE>procedure <B>InternalGotoBookmark</B> (Bookmark: Pointer); override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="InternalHandleException"></A><CODE>procedure <B>InternalHandleException</B>; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="InternalInitFieldDefs"></A><CODE>procedure <B>InternalInitFieldDefs</B>; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="InternalInitRecord"></A><CODE>procedure <B>InternalInitRecord</B> (Buffer: PChar); override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="InternalLast"></A><CODE>procedure <B>InternalLast</B>; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="InternalOpen"></A><CODE>procedure <B>InternalOpen</B>; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="InternalPost"></A><CODE>procedure <B>InternalPost</B>; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="InternalSetToRecord"></A><CODE>procedure <B>InternalSetToRecord</B> (Buffer: PChar); override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="IsCursorOpen"></A><CODE>function <B>IsCursorOpen</B>: Boolean; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="Loaded"></A><CODE>procedure <B>Loaded</B>; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="SetBookmarkData"></A><CODE>procedure <B>SetBookmarkData</B> (Buffer: PChar; Data: Pointer); override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="SetBookmarkFlag"></A><CODE>procedure <B>SetBookmarkFlag</B> (Buffer: PChar; Value: TBookmarkFlag); override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="SetFieldData"></A><CODE>procedure <B>SetFieldData</B>(Field: TField; Buffer: Pointer); overload; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="SetFieldData"></A><CODE>procedure <B>SetFieldData</B> (Field: TField; Buffer: Pointer; NativeFormat: Boolean); overload; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="SetRecNo"></A><CODE>procedure <B>SetRecNo</B> (Value: Integer); override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="UpdateStatus"></A><CODE>function <B>UpdateStatus</B>: TUpdateStatus; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<H2>Properties</H2>
+<H3>Overview</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><CODE>property <A href="SLUnit.TSLDataSet.html#Active"><B>Active</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#AfterCancel"><B>AfterCancel</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#AfterClose"><B>AfterClose</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#AfterDelete"><B>AfterDelete</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#AfterEdit"><B>AfterEdit</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#AfterInsert"><B>AfterInsert</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#AfterOpen"><B>AfterOpen</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#AfterPost"><B>AfterPost</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#AfterRefresh"><B>AfterRefresh</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#AfterScroll"><B>AfterScroll</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#BeforeCancel"><B>BeforeCancel</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#BeforeClose"><B>BeforeClose</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#BeforeDelete"><B>BeforeDelete</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#BeforeEdit"><B>BeforeEdit</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#BeforeInsert"><B>BeforeInsert</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#BeforeOpen"><B>BeforeOpen</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#BeforePost"><B>BeforePost</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#BeforeRefresh"><B>BeforeRefresh</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#BeforeScroll"><B>BeforeScroll</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#BufferCount"><B>BufferCount</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#Buffers"><B>Buffers</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#CanModify"><B>CanModify</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#DataBase"><B>DataBase</B></A>: <A href="SLUnit.TSLDataBase.html">TSLDataBase</A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#FieldDefs"><B>FieldDefs</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#Fields"><B>Fields</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#FieldValues"><B>FieldValues</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#GettingMethod"><B>GettingMethod</B></A>: <A href="SLUnit.html#TGettingMethod">TGettingMethod</A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#ObjectView"><B>ObjectView</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#OnCalcFields"><B>OnCalcFields</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#OnDeleteError"><B>OnDeleteError</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#OnEditError"><B>OnEditError</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#OnNewRecord"><B>OnNewRecord</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#OnPostError"><B>OnPostError</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#ReadOnly"><B>ReadOnly</B></A>: Boolean;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#RecNo"><B>RecNo</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#RecordCount"><B>RecordCount</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#RecordSize"><B>RecordSize</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#SLOptions"><B>SLOptions</B></A>: <A href="SLUnit.html#TSLOptions">TSLOptions</A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#SQL"><B>SQL</B></A>: TStrings;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#State"><B>State</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#Tail"><B>Tail</B></A>: String;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#UpdatingFieldNames"><B>UpdatingFieldNames</B></A>: String;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLUnit.TSLDataSet.html#UpdatingTableName"><B>UpdatingTableName</B></A>: String;</CODE></TD>
+</TR>
+</TABLE>
+<H3>Description</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="Active"></A><CODE>property <B>Active</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="AfterCancel"></A><CODE>property <B>AfterCancel</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="AfterClose"></A><CODE>property <B>AfterClose</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="AfterDelete"></A><CODE>property <B>AfterDelete</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="AfterEdit"></A><CODE>property <B>AfterEdit</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="AfterInsert"></A><CODE>property <B>AfterInsert</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="AfterOpen"></A><CODE>property <B>AfterOpen</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="AfterPost"></A><CODE>property <B>AfterPost</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="AfterRefresh"></A><CODE>property <B>AfterRefresh</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="AfterScroll"></A><CODE>property <B>AfterScroll</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="BeforeCancel"></A><CODE>property <B>BeforeCancel</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="BeforeClose"></A><CODE>property <B>BeforeClose</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="BeforeDelete"></A><CODE>property <B>BeforeDelete</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="BeforeEdit"></A><CODE>property <B>BeforeEdit</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="BeforeInsert"></A><CODE>property <B>BeforeInsert</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="BeforeOpen"></A><CODE>property <B>BeforeOpen</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="BeforePost"></A><CODE>property <B>BeforePost</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="BeforeRefresh"></A><CODE>property <B>BeforeRefresh</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="BeforeScroll"></A><CODE>property <B>BeforeScroll</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="BufferCount"></A><CODE>property <B>BufferCount</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Buffers"></A><CODE>property <B>Buffers</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="CanModify"></A><CODE>property <B>CanModify</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="DataBase"></A><CODE>property <B>DataBase</B>: <A href="SLUnit.TSLDataBase.html">TSLDataBase</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="FieldDefs"></A><CODE>property <B>FieldDefs</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Fields"></A><CODE>property <B>Fields</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="FieldValues"></A><CODE>property <B>FieldValues</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="GettingMethod"></A><CODE>property <B>GettingMethod</B>: <A href="SLUnit.html#TGettingMethod">TGettingMethod</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>Determine how data are retrived from engine.           See also <CODE><A href="SLUnit.html#TGettingMethod">TGettingMethod</A></CODE>.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="ObjectView"></A><CODE>property <B>ObjectView</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="OnCalcFields"></A><CODE>property <B>OnCalcFields</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="OnDeleteError"></A><CODE>property <B>OnDeleteError</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="OnEditError"></A><CODE>property <B>OnEditError</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="OnNewRecord"></A><CODE>property <B>OnNewRecord</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="OnPostError"></A><CODE>property <B>OnPostError</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="ReadOnly"></A><CODE>property <B>ReadOnly</B>: Boolean;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="RecNo"></A><CODE>property <B>RecNo</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="RecordCount"></A><CODE>property <B>RecordCount</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="RecordSize"></A><CODE>property <B>RecordSize</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="SLOptions"></A><CODE>property <B>SLOptions</B>: <A href="SLUnit.html#TSLOptions">TSLOptions</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>Options - see <CODE><A href="SLUnit.html#TSLOptions">TSLOptions</A></CODE>.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="SQL"></A><CODE>property <B>SQL</B>: TStrings;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="State"></A><CODE>property <B>State</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Tail"></A><CODE>property <B>Tail</B>: String;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="UpdatingFieldNames"></A><CODE>property <B>UpdatingFieldNames</B>: String;</CODE></TD>
+</TR>
+</TABLE>
+<P>Define fields that will be taken for update/insert. Not done yet.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="UpdatingTableName"></A><CODE>property <B>UpdatingTableName</B>: String;</CODE></TD>
+</TR>
+</TABLE>
+<P>Name of updating table. If no name set, by default name of first           table will be taken</P>
+<HR noshade size=1><EM>Generated by <A href="http://pasdoc.sourceforge.net/">PasDoc 0.8.7</A> on So 11- paü 2003 15:29:16</EM>
+</BODY>
+</HTML>

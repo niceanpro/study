@@ -1,0 +1,72 @@
+/*
+   ADP Platform version 1.0
+
+   $opyright ⓒ 2018 anylogic corp. All rights reserved.
+
+   This is a proprietary software of anylogic corp, and you may not use this file except in
+   compliance with license agreement with anylogic corp. Any redistribution or use of this
+   software, with or without modification shall be strictly prohibited without prior written
+   approval of anylogic corp, and the copyright notice above does not evidence any actual or
+   intended publication of such software.
+*/
+angular.module('app.systemConfig')
+    .controller('AccountEditController', AccountEditController);
+
+function AccountEditController($rootScope, $scope, $timeout, systemConfigDataService, $state, $stateParams, popupControl, store, messageBox, focus, checkUtil) {{
+
+
+    var vm = this;
+    $scope.newData = $stateParams.sendParam;
+
+    $scope.idDuplicateCheck = false;
+
+
+    var loadScript = function () {{
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'publish/js/common.js';
+        document.body.appendChild(script);
+
+    }}
+
+    $scope.$on('$viewContentLoaded', function() {
+        loadScript();
+        $timeout(function(){
+            currentLnb(4,4); 	 // 메뉴 경로 확인하여 적용
+        }, 100);
+    });
+
+    vm.loginNm = sessionStorage.getItem('loginNm');
+    vm.loginAplyClass = sessionStorage.getItem('loginAplyClass');
+    vm.loginMemberId = sessionStorage.getItem('loginMemberId');
+    vm.loginId = sessionStorage.getItem('loginId');
+
+
+    // input check
+    $scope.$watch('newData.checkPassword', checkUtil.inputPW, true);
+    $scope.$watch('newData.hp_no', checkUtil.inputHpNo, true);
+
+    $scope.updateData = function() {
+        $scope.selectedData = [];
+        $scope.selectedData.push($scope.newData);
+
+        if(! checkUtil.checkSeianPwd(vm.loginId, $scope.newData.passwd)) return;
+        if(! checkRV.checkRV($scope.newData.email, true, 'checkEmail', '이메일 형식을 확인하세요.')) return;
+
+        var sendParam = {};
+        sendParam.list = $scope.selectedData;
+
+        systemConfigDataService.insertObjs(sendParam, '/admin/systemConfig/updateAccount')
+        .success(function(data){
+            $state.go('accountList');
+        }).error(function(data){
+            $state.go('accountList');
+        });
+            
+    }
+
+    $scope.goList = function() {
+        $state.go('accountList');
+    }
+
+}}

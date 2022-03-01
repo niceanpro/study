@@ -1,0 +1,354 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="PasDoc 0.8.7">
+<TITLE>SLEngine: Class TSLEngine</TITLE>
+<LINK rel="StyleSheet" href="SQLite4Delphi.css">
+</HEAD>
+<BODY bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor="e0e0e0">
+<TD><A href="AllUnits.html"><CENTER>Units</CENTER></A></TD>
+<TD><A href="ClassHierarchy.html"><CENTER>Class Hierarchy</CENTER></A></TD>
+<TD><A href="AllClasses.html"><CENTER>Classes, Interfaces and Objects</CENTER></A></TD>
+<TD><A href="AllTypes.html"><CENTER>Types</CENTER></A></TD>
+<TD><A href="AllVariables.html"><CENTER>Variables</CENTER></A></TD>
+<TD><A href="AllConstants.html"><CENTER>Constants</CENTER></A></TD>
+<TD><A href="AllFunctions.html"><CENTER>Functions and Procedures</CENTER></A></TD>
+<TD><A href="AllIdentifiers.html"><CENTER>Identifiers</CENTER></A></TD>
+<TD><A href="GVUses.html"><CENTER></CENTER></A></TD>
+<TD><A href="GVClasses.html"><CENTER></CENTER></A></TD>
+</TR>
+</TABLE>
+<A name="TSLEngine"></A><H1>Class TSLEngine</H1>
+<H2>Unit</H2>
+<A href="SLEngine.html">SLEngine</A><BR><H2>Declaration</H2>
+<P><CODE>type TSLEngine = class()</CODE></P><H2>Description</H2>
+engine representation<P>.         SQLite API + databeses management. It is possible to have more then one         engine at a time. Application can for example use databases with different         page sizes.<H2>Methods</H2>
+<H3>Overview</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><CODE>constructor <A href="SLEngine.TSLEngine.html#Create"><B>Create</B></A> (aConnect: Boolean = True; const aLibName: String = '');</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>destructor <A href="SLEngine.TSLEngine.html#Destroy"><B>Destroy</B></A>; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLEngine.TSLEngine.html#DoLog"><B>DoLog</B></A> (const aText: String);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#Encoding"><B>Encoding</B></A>: String;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#ErrorString"><B>ErrorString</B></A> (const anErrNo: Integer): String;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#GetDB"><B>GetDB</B></A> (const anIndex: Integer): TObject;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#GetDBCount"><B>GetDBCount</B></A>: Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#RegisterDB"><B>RegisterDB</B></A> (aDB: TObject): Boolean;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#SQLite_AggregateContext"><B>SQLite_AggregateContext</B></A> (Func: Pointer; nBytes: Integer): Pointer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#SQLite_AggregateCount"><B>SQLite_AggregateCount</B></A> (Func: Pointer): Pointer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLEngine.TSLEngine.html#SQLite_BusyHandler"><B>SQLite_BusyHandler</B></A> (aDB: TObject);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLEngine.TSLEngine.html#SQLite_BusyTimeout"><B>SQLite_BusyTimeout</B></A> (aDB: TObject; const aTimeOut: Integer);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLEngine.TSLEngine.html#SQLite_Cancel"><B>SQLite_Cancel</B></A> (aDB: TObject);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#SQLite_Changes"><B>SQLite_Changes</B></A> (aDB: TObject): Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLEngine.TSLEngine.html#SQLite_Close"><B>SQLite_Close</B></A> (aDB: TObject);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#SQLite_Compile"><B>SQLite_Compile</B></A> (aDB: TObject; const aSQLStatement: String; var aTail: String; var aSQLite_VM: Integer; var anErrMsg: String): Integer; cdecl;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#SQLite_Complete"><B>SQLite_Complete</B></A> (P: PChar): boolean;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#SQLite_CreateAggregate"><B>SQLite_CreateAggregate</B></A> (DB: Pointer; const Name: PChar; nArg: Integer; xStep: Pointer; xFinalize: Pointer; pUserData: Pointer): Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#SQLite_CreateFunction"><B>SQLite_CreateFunction</B></A> (DB: Pointer; const Name: PChar; nArg: Integer; xFunc: Pointer; pUserData: Pointer): Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#SQLite_Exec"><B>SQLite_Exec</B></A> (anObj: TObject; aSQLStatement: String; var anErrMsg: String; aCallbackPtr: Pointer): Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#SQLite_Finalize"><B>SQLite_Finalize</B></A> (aSQLite_VM: Integer; var anErrMsg: String): Integer; cdecl;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLEngine.TSLEngine.html#SQLite_FreeMem"><B>SQLite_FreeMem</B></A> (P: PChar);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLEngine.TSLEngine.html#SQLite_FreeTable"><B>SQLite_FreeTable</B></A> (Table: Pointer);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#SQLite_FunctionType"><B>SQLite_FunctionType</B></A> (DB: Pointer; const Name: PChar; DataType: Integer): Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#SQLite_GetTable"><B>SQLite_GetTable</B></A> (aDB: TObject; aSQLStatement: String; var aResultPtr: Pointer; var aRowCount: Cardinal; var aColCount: Cardinal; var anErrMsg: String): Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#SQLite_LastInsertRow"><B>SQLite_LastInsertRow</B></A> (aDB: TObject): integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#SQLite_Open"><B>SQLite_Open</B></A> (aDBName: String; aMode: Integer; var anErrMsg: String): Pointer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLEngine.TSLEngine.html#SQLite_SetResultDouble"><B>SQLite_SetResultDouble</B></A> (Func: Pointer; Res: Double);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLEngine.TSLEngine.html#SQLite_SetResultError"><B>SQLite_SetResultError</B></A> (Func: Pointer; const pRes: PChar; Len: Integer);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLEngine.TSLEngine.html#SQLite_SetResultInt"><B>SQLite_SetResultInt</B></A> (Func: Pointer; Res: Integer);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#SQLite_SetResultString"><B>SQLite_SetResultString</B></A> (Func: Pointer; const pRes: PChar; Len: Integer): PChar;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#SQLite_Step"><B>SQLite_Step</B></A> (aSQLite_VM: Integer; var aColCount: Cardinal; var aValuePtr: Pointer; var aColsPtr: Pointer): Integer; cdecl;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#SQLite_UserData"><B>SQLite_UserData</B></A> (Func: Pointer): Pointer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLEngine.TSLEngine.html#Version"><B>Version</B></A>: String;</CODE></TD>
+</TR>
+</TABLE>
+<H3>Description</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Create"></A><CODE>constructor <B>Create</B> (aConnect: Boolean = True; const aLibName: String = '');</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Destroy"></A><CODE>destructor <B>Destroy</B>; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="DoLog"></A><CODE>procedure <B>DoLog</B> (const aText: String);</CODE></TD>
+</TR>
+</TABLE>
+<P>Calling log event for the text.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Encoding"></A><CODE>function <B>Encoding</B>: String;</CODE></TD>
+</TR>
+</TABLE>
+<P><a href="http://www.sqlite.org/c_interface.html" target="_new">http://www.sqlite.org/c_interface.html</a> 3.7 encoding used by engine.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="ErrorString"></A><CODE>function <B>ErrorString</B> (const anErrNo: Integer): String;</CODE></TD>
+</TR>
+</TABLE>
+<P>Converts error number to string</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="GetDB"></A><CODE>function <B>GetDB</B> (const anIndex: Integer): TObject;</CODE></TD>
+</TR>
+</TABLE>
+<P>Database defined by specified index.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="GetDBCount"></A><CODE>function <B>GetDBCount</B>: Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>Number of databases.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="RegisterDB"></A><CODE>function <B>RegisterDB</B> (aDB: TObject): Boolean;</CODE></TD>
+</TR>
+</TABLE>
+<P>Adding database to FDBList.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_AggregateContext"></A><CODE>function <B>SQLite_AggregateContext</B> (Func: Pointer; nBytes: Integer): Pointer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_AggregateCount"></A><CODE>function <B>SQLite_AggregateCount</B> (Func: Pointer): Pointer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_BusyHandler"></A><CODE>procedure <B>SQLite_BusyHandler</B> (aDB: TObject);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_BusyTimeout"></A><CODE>procedure <B>SQLite_BusyTimeout</B> (aDB: TObject; const aTimeOut: Integer);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_Cancel"></A><CODE>procedure <B>SQLite_Cancel</B> (aDB: TObject);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_Changes"></A><CODE>function <B>SQLite_Changes</B> (aDB: TObject): Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_Close"></A><CODE>procedure <B>SQLite_Close</B> (aDB: TObject);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_Compile"></A><CODE>function <B>SQLite_Compile</B> (aDB: TObject; const aSQLStatement: String; var aTail: String; var aSQLite_VM: Integer; var anErrMsg: String): Integer; cdecl;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_Complete"></A><CODE>function <B>SQLite_Complete</B> (P: PChar): boolean;</CODE></TD>
+</TR>
+</TABLE>
+<P><a href="http://www.sqlite.org/c_interface.html" target="_new">http://www.sqlite.org/c_interface.html</a> 3.5 - testing if SQL is           complite query string.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_CreateAggregate"></A><CODE>function <B>SQLite_CreateAggregate</B> (DB: Pointer; const Name: PChar; nArg: Integer; xStep: Pointer; xFinalize: Pointer; pUserData: Pointer): Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_CreateFunction"></A><CODE>function <B>SQLite_CreateFunction</B> (DB: Pointer; const Name: PChar; nArg: Integer; xFunc: Pointer; pUserData: Pointer): Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_Exec"></A><CODE>function <B>SQLite_Exec</B> (anObj: TObject; aSQLStatement: String; var anErrMsg: String; aCallbackPtr: Pointer): Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_Finalize"></A><CODE>function <B>SQLite_Finalize</B> (aSQLite_VM: Integer; var anErrMsg: String): Integer; cdecl;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_FreeMem"></A><CODE>procedure <B>SQLite_FreeMem</B> (P: PChar);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_FreeTable"></A><CODE>procedure <B>SQLite_FreeTable</B> (Table: Pointer);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_FunctionType"></A><CODE>function <B>SQLite_FunctionType</B> (DB: Pointer; const Name: PChar; DataType: Integer): Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_GetTable"></A><CODE>function <B>SQLite_GetTable</B> (aDB: TObject; aSQLStatement: String; var aResultPtr: Pointer; var aRowCount: Cardinal; var aColCount: Cardinal; var anErrMsg: String): Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_LastInsertRow"></A><CODE>function <B>SQLite_LastInsertRow</B> (aDB: TObject): integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_Open"></A><CODE>function <B>SQLite_Open</B> (aDBName: String; aMode: Integer; var anErrMsg: String): Pointer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_SetResultDouble"></A><CODE>procedure <B>SQLite_SetResultDouble</B> (Func: Pointer; Res: Double);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_SetResultError"></A><CODE>procedure <B>SQLite_SetResultError</B> (Func: Pointer; const pRes: PChar; Len: Integer);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_SetResultInt"></A><CODE>procedure <B>SQLite_SetResultInt</B> (Func: Pointer; Res: Integer);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_SetResultString"></A><CODE>function <B>SQLite_SetResultString</B> (Func: Pointer; const pRes: PChar; Len: Integer): PChar;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_Step"></A><CODE>function <B>SQLite_Step</B> (aSQLite_VM: Integer; var aColCount: Cardinal; var aValuePtr: Pointer; var aColsPtr: Pointer): Integer; cdecl;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQLite_UserData"></A><CODE>function <B>SQLite_UserData</B> (Func: Pointer): Pointer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Version"></A><CODE>function <B>Version</B>: String;</CODE></TD>
+</TR>
+</TABLE>
+<P><a href="http://www.sqlite.org/c_interface.html" target="_new">http://www.sqlite.org/c_interface.html</a> 3.6 library version.</P>
+<H2>Properties</H2>
+<H3>Overview</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><CODE>property <A href="SLEngine.TSLEngine.html#OnLog"><B>OnLog</B></A>: <A href="SLEngine.html#TLogEvent">TLogEvent</A>;</CODE></TD>
+</TR>
+</TABLE>
+<H3>Description</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="OnLog"></A><CODE>property <B>OnLog</B>: <A href="SLEngine.html#TLogEvent">TLogEvent</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>For every call of engine application can log.</P>
+<HR noshade size=1><EM>Generated by <A href="http://pasdoc.sourceforge.net/">PasDoc 0.8.7</A> on N 16- lis 2003 16:05:18</EM>
+</BODY>
+</HTML>

@@ -1,0 +1,61 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+}
+ul {
+    display: inline;
+    list-style: none;
+}
+.polaroidContainer {
+    /* 위치 */
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    /* 크기 */
+    width: 1024px;
+    height: 700px;    /* 배경 이미지 */
+    background: url("../image/cork.jpg");
+    background-repeat: repeat;
+    
+    /* 그림자 효과 */
+    box-shadow: 10px 10px 10px #555555;  
+    -webkit-box-shadow: 10px 10px 10px #555555;  /* Safari and Chrome */
+    -moz-box-shadow: 10px 10px 10px #555555;  /* Firefox 4 */
+    -o-box-shadow: 10px 10px 10px #555555;  /* Opera */
+}
+.item {
+    /* 위치 */
+    position: absolute;
+    top: 230px;
+    left: 422px;
+    /* 크기 */
+    width: 244px;
+    height: 341px;
+    /* 배경 이미지 */
+    background: url('../image/photobg.png') no-repeat;
+    
+    /* CSS 애니메이션 */
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox 4 */
+    -o-transition: all 1s ease; /* Opera */
+   
+    /* 마우스 커서 */
+    cursor: pointer;
+    
+    /* 마우스 오버시 기본 뎁스 값 */
+    z-index: 10;
+}
+.item img {
+    /* 위치 */
+    position: absolute;
+    top: 19px;
+    left: 19px;
+    /* 크기 */
+    width: 198px;
+    height: 263px;
+}
+.item:hover {
+    /* 마우스 오버시 뎁스 변경 */
+    z-index: 1000;
+}

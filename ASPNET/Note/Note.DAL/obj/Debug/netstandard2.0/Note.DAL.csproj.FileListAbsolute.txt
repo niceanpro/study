@@ -1,0 +1,14 @@
+D:\study\ASPNET\Note\Note.DAL\bin\Debug\netstandard2.0\Note.DAL.deps.json
+D:\study\ASPNET\Note\Note.DAL\bin\Debug\netstandard2.0\Note.DAL.dll
+D:\study\ASPNET\Note\Note.DAL\bin\Debug\netstandard2.0\Note.DAL.pdb
+D:\study\ASPNET\Note\Note.DAL\bin\Debug\netstandard2.0\Note.IDAL.dll
+D:\study\ASPNET\Note\Note.DAL\bin\Debug\netstandard2.0\Note.Model.dll
+D:\study\ASPNET\Note\Note.DAL\bin\Debug\netstandard2.0\Note.IDAL.pdb
+D:\study\ASPNET\Note\Note.DAL\bin\Debug\netstandard2.0\Note.Model.pdb
+D:\study\ASPNET\Note\Note.DAL\obj\Debug\netstandard2.0\Note.DAL.csprojResolveAssemblyReference.cache
+D:\study\ASPNET\Note\Note.DAL\obj\Debug\netstandard2.0\Note.DAL.csproj.CoreCompileInputs.cache
+D:\study\ASPNET\Note\Note.DAL\obj\Debug\netstandard2.0\Note.DAL.AssemblyInfoInputs.cache
+D:\study\ASPNET\Note\Note.DAL\obj\Debug\netstandard2.0\Note.DAL.AssemblyInfo.cs
+D:\study\ASPNET\Note\Note.DAL\obj\Debug\netstandard2.0\Note.DAL.csproj.CopyComplete
+D:\study\ASPNET\Note\Note.DAL\obj\Debug\netstandard2.0\Note.DAL.dll
+D:\study\ASPNET\Note\Note.DAL\obj\Debug\netstandard2.0\Note.DAL.pdb

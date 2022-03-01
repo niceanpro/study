@@ -1,0 +1,58 @@
+unit Ucompo;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TCompo_Form = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    Button5: TButton;
+    Button6: TButton;
+    Button7: TButton;
+    Button8: TButton;
+    Button9: TButton;
+    procedure Button1Click(Sender: TObject);
+    procedure FormPaint(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Compo_Form: TCompo_Form;
+
+implementation
+
+{$R *.dfm}
+
+procedure TCompo_Form.Button1Click(Sender: TObject);
+begin
+  Compo_Form.Close;
+end;
+
+procedure TCompo_Form.Button2Click(Sender: TObject);
+begin
+  Button1.Caption := '닫기';
+end;
+
+procedure TCompo_Form.Button4Click(Sender: TObject);
+begin
+  ShowMessage('핸들러호출');
+  Button1Click(Sender);
+end;
+
+procedure TCompo_Form.FormPaint(Sender: TObject);
+begin
+  Compo_Form.Caption := IntToStr(Application.ComponentCount);
+end;
+
+end.

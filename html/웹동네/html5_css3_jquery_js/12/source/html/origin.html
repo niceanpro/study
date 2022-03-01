@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+.parent {
+	width:200px; height:200px; border:1px solid #000; margin:100px;
+	-webkit-perspective: 500px; 
+}
+.child {
+	width:200px; height:200px; background:blue;
+	-webkit-transform:rotate3d(0, 1, 0, 60deg);
+	-webkit-transform-origin: 20% center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="parent">
+	<div class="child"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+ii
+
+
+
+is
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+
+namespace SDPGen
+{
+    public partial class GenJS
+    {
+        public int OpSelect(StreamWriter sw, TPage te, TOpInfo tm, string space, List<TColumn> tcs, String tabs)
+        {
+            if(tm.oprType != "select")
+                return 0;
+
+            #region "Select function"
+            if(tm.bImageView)
+            {
+                sw.WriteLine("    $scope.{0} = function(param){{", tm.opName);
+                sw.WriteLine("        var sendParam = { };");
+                sw.WriteLine("        sendParam.uploadPath = param.file_path;");
+                sw.WriteLine("        sendParam.orgFilename = param.file_name;");
+                sw.WriteLine("        sendParam.mimeTypeParam = 'image/jpeg';");
+                sw.WriteLine("    ");
+                sw.WriteLine("        templateDataService.selectList(sendParam, '/{0}/common/downloadImageFile')", te.pg_svrPathName, te.pg_module);
+                sw.WriteLine("            .success(function(obj){");
+                sw.WriteLine("                var blob = new Blob([obj], { type: \"image/png\" });");
+                sw.WriteLine("                var fileURL = URL.createObjectURL(blob); ");
+                sw.WriteLine("                $scope.{0}Img = 'data:image/png;base64,' + obj;", tm.opName);
+                sw.WriteLine("        });");
+                sw.WriteLine("    }");
+                sw.WriteLine("");
+                sw.WriteLine("");
+                return -1;
+            }
+
+
+            if(tm.pagingType == "Paging")
+            {
+                sw.WriteLine(@"    $scope.sortChange{0} = function(sortItem) {{", GD.ToUpperFirst(tm.resName));
+                sw.WriteLine(@"        if(sortItem == $scope.{0}SortItem){{", tm.resName);
+                sw.WriteLine("            if($scope.{0}SortDirection == \"ASC\"){{", tm.resName);
+                sw.WriteLine("                 $scope.{0}SortDirection = \"DESC\";", tm.resName);
+                sw.WriteLine(@"            }else{");
+                sw.WriteLine("                 $scope.{0}SortDirection = \"ASC\";", tm.resName);
+                sw.WriteLine(@"            }");
+                sw.WriteLine(@"        }else{");
+                sw.WriteLine("             $scope.{0}SortDirection = \"ASC\";", tm.resName);
+                sw.WriteLine(@"        }");
+                sw.WriteLine(@"        $scope.{0}SortItem = sortItem;", tm.resName);
+                sw.WriteLine(@"");
+                sw.WriteLine(@"        $scope.{0}(1);", tm.opName);
+                sw.WriteLine(@"    }");
+                sw.WriteLine(@"");
+            }
+
+
+            if(tm.pagingType == "Paging")
+            {
+                sw.WriteLine(@"    $scope.{0} = function(pageno) {{", tm.opName);
+                sw.WriteLine(@"        var param = {};");
+                sw.WriteLine(@"        param.pageNum = pageno;");
+                sw.WriteLine(@"        param.pageCon = $scope.itemsPerPage{0};", GD.ToUpperFirst(tm.resName));
+                sw.WriteLine(@"");
+
+                foreach(String searchItem in tm.searchList)
+                {
+                    if(searchItem != "")
+                    {
+                        sw.WriteLine(@"        param.{1} = $scope.{0}Search.{1};", tm.resName, searchItem);
+                    }
+                }
+
+
+                sw.WriteLine(@"");
+                sw.WriteLine(@"        param.{0}SortItem = $scope.{0}SortItem;", tm.resName);
+                sw.WriteLine(@"        param.{0}SortDirection = $scope.{0}SortDirection;", tm.resName);
+
+                sw.WriteLine(@"");
+                sw.WriteLine(@"        templateDataService.selectList(param, '/{0}/{1}/{2}')", tm.svrPathName, tm.moduleName, tm.opName);
+                sw.WriteLine(@"        .success(function(data){");
+                sw.WriteLine(@"            if(data.data.rows.length < 1){");
+                sw.WriteLine(@"                $scope.{0}ResList  = [];", tm.resName);
+                sw.WriteLine(@"                $scope.total_count{0}  = 0;", GD.ToUpperFirst(tm.resName));
+                sw.WriteLine(@"                return;");
+                sw.WriteLine(@"            }");
+                sw.WriteLine(@"            $scope.{0}ResList = data.data.rows;", tm.resName);
+
+
+
+                sw.WriteLine("");
+                sw.WriteLine(@"            for (var i = 0; i < $scope.{0}ResList.length; i++) {{", tm.resName);
+                if(GD.colDic.TryGetValue((te.pg_dbName + '-' + te.pg_Schema + "-" + te.pg_table), out tcs))
+                {
+                    foreach(TColumn tc in tcs)
+                    {
+                        if(tc.bIsSeq)
+                            continue;
+                        switch(tc.dataType)
+                        {
+                            case "date":
+                            case "datetime":
+                            case "timestamp without time zone":
+                                sw.WriteLine(@"                $scope.{0}ResList[i].{1} = currentDateFactory.unixToDate($scope.{0}ResList[i].{1});", tm.resName, tc.columnName);
+                                break;
+                        }
+                    }
+                }
+                sw.WriteLine(@"            }");
+                sw.WriteLine("");
+
+
+
+                sw.WriteLine(@"            for (var k = 0; k < $scope.{0}ResList.length; k++) {{", tm.resName);
+                sw.WriteLine(@"                $scope.{0}ResList[k].pageno = (k + 1) + ((1 - 1) * 10);", tm.resName);
+                sw.WriteLine(@"            }");
+                sw.WriteLine(@"");
+                sw.WriteLine(@"            $scope.total_count{0} = data.data.rows[0].totalCnt;", GD.ToUpperFirst(tm.resName));
+                sw.WriteLine(@"        }).error(function(error){console.log(error)});");
+                sw.WriteLine(@"    }");
+                sw.WriteLine(@"");
+                sw.WriteLine(@"");
+            }
+            else    // Non Paging
+            {
+                if (GD.genAngularVersion.ToLower() == "1.7".ToLower())
+                {
+                    sw.WriteLine(@"{0}    function {1}() {{", tabs, tm.opName);
+                    sw.WriteLine(@"{0}        var url = Url.GW + '/stores/categories/02';", tabs);
+                    sw.WriteLine(@"{0}        var param = {{}};", tabs);
+                    sw.WriteLine(@"{0}        param.countryCd = PCCode.countryCd;", tabs);
+                    sw.WriteLine(@"{0}        param.deviceTypeCd = PCCode.deviceTypeCd;", tabs);
+                    sw.WriteLine(@"{0}        param.deviceCd = PCCode.deviceCd;", tabs);
+                    sw.WriteLine(@"{0}        param.langCd = PCCode.langCd;", tabs);
+                    sw.WriteLine(@"{0}        param.siteCd = PCCode.siteCd;", tabs);
+                    sw.WriteLine(@"");
+                    sw.WriteLine(@"{0}        CommonService.{1}(url, param).then(function successCallback(data){{", tabs, tm.opName);
+                    sw.WriteLine(@"{0}            var recvList = data.data.data;", tabs);
+                    sw.WriteLine(@"{0}            for(var i = 0; i < recvList.length; i++){{", tabs);
+                    sw.WriteLine(@"{0}            }}", tabs);
+                    sw.WriteLine(@"{0}        }}, function errorCallback(data) {{", tabs);
+                    sw.WriteLine(@"{0}        }});", tabs);
+                    sw.WriteLine(@"{0}    }}", tabs);
+                    sw.WriteLine(@"");
+                    sw.WriteLine(@"");
+                }
+                else  // 1.5
+                {
+                    sw.WriteLine(@"    $scope.{0} = function() {{", tm.opName);
+                    sw.WriteLine(@"        var param = {};");
+                    sw.WriteLine(@"");
+
+                    foreach (String searchItem in tm.searchList)
+                    {
+                        if (searchItem != "")
+                        {
+                            sw.WriteLine(@"        param.{1} = $scope.{0}Search.{1};", tm.resName, searchItem);
+                        }
+                    }
+
+                    sw.WriteLine(@"");
+                    sw.WriteLine(@"        param.{0}SortItem = $scope.{0}SortItem;", tm.resName);
+                    sw.WriteLine(@"        param.{0}SortDirection = $scope.{0}SortDirection;", tm.resName);
+
+                    sw.WriteLine(@"");
+                    sw.WriteLine(@"        $scope.{0}ResList = [];", tm.resName);
+                    sw.WriteLine(@"        templateDataService.selectList(param, '/{0}/{1}/{2}')", tm.svrPathName, tm.moduleName, tm.opName);
+                    sw.WriteLine(@"        .success(function(data){");
+                    sw.WriteLine(@"            $scope.{0}ResList = data.data.rows;", tm.resName);
+
+
+
+                    sw.WriteLine("");
+                    sw.WriteLine(@"            for (var i = 0; i < $scope.{0}ResList.length; i++) {{", tm.resName);
+                    if (GD.colDic.TryGetValue((te.pg_dbName + '-' + te.pg_Schema + "-" + te.pg_table), out tcs))
+                    {
+                        foreach (TColumn tc in tcs)
+                        {
+                            if (tc.bIsSeq)
+                                continue;
+                            switch (tc.dataType)
+                            {
+                                case "date":
+                                case "datetime":
+                                case "timestamp without time zone":
+                                    sw.WriteLine(@"                $scope.{0}ResList[i].{1} = currentDateFactory.unixToDate($scope.{0}ResList[i].{1});", tm.resName, tc.columnName);
+                                    break;
+                            }
+                        }
+                    }
+                    sw.WriteLine(@"            }");
+                    sw.WriteLine("");
+
+
+
+                    sw.WriteLine(@"        }).error(function(error){console.log(error)});");
+                    sw.WriteLine(@"    }");
+                    sw.WriteLine(@"");
+                    sw.WriteLine(@"");
+                }
+            }
+
+            #endregion
+
+            return 0;
+        }
+
+    }
+}

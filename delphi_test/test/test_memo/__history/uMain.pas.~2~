@@ -1,0 +1,96 @@
+unit uMain;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.Menus,
+  Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls, Vcl.Ribbon, Vcl.StdActns,
+  Vcl.ExtActns, System.Actions, Vcl.ActnList, Vcl.ImgList,
+  Vcl.RibbonLunaStyleActnCtrls;
+
+type
+  TMainForm = class(TForm)
+    ActionManager1: TActionManager;
+    ImageList1: TImageList;
+    EditCut1: TEditCut;
+    EditCopy1: TEditCopy;
+    EditPaste1: TEditPaste;
+    EditSelectAll1: TEditSelectAll;
+    EditUndo1: TEditUndo;
+    EditDelete1: TEditDelete;
+    Action1: TAction;
+    FormatRichEditBold1: TRichEditBold;
+    FormatRichEditItalic1: TRichEditItalic;
+    FormatRichEditUnderline1: TRichEditUnderline;
+    FormatRichEditAlignLeft1: TRichEditAlignLeft;
+    FormatRichEditAlignRight1: TRichEditAlignRight;
+    FormatRichEditAlignCenter1: TRichEditAlignCenter;
+    Action2: TAction;
+    FileOpen1: TFileOpen;
+    FileSaveAs1: TFileSaveAs;
+    FileExit1: TFileExit;
+    New_Action: TAction;
+    About_Action: TAction;
+    Top_Action: TAction;
+    Ribbon1: TRibbon;
+    RibbonPage1: TRibbonPage;
+    RibbonPage2: TRibbonPage;
+    RibbonGroup1: TRibbonGroup;
+    RibbonGroup2: TRibbonGroup;
+    RibbonGroup3: TRibbonGroup;
+    RibbonGroup4: TRibbonGroup;
+    RibbonGroup5: TRibbonGroup;
+    PopupMenu1: TPopupMenu;
+    Open1: TMenuItem;
+    SaveAs1: TMenuItem;
+    New1: TMenuItem;
+    N1: TMenuItem;
+    Exit1: TMenuItem;
+    RichEdit1: TRichEdit;
+    StatusBar1: TStatusBar;
+    procedure New_ActionExecute(Sender: TObject);
+    procedure FileOpen1BeforeExecute(Sender: TObject);
+    procedure FileOpen1Accept(Sender: TObject);
+    procedure FileSaveAs1BeforeExecute(Sender: TObject);
+    procedure FileSaveAs1Accept(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  MainForm: TMainForm;
+
+implementation
+
+{$R *.dfm}
+
+procedure TMainForm.FileOpen1Accept(Sender: TObject);
+begin
+  RichEdit1.Lines.LoadFromFile(FileOpen1.Dialog.FileName);
+end;
+
+procedure TMainForm.FileOpen1BeforeExecute(Sender: TObject);
+begin
+  FileOpen1.Dialog.InitialDir := 'C;\';
+  FileOpen1.Dialog.Filter := '유니트파일|*.pas|텍스트파일|*.txt';
+end;
+
+procedure TMainForm.FileSaveAs1Accept(Sender: TObject);
+begin
+  RichEdit1.Lines.SaveToFile((FileSaveAs1.Dialog.FileName);
+end;
+
+procedure TMainForm.FileSaveAs1BeforeExecute(Sender: TObject);
+begin
+  FileSaveAs1.Dialog.InitialDir := 'c:\';
+end;
+
+procedure TMainForm.New_ActionExecute(Sender: TObject);
+begin
+  RichEdit1.Lines.Clear;
+end;
+
+end.

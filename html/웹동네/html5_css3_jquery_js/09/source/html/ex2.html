@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>  
+<title></title>
+<style>
+.mc {width:100px; height:100px; border:1px solid #000; -webkit-transition:width 2s linear 0, height 1s linear 1s }
+.motion {width:200px; height:200px}
+</style>
+</head>
+
+<body>
+<div id="el" class="mc"></div>
+
+<script>
+setTimeout(function(){
+	document.querySelector("#el").className = "mc motion";
+}, 10)
+
+</script>
+</body>
+</html>
+
+
+
+

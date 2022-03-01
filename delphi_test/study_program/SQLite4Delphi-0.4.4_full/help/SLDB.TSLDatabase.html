@@ -1,0 +1,462 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="PasDoc 0.8.7">
+<TITLE>SLDB: Class TSLDatabase</TITLE>
+<LINK rel="StyleSheet" href="SQLite4Delphi.css">
+</HEAD>
+<BODY bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor="e0e0e0">
+<TD><A href="AllUnits.html"><CENTER>Units</CENTER></A></TD>
+<TD><A href="ClassHierarchy.html"><CENTER>Class Hierarchy</CENTER></A></TD>
+<TD><A href="AllClasses.html"><CENTER>Classes, Interfaces and Objects</CENTER></A></TD>
+<TD><A href="AllTypes.html"><CENTER>Types</CENTER></A></TD>
+<TD><A href="AllVariables.html"><CENTER>Variables</CENTER></A></TD>
+<TD><A href="AllConstants.html"><CENTER>Constants</CENTER></A></TD>
+<TD><A href="AllFunctions.html"><CENTER>Functions and Procedures</CENTER></A></TD>
+<TD><A href="AllIdentifiers.html"><CENTER>Identifiers</CENTER></A></TD>
+<TD><A href="GVUses.html"><CENTER></CENTER></A></TD>
+<TD><A href="GVClasses.html"><CENTER></CENTER></A></TD>
+</TR>
+</TABLE>
+<A name="TSLDatabase"></A><H1>Class TSLDatabase</H1>
+<H2>Unit</H2>
+<A href="SLDB.html">SLDB</A><BR><H2>Declaration</H2>
+<P><CODE>type TSLDatabase = class()</CODE></P><H2>Description</H2>
+database component.<H2>Methods</H2>
+<H3>Overview</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><CODE>procedure <A href="SLDB.TSLDatabase.html#BeginTransaction"><B>BeginTransaction</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLDB.TSLDatabase.html#Close"><B>Close</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLDB.TSLDatabase.html#CloseDataSets"><B>CloseDataSets</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLDB.TSLDatabase.html#CloseVM"><B>CloseVM</B></A> (var aSQLite_VM: Integer; var anErrMsg: String): Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLDB.TSLDatabase.html#Commit"><B>Commit</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>constructor <A href="SLDB.TSLDatabase.html#Create"><B>Create</B></A> (AOwner: TComponent); override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>destructor <A href="SLDB.TSLDatabase.html#Destroy"><B>Destroy</B></A>; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>function <A href="SLDB.TSLDatabase.html#DoGetDBList"><B>DoGetDBList</B></A> (aStrs: TStrings): Boolean;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>function <A href="SLDB.TSLDatabase.html#DoGetTable"><B>DoGetTable</B></A> (aStrs: TStrings): Boolean;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLDB.TSLDatabase.html#ExecSQL"><B>ExecSQL</B></A> (anObj: TObject; const aSQL: String; aForceTrans: Boolean; var anErrMsg: String): Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLDB.TSLDatabase.html#FreeTable"><B>FreeTable</B></A> (aPtr: Pointer);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLDB.TSLDatabase.html#GetDBInfo"><B>GetDBInfo</B></A> (const aDbName: String): <A href="SLDB.TDBInfo.html">TDBInfo</A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>function <A href="SLDB.TSLDatabase.html#GetDBListCount"><B>GetDBListCount</B></A>: Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>function <A href="SLDB.TSLDatabase.html#GetDBListItem"><B>GetDBListItem</B></A> (const anIdx: Integer): <A href="SLDB.TDBInfo.html">TDBInfo</A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>function <A href="SLDB.TSLDatabase.html#GetFunCount"><B>GetFunCount</B></A>: Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>function <A href="SLDB.TSLDatabase.html#GetFunItem"><B>GetFunItem</B></A> (const anIdx: Integer): TObject;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLDB.TSLDatabase.html#GetIndexInfo"><B>GetIndexInfo</B></A> (const aTblName: String; const anIdxName: String): <A href="SLDB.TIdxInfo.html">TIdxInfo</A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLDB.TSLDatabase.html#GetIndexList"><B>GetIndexList</B></A> (const aTblName: String; aStrs: TStrings): Boolean;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLDB.TSLDatabase.html#GetTable"><B>GetTable</B></A> (const aSQL: String; var aResult: Pointer; var aRecCount: Cardinal; var aColCount: Cardinal; var anErrMsg: String): Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>function <A href="SLDB.TSLDatabase.html#GetTableCount"><B>GetTableCount</B></A>: Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>function <A href="SLDB.TSLDatabase.html#GetTableItem"><B>GetTableItem</B></A> (const anIdx: Integer): <A href="SLDB.TTblInfo.html">TTblInfo</A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLDB.TSLDatabase.html#GetTblInfo"><B>GetTblInfo</B></A> (const aTblName: String): <A href="SLDB.TTblInfo.html">TTblInfo</A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLDB.TSLDatabase.html#InitializeDB"><B>InitializeDB</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLDB.TSLDatabase.html#InitializeFun"><B>InitializeFun</B></A> (aFun: TObject = nil);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLDB.TSLDatabase.html#LastInsertRow"><B>LastInsertRow</B></A>: Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLDB.TSLDatabase.html#Loaded"><B>Loaded</B></A>; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLDB.TSLDatabase.html#Open"><B>Open</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLDB.TSLDatabase.html#OpenVM"><B>OpenVM</B></A> (const aSQL: String; var aTail: String; var aSQLite_VM: Integer; var anErrMsg: String): Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLDB.TSLDatabase.html#RefreshDBList"><B>RefreshDBList</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLDB.TSLDatabase.html#RefreshTblList"><B>RefreshTblList</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLDB.TSLDatabase.html#RegisterAggregate"><B>RegisterAggregate</B></A> (aFunObject: TObject);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLDB.TSLDatabase.html#RegisterDataSet"><B>RegisterDataSet</B></A> (aDtSet: TObject);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLDB.TSLDatabase.html#RegisterFunction"><B>RegisterFunction</B></A> (aFun: TObject);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLDB.TSLDatabase.html#Rollback"><B>Rollback</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLDB.TSLDatabase.html#VMStep"><B>VMStep</B></A> (const aSQLite_VM: Integer; var aColCount: Cardinal; var aValuePtr: Pointer; var aColsPtr: Pointer): Integer;</CODE></TD>
+</TR>
+</TABLE>
+<H3>Description</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="BeginTransaction"></A><CODE>procedure <B>BeginTransaction</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>Starting transaction.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Close"></A><CODE>procedure <B>Close</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>closing database connection.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="CloseDataSets"></A><CODE>procedure <B>CloseDataSets</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>closing all datasets connected to the database</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="CloseVM"></A><CODE>function <B>CloseVM</B> (var aSQLite_VM: Integer; var anErrMsg: String): Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Commit"></A><CODE>procedure <B>Commit</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>Commiting transaction.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Create"></A><CODE>constructor <B>Create</B> (AOwner: TComponent); override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Destroy"></A><CODE>destructor <B>Destroy</B>; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="DoGetDBList"></A><CODE>function <B>DoGetDBList</B> (aStrs: TStrings): Boolean;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="DoGetTable"></A><CODE>function <B>DoGetTable</B> (aStrs: TStrings): Boolean;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="ExecSQL"></A><CODE>function <B>ExecSQL</B> (anObj: TObject; const aSQL: String; aForceTrans: Boolean; var anErrMsg: String): Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>query engine with Exec function (callback)</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="FreeTable"></A><CODE>procedure <B>FreeTable</B> (aPtr: Pointer);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="GetDBInfo"></A><CODE>function <B>GetDBInfo</B> (const aDbName: String): <A href="SLDB.TDBInfo.html">TDBInfo</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>info of a database (SQLite file) defined by name. See also           <CODE><A href="SLDB.TDBInfo.html">TDBInfo</A></CODE>.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="GetDBListCount"></A><CODE>function <B>GetDBListCount</B>: Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="GetDBListItem"></A><CODE>function <B>GetDBListItem</B> (const anIdx: Integer): <A href="SLDB.TDBInfo.html">TDBInfo</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="GetFunCount"></A><CODE>function <B>GetFunCount</B>: Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="GetFunItem"></A><CODE>function <B>GetFunItem</B> (const anIdx: Integer): TObject;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="GetIndexInfo"></A><CODE>function <B>GetIndexInfo</B> (const aTblName: String; const anIdxName: String): <A href="SLDB.TIdxInfo.html">TIdxInfo</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>info of index specified by name. See also <CODE><A href="SLDB.TIdxInfo.html">TIdxInfo</A></CODE>.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="GetIndexList"></A><CODE>function <B>GetIndexList</B> (const aTblName: String; aStrs: TStrings): Boolean;</CODE></TD>
+</TR>
+</TABLE>
+<P>list of indices for table specified by name.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="GetTable"></A><CODE>function <B>GetTable</B> (const aSQL: String; var aResult: Pointer; var aRecCount: Cardinal; var aColCount: Cardinal; var anErrMsg: String): Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>query engine with GetTable API function (all data at once)</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="GetTableCount"></A><CODE>function <B>GetTableCount</B>: Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="GetTableItem"></A><CODE>function <B>GetTableItem</B> (const anIdx: Integer): <A href="SLDB.TTblInfo.html">TTblInfo</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="GetTblInfo"></A><CODE>function <B>GetTblInfo</B> (const aTblName: String): <A href="SLDB.TTblInfo.html">TTblInfo</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>info of a table defined by name. See also <CODE><A href="SLDB.TTblInfo.html">TTblInfo</A></CODE>.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="InitializeDB"></A><CODE>procedure <B>InitializeDB</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="InitializeFun"></A><CODE>procedure <B>InitializeFun</B> (aFun: TObject = nil);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="LastInsertRow"></A><CODE>function <B>LastInsertRow</B>: Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="Loaded"></A><CODE>procedure <B>Loaded</B>; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Open"></A><CODE>procedure <B>Open</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>opening database connection.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="OpenVM"></A><CODE>function <B>OpenVM</B> (const aSQL: String; var aTail: String; var aSQLite_VM: Integer; var anErrMsg: String): Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="RefreshDBList"></A><CODE>procedure <B>RefreshDBList</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>refreshing cached information about attached databases (SQLite files).</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="RefreshTblList"></A><CODE>procedure <B>RefreshTblList</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>refreshing cached information about tables/views structure.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="RegisterAggregate"></A><CODE>procedure <B>RegisterAggregate</B> (aFunObject: TObject);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="RegisterDataSet"></A><CODE>procedure <B>RegisterDataSet</B> (aDtSet: TObject);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="RegisterFunction"></A><CODE>procedure <B>RegisterFunction</B> (aFun: TObject);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Rollback"></A><CODE>procedure <B>Rollback</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>Cancelling (rooling back) transaction.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="VMStep"></A><CODE>function <B>VMStep</B> (const aSQLite_VM: Integer; var aColCount: Cardinal; var aValuePtr: Pointer; var aColsPtr: Pointer): Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<H2>Properties</H2>
+<H3>Overview</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><CODE>property <A href="SLDB.TSLDatabase.html#Active"><B>Active</B></A>: Boolean;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLDB.TSLDatabase.html#DBList"><B>DBList</B></A>[const Idx: Integer]: <A href="SLDB.TDBInfo.html">TDBInfo</A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLDB.TSLDatabase.html#DBListCount"><B>DBListCount</B></A>: Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLDB.TSLDatabase.html#DBName"><B>DBName</B></A>: TFileName;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLDB.TSLDatabase.html#Engine"><B>Engine</B></A>: <A href="SLEngine.TSLEngine.html">TSLEngine</A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLDB.TSLDatabase.html#Fun"><B>Fun</B></A>[const Idx: Integer]: TObject;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLDB.TSLDatabase.html#FunCount"><B>FunCount</B></A>: Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLDB.TSLDatabase.html#Handle"><B>Handle</B></A>: Pointer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLDB.TSLDatabase.html#InTransaction"><B>InTransaction</B></A>: Boolean;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLDB.TSLDatabase.html#SLDBOptions"><B>SLDBOptions</B></A>: <A href="SLDB.TSLDBOptions.html">TSLDBOptions</A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLDB.TSLDatabase.html#Table"><B>Table</B></A>[const Idx: Integer]: <A href="SLDB.TTblInfo.html">TTblInfo</A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLDB.TSLDatabase.html#TableCount"><B>TableCount</B></A>: Integer;</CODE></TD>
+</TR>
+</TABLE>
+<H3>Description</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="Active"></A><CODE>property <B>Active</B>: Boolean;</CODE></TD>
+</TR>
+</TABLE>
+<P>Determine if database is connected.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="DBList"></A><CODE>property <B>DBList</B>[const Idx: Integer]: <A href="SLDB.TDBInfo.html">TDBInfo</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>Information about attached database (SQLite file). See also           <CODE><A href="SLDB.TDBInfo.html">TDBInfo</A></CODE>.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="DBListCount"></A><CODE>property <B>DBListCount</B>: Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>Number of databases (SQLite files) being attached.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="DBName"></A><CODE>property <B>DBName</B>: TFileName;</CODE></TD>
+</TR>
+</TABLE>
+<P>Name of file with main database.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Engine"></A><CODE>property <B>Engine</B>: <A href="SLEngine.TSLEngine.html">TSLEngine</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>Engine object.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Fun"></A><CODE>property <B>Fun</B>[const Idx: Integer]: TObject;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="FunCount"></A><CODE>property <B>FunCount</B>: Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Handle"></A><CODE>property <B>Handle</B>: Pointer;</CODE></TD>
+</TR>
+</TABLE>
+<P>Handle to SQLite object</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="InTransaction"></A><CODE>property <B>InTransaction</B>: Boolean;</CODE></TD>
+</TR>
+</TABLE>
+<P>Determinig if database is in transaction.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="SLDBOptions"></A><CODE>property <B>SLDBOptions</B>: <A href="SLDB.TSLDBOptions.html">TSLDBOptions</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>Options speciffied for database. See also <CODE><A href="SLDB.TSLDBOptions.html">TSLDBOptions</A></CODE>.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Table"></A><CODE>property <B>Table</B>[const Idx: Integer]: <A href="SLDB.TTblInfo.html">TTblInfo</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>Table or view selected by it's numver. See also <CODE><A href="SLDB.TTblInfo.html">TTblInfo</A></CODE>.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="TableCount"></A><CODE>property <B>TableCount</B>: Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>Number of tables/views.</P>
+<HR noshade size=1><EM>Generated by <A href="http://pasdoc.sourceforge.net/">PasDoc 0.8.7</A> on N 16- lis 2003 16:05:18</EM>
+</BODY>
+</HTML>

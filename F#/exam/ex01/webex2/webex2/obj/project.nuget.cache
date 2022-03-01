@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "bch50l/2e1Eyo6l2RxCgJnp/HbgWzQVB+Bf8xOdfeZ8BrNy6jst8UBrXezzsJejBqAUp0B3yYvSYc9GY2fXaTA==",
+  "success": true,
+  "projectFilePath": "D:\\study\\F#\\exam\\ex01\\webex2\\webex2\\webex2.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nicea\\.nuget\\packages\\fsharp.core\\5.0.0\\fsharp.core.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>test</title>
+<script  type="text/javascript" src="./libs/jquery-1.8.1.js"></script>
+<script>
+var totalIndex = 5;//아이탬 개수
+var count = 0;//현재 아이템 index
+
+//1초에 한번씩 실행
+setInterval(function(){
+//count가 아이템 개수보다 커지면 0으로 초기화
+    if( count == totalIndex ){
+        count = 0;
+    }
+    
+    console.log( count );
+    count++;
+}, 1000 );
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="PasDoc 0.8.7">
+<TITLE>SLUnit</TITLE>
+<LINK rel="StyleSheet" href="Help Project.css">
+</HEAD>
+<BODY bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor="e0e0e0">
+<TD><A href="AllUnits.html"><CENTER>Units</CENTER></A></TD>
+<TD><A href="ClassHierarchy.html"><CENTER>Class Hierarchy</CENTER></A></TD>
+<TD><A href="AllClasses.html"><CENTER>Classes, Interfaces and Objects</CENTER></A></TD>
+<TD><A href="AllTypes.html"><CENTER>Types</CENTER></A></TD>
+<TD><A href="AllVariables.html"><CENTER>Variables</CENTER></A></TD>
+<TD><A href="AllConstants.html"><CENTER>Constants</CENTER></A></TD>
+<TD><A href="AllFunctions.html"><CENTER>Functions and Procedures</CENTER></A></TD>
+<TD><A href="AllIdentifiers.html"><CENTER>Identifiers</CENTER></A></TD>
+<TD><A href="GVUses.html"><CENTER></CENTER></A></TD>
+<TD><A href="GVClasses.html"><CENTER></CENTER></A></TD>
+</TR>
+</TABLE>
+<H1>Unit SLUnit</H1>
+<H2>Description</H2>
+&nbsp;<H2>Classes, Interfaces and Objects</H2>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor="#e0e0e0"><TH>Name</TH><TH>Description</TH></TR>
+<TR bgcolor=#efefef valign=top><TD>record&nbsp;<A href="SLUnit.TRecInfo.html"><CODE>TRecInfo</CODE></A></TD>
+<TD width=100%>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD>record&nbsp;<A href="SLUnit.TRecData.html"><CODE>TRecData</CODE></A></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD>record&nbsp;<A href="SLUnit.TColData.html"><CODE>TColData</CODE></A></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD>Class&nbsp;<A href="SLUnit.TSLDataSet.html"><CODE>TSLDataSet</CODE></A></TD>
+<TD>TDataSet descendant</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD>record&nbsp;<A href="SLUnit.TSLDBOptions.html"><CODE>TSLDBOptions</CODE></A></TD>
+<TD>options for <CODE><A href="SLUnit.TSLDataBase.html">TSLDataBase</A></CODE>.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD>Class&nbsp;<A href="SLUnit.TTblField.html"><CODE>TTblField</CODE></A></TD>
+<TD>information about every field of table -  <CODE><A href="SLUnit.TTblInfo.html">TTblInfo</A></CODE>.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD>Class&nbsp;<A href="SLUnit.TIdxField.html"><CODE>TIdxField</CODE></A></TD>
+<TD>information about every field of index -  <CODE><A href="SLUnit.TIdxInfo.html">TIdxInfo</A></CODE>.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD>Class&nbsp;<A href="SLUnit.TIdxInfo.html"><CODE>TIdxInfo</CODE></A></TD>
+<TD>index information - see <CODE><A href="SLUnit.TSLDataBase.html">TSLDataBase</A></CODE>.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD>Class&nbsp;<A href="SLUnit.TTblInfo.html"><CODE>TTblInfo</CODE></A></TD>
+<TD>table information.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD>Class&nbsp;<A href="SLUnit.TDBInfo.html"><CODE>TDBInfo</CODE></A></TD>
+<TD>information about attached databases.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD>Class&nbsp;<A href="SLUnit.TSLDataBase.html"><CODE>TSLDataBase</CODE></A></TD>
+<TD>database component.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD>Class&nbsp;<A href="SLUnit.TSLEngine.html"><CODE>TSLEngine</CODE></A></TD>
+<TD>engine representation</TD>
+</TR>
+</TABLE>
+<H2>Types</H2>
+<TABLE cellspacing=2 cellpadding=4 width=100%><TR bgcolor="#e0e0e0"><TH>Name</TH><TH>Description</TH></TR>
+<TR bgcolor=#efefef valign=top><TD><A name="ESQLiteError"></A>ESQLiteError<CODE> = Exception;</CODE></TD>
+<TD width=100%>Exception class<P>All exceptions of SQLite are called with this class.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="PPChar"></A>PPChar<CODE> = ^PChar;</CODE></TD>
+<TD>for D5 copatibility</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="TPCharArray"></A>TPCharArray<CODE> = array [0 .. MaxInt div 16 - 1] of PChar;</CODE></TD>
+<TD>for D5 copatibility</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="PPCharArray"></A>PPCharArray<CODE> = ^<A href="SLUnit.html#TPCharArray">TPCharArray</A>;</CODE></TD>
+<TD>for D5 copatibility</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="PRecInfo"></A>PRecInfo<CODE> = ^<A href="SLUnit.TRecInfo.html">TRecInfo</A>;</CODE></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="PRecData"></A>PRecData<CODE> = ^<A href="SLUnit.TRecData.html">TRecData</A>;</CODE></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="PColData"></A>PColData<CODE> = ^<A href="SLUnit.TColData.html">TColData</A>;</CODE></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="TGettingMethod"></A>TGettingMethod<CODE></CODE></TD>
+<TD>determine how dataset retrives data from the engine.<UL>
+<LI>
+gmCallback: </LI>
+<LI>
+gmGetTable: </LI>
+<LI>
+gmVMachine: </LI>
+</UL>
+</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="TCBDtSetFlag"></A>TCBDtSetFlag<CODE></CODE></TD>
+<TD>callback flag used in <CODE><A href="SLUnit.TSLDataSet.html">TSLDataSet</A></CODE>.<P>Callback is a function called by the engine - this flag    determines what operation is pendning:<UL>
+<LI>
+cdfUnknown: default, just to allow "empty" value.</LI>
+<LI>
+cdfNormal: getting data, most common.</LI>
+<LI>
+cdfInternal: insert,update,delete - or other "internal" operations.</LI>
+<LI>
+cdfRequery: requering for updated record.</LI>
+</UL>
+</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="TSLOption"></A>TSLOption<CODE></CODE></TD>
+<TD>represents single option<P>Used by <CODE><A href="SLUnit.TSLDataSet.html">TSLDataSet</A></CODE>.<UL>
+<LI>
+soUseROWIDs: rowid column is used to create updates/inserts/deletes,           as well as in re-query.</LI>
+<LI>
+soHideROWIDs: columns with rowid has visible = false.</LI>
+<LI>
+soHideTableName: </LI>
+<LI>
+soTextAsMemo: SQLite text fields are treated as TMemoFields, in other case they           are TStringFields.</LI>
+<LI>
+soRangedNumericsAsBCD: </LI>
+<LI>
+soRangedFloatsAsBCD: </LI>
+</UL>
+</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="TSLOptions"></A>TSLOptions<CODE> = set of <A href="SLUnit.html#TSLOption">TSLOption</A>;</CODE></TD>
+<TD>represents option set<P>Used by <CODE><A href="SLUnit.TSLDataSet.html">TSLDataSet</A></CODE>.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="TCBDBFlag"></A>TCBDBFlag<CODE></CODE></TD>
+<TD>callback flag.<P>Callback is a function called by the engine - this flag    determines what operation is pendning:<UL>
+<LI>
+cbfUnknown: default, just to allow "empty" value.</LI>
+<LI>
+cbfDBList: list of databases.</LI>
+<LI>
+cbfTblList: table list.</LI>
+<LI>
+cbfIdxList: list of indices.</LI>
+<LI>
+cbfInternal: internal data - not used.</LI>
+</UL>
+</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="TOnBusy"></A>TOnBusy</TD>
+<TD>event for on busy calling.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="TLogEvent"></A>TLogEvent</TD>
+<TD>event for logging API calls<P>.</TD>
+</TR>
+</TABLE><H2>Constants</H2>
+<TABLE cellspacing=2 cellpadding=4 width=100%><TR bgcolor="#e0e0e0"><TH>Name</TH><TH>Description</TH></TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_OK"></A>SQLITE_OK<CODE>         =  0;</CODE></TD>
+<TD width=100%>Successful result.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_ERROR"></A>SQLITE_ERROR<CODE>      =  1;</CODE></TD>
+<TD>SQL error or missing database.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_INTERNAL"></A>SQLITE_INTERNAL<CODE>   =  2;</CODE></TD>
+<TD>An internal logic error in SQLite.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_PERM"></A>SQLITE_PERM<CODE>       =  3;</CODE></TD>
+<TD>Access permission denied.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_ABORT"></A>SQLITE_ABORT<CODE>      =  4;</CODE></TD>
+<TD>Callback routine requested an abort.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_BUSY"></A>SQLITE_BUSY<CODE>       =  5;</CODE></TD>
+<TD>The database file is locked.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_LOCKED"></A>SQLITE_LOCKED<CODE>     =  6;</CODE></TD>
+<TD>A table in the database is locked.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_NOMEM"></A>SQLITE_NOMEM<CODE>      =  7;</CODE></TD>
+<TD>A malloc() failed.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_READONLY"></A>SQLITE_READONLY<CODE>   =  8;</CODE></TD>
+<TD>Attempt to write a readonly database.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_INTERRUPT"></A>SQLITE_INTERRUPT<CODE>  =  9;</CODE></TD>
+<TD>Operation terminated by sqlite_interrupt().</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_IOERR"></A>SQLITE_IOERR<CODE>      = 10;</CODE></TD>
+<TD>Some kind of disk I/O error occurred.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_CORRUPT"></A>SQLITE_CORRUPT<CODE>    = 11;</CODE></TD>
+<TD>The database disk image is malformed.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_NOTFOUND"></A>SQLITE_NOTFOUND<CODE>   = 12;</CODE></TD>
+<TD>(Internal Only) Table or record not found.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_FULL"></A>SQLITE_FULL<CODE>       = 13;</CODE></TD>
+<TD>Insertion failed because database is full.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_CANTOPEN"></A>SQLITE_CANTOPEN<CODE>   = 14;</CODE></TD>
+<TD>Unable to open the database file.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_PROTOCOL"></A>SQLITE_PROTOCOL<CODE>   = 15;</CODE></TD>
+<TD>Database lock protocol error.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_EMPTY"></A>SQLITE_EMPTY<CODE>      = 16;</CODE></TD>
+<TD>(Internal Only) Database table is empty.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_SCHEMA"></A>SQLITE_SCHEMA<CODE>     = 17;</CODE></TD>
+<TD>The database schema changed.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_TOOBIG"></A>SQLITE_TOOBIG<CODE>     = 18;</CODE></TD>
+<TD>Too much data for one row of a table.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_CONSTRAINT"></A>SQLITE_CONSTRAINT<CODE> = 19;</CODE></TD>
+<TD>Abort due to contraint violation.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_MISMATCH"></A>SQLITE_MISMATCH<CODE>   = 20;</CODE></TD>
+<TD>Data type mismatch.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_ROW"></A>SQLITE_ROW<CODE>        = 100;</CODE></TD>
+<TD>sqlite_step() has another row ready</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_DONE"></A>SQLITE_DONE<CODE>       = 101;</CODE></TD>
+<TD>sqlite_step() has finished executing</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITEDLL"></A>SQLITEDLL<CODE>: PChar  = 'sqlite.dll';</CODE></TD>
+<TD>Name of DLL with engine.</TD>
+</TR>
+</TABLE><H2>Variables</H2>
+<TABLE cellspacing=2 cellpadding=4 width=100%><TR bgcolor="#e0e0e0"><TH>Name</TH><TH>Description</TH></TR>
+<TR bgcolor=#efefef valign=top><TD><A name="__Engine"></A>__Engine<CODE>: <A href="SLUnit.TSLEngine.html">TSLEngine</A>;</CODE></TD>
+<TD width=100%>Default engine. Created and started in <i>initialization</i> section       (terminated in <i>finalization</i>).</TD>
+</TR>
+</TABLE><HR noshade size=1><EM>Generated by <A href="http://pasdoc.sourceforge.net/">PasDoc 0.8.7</A> on So 11- paü 2003 15:29:16</EM>
+</BODY>
+</HTML>

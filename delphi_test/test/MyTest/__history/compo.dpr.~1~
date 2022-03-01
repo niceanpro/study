@@ -1,0 +1,14 @@
+program compo;
+
+uses
+  Vcl.Forms,
+  Ucompo in 'Ucompo.pas' {Compo_Form};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TCompo_Form, Compo_Form);
+  Application.Run;
+end.

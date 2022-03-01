@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지없이만드는 탭레이아웃</title>
+<style>
+	body{ background:#fff;}
+	section {position:relative; 
+		width:500px;  
+		display:box; display:-webkit-box; 
+		-webkit-box-orient:horizental; 
+		box-orient:horizental; 
+		}
+		input{
+			width:100px;
+			display: none;
+			}
+		label {
+		position:relative;
+		display:block; 
+		width:100px; 
+		height:0; line-height:32px; 
+		border-right:30px solid transparent; 
+		border-bottom:30px solid #a4dc6c; 
+		text-align:center; color:#fff; font-size:15px; font-weight:bold; 
+		text-shadow: rgba(10, 10, 10, 0.5) 0px 0px 1px;
+		border-radius:5px 0 0 0px; text-decoration:none; 
+		padding-left:5px; font-family:Arial, Helvetica, sans-serif; 
+		cursor: pointer;
+		z-index:2;
+		}
+</style>
+</head>
+
+<body>
+  <section>	
+    <input id="select1" name="tabmenu" type="radio" >
+    <label for="select1"  >Story</label>
+    <input id="select2" name="tabmenu" type="radio" >
+    <label for="select2" >Happy life</label>
+    <input id="select3" name="tabmenu" type="radio" >
+    <label for="select3">Dream</label>
+  </section>
+
+</body>
+</html>

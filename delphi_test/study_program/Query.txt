@@ -1,0 +1,5 @@
+select top 5 * from (
+( select *, (0) as ratio from study_master where qstcnt = 0 and type = '패턴' )
+union all
+( select top 4 *, (succnt*10000/qstcnt) as ratio from study_master where qstcnt != 0 and type = '패턴')
+) as b order by ratio

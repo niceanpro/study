@@ -1,0 +1,10 @@
+D:\study\WPF\HelloWorld1\FileIO\bin\Debug\FileIO.exe.config
+D:\study\WPF\HelloWorld1\FileIO\bin\Debug\FileIO.exe
+D:\study\WPF\HelloWorld1\FileIO\bin\Debug\FileIO.pdb
+D:\study\WPF\HelloWorld1\FileIO\obj\Debug\FileIO.csprojResolveAssemblyReference.cache
+D:\study\WPF\HelloWorld1\FileIO\obj\Debug\FileIO.Form1.resources
+D:\study\WPF\HelloWorld1\FileIO\obj\Debug\FileIO.Properties.Resources.resources
+D:\study\WPF\HelloWorld1\FileIO\obj\Debug\FileIO.csproj.GenerateResource.cache
+D:\study\WPF\HelloWorld1\FileIO\obj\Debug\FileIO.csproj.CoreCompileInputs.cache
+D:\study\WPF\HelloWorld1\FileIO\obj\Debug\FileIO.exe
+D:\study\WPF\HelloWorld1\FileIO\obj\Debug\FileIO.pdb

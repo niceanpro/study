@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.910,D:\delphi_연습\C++\test1\Unit1.h=C:\Users\changjun\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.811,D:\delphi_연습\C++\test1\Project1.cbproj=C:\Users\changjun\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.515,=C:\Users\changjun\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.556,=C:\Users\changjun\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.911,D:\delphi_연습\C++\test1\Unit1.dfm=C:\Users\changjun\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.910,D:\delphi_연습\C++\test1\Unit1.cpp=C:\Users\changjun\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.392,D:\delphi_연습\C++\test1\Project1PCH1.h=C:\Users\changjun\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.497,=C:\Users\changjun\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.540,=C:\Users\changjun\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+  </Transactions>
+</BorlandProject>

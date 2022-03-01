@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS3 Banner</title>
+        <style type="text/css">
+            /*
+             1단계 - html 구조 잡기
+             2단계 - CSS 초기화하기
+             3단계 - 배너 컨테이너 크기 잡아주기
+             4단계 - 배너 이미지 위치 정렬시키기
+             5단계 - 배너 영역만 보여지게하기 overflow:hidden 적용
+             */
+
+            /* CSS 초기화 */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            img {
+                border: 0;
+            }
+            ol, ul {
+                list-style: none;
+            }
+            body {
+                background: #eee;
+                font-size: 12px;
+                font-family: 돋움;
+            }
+
+            /* 배너 컨테이너 크기잡기*/
+            section.container {
+                position: relative;
+                width: 300px;
+                height: 100px;
+                top: 100px;
+                margin: 0 auto;
+                border: 10px solid #fff;
+                box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            }
+            /* 배너 이미지 마스크 영역*/
+            section ul.banner_mask {
+                overflow: hidden;
+                position: absolute;
+                width: 300px;
+                height: 100px;
+            }
+            /*이미지 초기위치 잡기*/
+            section ul.banner_mask li {
+                position: absolute;
+                top: 0px;
+                left: 300px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <section class="container">
+            <input id="select1" name="radioBanner" type="radio" class="banner_input1" />
+            <label for="select1" class="label_btn1">1</label>
+            <input id="select2" name="radioBanner" type="radio" class="banner_input2" />
+            <label for="select2" class="label_btn2">2</label>
+            <input id="select3" name="radioBanner" type="radio" class="banner_input3" />
+            <label for="select3" class="label_btn3">3</label>
+            <input id="select4" name="radioBanner" type="radio" class="banner_input4" />
+            <label for="select4" class="label_btn4">4</label>
+            <ul class="banner_mask">
+                <li>
+                    <a href="#none"><img src="./images/1.jpg" alt="첫번째 배너이미지" /></a>
+                </li>
+                <li>
+                    <a href="#none"><img src="./images/2.jpg" alt="두번째 배너이미지" /></a>
+                </li>
+                <li>
+                    <a href="#none"><img src="./images/3.jpg" alt="세번재 배너이미지" /></a>
+                </li>
+                <li>
+                    <a href="#none"><img src="./images/4.jpg" alt="네번째 배너이미지" /></a>
+                </li>
+            </ul>
+        </section>
+    </body>
+</html>

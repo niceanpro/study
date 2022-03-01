@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>rotate값 알아보기</title>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="../js/jquery1.7.js"></script>
+		<style>
+			/* 브라우저 rotate값 처리 보기 */
+			#divItem{
+				background:red;
+				width:100px;
+				height:100px;
+				-webkit-transition		: -webkit-transform 0.5s ease-in-out;
+			}
+		</style>
+		
+	</head>
+	<body>		
+		<h1>rotate값 바로 알기</h1>
+		<div id="divItem">
+		</div>
+		<script>
+			var angle=0;
+			// div 클릭 시 angle값을 30도씩 증가 시킴 
+			$("#divItem").mousedown( function(){
+				angle+=30;
+				
+		
+				$(this).css( {"-webkit-transform":"rotate(" + angle +"deg)"});
+				//console.log( getRotationDegrees( $(this) ) );
+			} );
+			/* radian값을 degress 값으로 변환 처리 함수 */
+			function getRotationDegrees(obj) {
+				var matrix = obj.css("-webkit-transform") ||
+				obj.css("-moz-transform")    ||
+				obj.css("-ms-transform")     ||
+				obj.css("-o-transform")      ||
+				obj.css("transform");
+				if(matrix !== 'none') {
+					var values = matrix.split('(')[1].split(')')[0].split(',');
+					var a = values[0];
+					var b = values[1];
+					var angle = Math.round(Math.atan2(b, a) * (180/Math.PI));
+				} else { var angle = 0; }
+				return angle;
+			}
+		</script>
+	</body>
+</html>

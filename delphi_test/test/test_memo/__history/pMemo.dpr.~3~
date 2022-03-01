@@ -1,0 +1,16 @@
+program pMemo;
+
+uses
+  Vcl.Forms,
+  uMain in 'uMain.pas' {MainForm},
+  uSplash in 'uSplash.pas' {SplashForm};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TMainForm, MainForm);
+  Application.CreateForm(TSplashForm, SplashForm);
+  Application.Run;
+end.

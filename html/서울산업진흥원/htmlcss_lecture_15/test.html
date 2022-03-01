@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>다인정공</title>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../js/html5.js"></script>
+<![endif]-->
+
+<style>
+	body, div, table, td, th, ul, li, p{padding:0px; margin:0px;}
+	body{font-size:14px; color:#000; font-family:NanumGothic, '나눔고딕', '돋움',dotum,AppleGothic,sans-serif; font-smoothing: antialiased;}
+	div, ul, li,dl,dt,dd,span,p,strong, table, th, td, a, ol, button{box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
+	p{line-height:20px;}
+	ul, li{list-style:none;}
+	img {vertical-align:top; border:0;}
+	table{width:100%; table-layout:fixed; border-collapse:collapse; border-spacing:none;}
+
+	.wrap{ padding:20px; width:1000px; overflow-y:auto;}
+	.header{padding:0 0 10px 0; border-bottom:2px solid #333; font-size:12px;}
+	.header .logo{margin-bottom:8px;}
+	.content{position:relative; padding:20px 0;}
+
+	table th{padding:14px; font-size:14px; border:1px solid #333;}
+	table td{padding:14px; height:43px; font-size:12px; border:1px solid #333; text-align:center;}
+
+	.tableHeader{margin-bottom:20px;}
+	.tableHeader th, .tableHeader td{text-align:left;}
+
+	.tableSum{width:700px; margin:30px 0 0 260px;}
+
+	.txt{font-size:12px; margin-top:160px;}
+
+	.sign{margin-top:350px; text-align:right;}
+	.sign span{display:inline-block; width:200px; vertical-align:bottom; border-bottom:1px solid #333;}
+
+	.dine{overflow:hidden;margin-top:150px; margin-bottom:50px; }
+	.dine span{float:right; text-align:right; width:300px; font-size:12px; padding-top:5px; border-top:2px dashed #333;}
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="wrap" id="trStateView" style="background-color: #ffffff;">
+	<div class="header">
+		<div class="logo"><img src="publish/images/logo.png" width="120" height="32" alt=""></div>
+		<p>HEAD OFFICE: (15116) 24, MTV 26-ro, Siheung-si, Gyeonggi-do, S-KOREA</p>
+		<p>web site: www.dine.co.kr , order site: prm.dine.ko.kr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEL: +82-31-488-6200/ FAX:+82-31-433-1721</p>
+	</div>
+	<div class="content">
+		<table class="tableHeader">
+			<colgroup>
+				<col style="width:15%;">
+				<col style="width:35%;">
+				<col style="width:15%;">
+				<col style="width:35%;">
+			</colgroup>
+			<thead>
+				<tr>
+					<th colspan="2" style="text-align:center;">공급자</th>
+					<th colspan="2" style="text-align:center;">거래처</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+ 					<th>사업자 등록번호</th>
+					<td>{{dt.header_info[0].dine_saup_no}}</td>
+					<th>사업자 등록번호</th>
+					<td>{{dt.header_info[0].customer_saup_no}}</td>
+				</tr>
+				<tr>
+					<th>상호(대표자)</th>
+					<td>{{dt.header_info[0].dine_customer_name}} ({{dt.header_info[0].dine_ceo}})</td>
+					<th>상호(대표자)</th>
+					<td>{{dt.header_info[0].customer_name}} ({{dt.header_info[0].customer_ceo}})</td>
+				</tr>
+				<tr>
+					<th> 사업장 주소</th>
+					<td style="height:80px;">{{dt.header_info[0].dine_address}}</td>
+					<th> 사업장 주소</th>
+					<td style="height:80px;">{{dt.header_info[0].customer_address}}</td>
+				</tr>
+			</tbody> 
+		</table>
+		
+		<table>
+			<colgroup>
+				<col style="width:10%;">
+				<col style="width:10%;">
+				<col style="width:10%;">
+				<col style="width:10%;">
+				<col style="width:10%;">
+				<col style="width:10%;">
+				<col style="width:10%;">
+				<col style="width:10%;">
+				<col style="width:10%;">
+				<col style="width:10%;">
+			</colgroup>
+			<thead>
+				<tr>
+					<th>주문정보</th>
+					<th colspan="9"> {{dt.order_info}}</th>
+				</tr>
+				<tr>
+					<th>유형</th>
+					<th>품번</th>
+					<th>형번</th>
+					<th>재종</th>
+					<th>수량</th>
+					<th>단가</th>
+					<th>금액</th>
+					<th>접수번호</th>
+					<th>배송처명</th>
+					<th>주문번호</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				<tr ng-repeat="item in dt.data_list">
+					<td>{{dt.head_info.gb}}</td>
+					<td>{{item.part_no}}</td>
+					<td>{{item.part_hb}}</td>
+					<td>{{item.part_jj}}</td>
+					<td>{{item.qty}}</td>
+					<td>{{item.unit_saleprice}}</td>
+					<td>{{item.amount}}</td>
+					<td>{{item.order_no}}</td>
+					<td>{{item.shipto_name}}</td>
+					<td>{{item.ordernum_cust}}</td>
+				</tr>
+
+			</tbody>
+		</table>
+	
+		<table class="tableSum">
+			<colgroup>
+				<col style="width:20%;">
+				<col style="width:20%;">
+				<col style="width:20%;">
+				<col style="width:20%;">
+				<col style="width:20%;">
+			</colgroup>
+			<thead>
+				<tr>
+					<th></th>
+					<th>수량</th>
+					<th>공급가액</th>
+					<th>세액</th>
+					<th>합계금액</th>
+				</tr>
+			</thead>
+			<tbody>
+			
+				<th>합계</th>
+				<td>{{dt.total.pagetotal_qty}}</td>
+				<td>{{dt.total.pagetotal_sale_price}}</td>
+				<td>{{dt.total.pagetotal_tax}}</td>
+				<td>{{dt.total.pagetotal_amount}}</td>
+				
+			</tbody>
+		</table>
+
+		<p class="txt">본 거래명세표는 사업자 월 합계표에 의한 세금계산서를 발행한 경우 매장 검인을 받아 거래시마다<br>사용하는 거래명세서이며, 월 합계로 세금계산서를 작성할 때 반드시 포함시켜야 합니다.</p>
+		<div class="dine"><span>DINE Inc. signnature .</span></div>
+	</div>
+	<div style="text-align:center; margin-top:20px;">
+		<button type="button" class="btn_gray" ng-click="Close();">닫기</button>
+		<button type="button" class="btn_gray" ng-click="printView();">인쇄</button>
+		<button type="button" class="btn_gray" ng-click="downloadPdf();">Pdf 다운로드</button>
+	</div>
+
+</div>
+	
+
+</body>
+</html>

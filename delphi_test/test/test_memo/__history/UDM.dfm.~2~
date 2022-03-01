@@ -1,0 +1,64 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 313
+  Width = 530
+  object SQLConnection1: TSQLConnection
+    ConnectionName = 'SampleConnection'
+    DriverName = 'MSSQL'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverName=MSSQL'
+      'SchemaOverride=%.dbo'
+      'DriverUnit=Data.DBXMSSQL'
+      
+        'DriverPackageLoader=TDBXDynalinkDriverLoader,DBXCommonDriver200.' +
+        'bpl'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXDynalinkDriverLoader,Borla' +
+        'nd.Data.DbxCommonDriver,Version=20.0.0.0,Culture=neutral,PublicK' +
+        'eyToken=91d62ebb5b0d1b1b'
+      
+        'MetaDataPackageLoader=TDBXMsSqlMetaDataCommandFactory,DbxMSSQLDr' +
+        'iver200.bpl'
+      
+        'MetaDataAssemblyLoader=Borland.Data.TDBXMsSqlMetaDataCommandFact' +
+        'ory,Borland.Data.DbxMSSQLDriver,Version=20.0.0.0,Culture=neutral' +
+        ',PublicKeyToken=91d62ebb5b0d1b1b'
+      'LibraryName=dbxmss.dll'
+      'VendorLib=sqlncli10.dll'
+      'VendorLibWin64=sqlncli10.dll'
+      'HostName=localhost'
+      'Database=jspdb'
+      'MaxBlobSize=-1'
+      'LocaleCode=0000'
+      'IsolationLevel=ReadCommitted'
+      'OSAuthentication=False'
+      'PrepareSQL=True'
+      'User_Name=anpro'
+      'Password=anali'
+      'BlobSize=-1'
+      'ErrorResourceFile='
+      'OS Authentication=False'
+      'Prepare SQL=False')
+    Connected = True
+    Left = 32
+    Top = 24
+  end
+  object Insa: TSimpleDataSet
+    Active = True
+    Aggregates = <>
+    Connection = SQLConnection1
+    DataSet.CommandText = 'DEPT'
+    DataSet.CommandType = ctTable
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 128
+    Top = 24
+  end
+  object InsaDataSource: TDataSource
+    DataSet = Insa
+    Left = 200
+    Top = 24
+  end
+end

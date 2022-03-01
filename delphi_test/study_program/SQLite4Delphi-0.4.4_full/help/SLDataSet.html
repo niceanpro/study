@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="PasDoc 0.8.7">
+<TITLE>SLDataSet</TITLE>
+<LINK rel="StyleSheet" href="SQLite4Delphi.css">
+</HEAD>
+<BODY bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor="e0e0e0">
+<TD><A href="AllUnits.html"><CENTER>Units</CENTER></A></TD>
+<TD><A href="ClassHierarchy.html"><CENTER>Class Hierarchy</CENTER></A></TD>
+<TD><A href="AllClasses.html"><CENTER>Classes, Interfaces and Objects</CENTER></A></TD>
+<TD><A href="AllTypes.html"><CENTER>Types</CENTER></A></TD>
+<TD><A href="AllVariables.html"><CENTER>Variables</CENTER></A></TD>
+<TD><A href="AllConstants.html"><CENTER>Constants</CENTER></A></TD>
+<TD><A href="AllFunctions.html"><CENTER>Functions and Procedures</CENTER></A></TD>
+<TD><A href="AllIdentifiers.html"><CENTER>Identifiers</CENTER></A></TD>
+<TD><A href="GVUses.html"><CENTER></CENTER></A></TD>
+<TD><A href="GVClasses.html"><CENTER></CENTER></A></TD>
+</TR>
+</TABLE>
+<H1>Unit SLDataSet</H1>
+<H2>Description</H2>
+The <CODE>SLDataSet</CODE>  - DB components for SQLite<H2>Classes, Interfaces and Objects</H2>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor="#e0e0e0"><TH>Name</TH><TH>Description</TH></TR>
+<TR bgcolor=#efefef valign=top><TD>record&nbsp;<A href="SLDataSet.TRecInfo.html"><CODE>TRecInfo</CODE></A></TD>
+<TD width=100%>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD>record&nbsp;<A href="SLDataSet.TRecData.html"><CODE>TRecData</CODE></A></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD>record&nbsp;<A href="SLDataSet.TColData.html"><CODE>TColData</CODE></A></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD>Class&nbsp;<A href="SLDataSet.TSLDataSet.html"><CODE>TSLDataSet</CODE></A></TD>
+<TD>TDataSet descendant</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD>Class&nbsp;<A href="SLDataSet.TSLFun_RecNo.html"><CODE>TSLFun_RecNo</CODE></A></TD>
+<TD>Build-in function that enumerates row number</TD>
+</TR>
+</TABLE>
+<H2>Functions and Procedures</H2>
+<H3>Overview</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD width=100%><CODE>procedure Register;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><CODE>function <A href="#TSLDataSet_ExecCallback"><B>TSLDataSet_ExecCallback</B></A> (Sender: <A href="SLDataSet.TSLDataSet.html">TSLDataSet</A>; Columns: Integer; ColumnValues: Pointer; ColumnNames: Pointer): integer; cdecl;</CODE></TD>
+</TR>
+</TABLE>
+<H3>Description</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD width=100%><A name="Register"></A><CODE>procedure Register;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD width=100%><A name="TSLDataSet_ExecCallback"></A><CODE>function <B>TSLDataSet_ExecCallback</B> (Sender: <A href="SLDataSet.TSLDataSet.html">TSLDataSet</A>; Columns: Integer; ColumnValues: Pointer; ColumnNames: Pointer): integer; cdecl;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<H2>Types</H2>
+<TABLE cellspacing=2 cellpadding=4 width=100%><TR bgcolor="#e0e0e0"><TH>Name</TH><TH>Description</TH></TR>
+<TR bgcolor=#efefef valign=top><TD><A name="PRecInfo"></A>PRecInfo<CODE> = ^<A href="SLDataSet.TRecInfo.html">TRecInfo</A>;</CODE></TD>
+<TD width=100%>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="PRecData"></A>PRecData<CODE> = ^<A href="SLDataSet.TRecData.html">TRecData</A>;</CODE></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="PColData"></A>PColData<CODE> = ^<A href="SLDataSet.TColData.html">TColData</A>;</CODE></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="TGettingMethod"></A>TGettingMethod<CODE></CODE></TD>
+<TD>determine how dataset retrives data from the engine.<UL>
+<LI>
+gmCallback: </LI>
+<LI>
+gmGetTable: </LI>
+<LI>
+gmVMachine: </LI>
+</UL>
+</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="TCBDtSetFlag"></A>TCBDtSetFlag<CODE></CODE></TD>
+<TD>callback flag used in <CODE><A href="SLDataSet.TSLDataSet.html">TSLDataSet</A></CODE>.<P>Callback is a function called by the engine - this flag    determines what operation is pendning:<UL>
+<LI>
+cdfUnknown: default, just to allow "empty" value.</LI>
+<LI>
+cdfNormal: getting data, most common.</LI>
+<LI>
+cdfInternal: insert,update,delete - or other "internal" operations.</LI>
+<LI>
+cdfRequery: requering for updated record.</LI>
+</UL>
+</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="TSLOption"></A>TSLOption<CODE></CODE></TD>
+<TD>represents single option<P>Used by <CODE><A href="SLDataSet.TSLDataSet.html">TSLDataSet</A></CODE>.<UL>
+<LI>
+soUseROWIDs: rowid column is used to create updates/inserts/deletes,           as well as in re-query.</LI>
+<LI>
+soHideROWIDs: columns with rowid has visible = false.</LI>
+<LI>
+soHideTableName: </LI>
+<LI>
+soTextAsMemo: SQLite text fields are treated as TMemoFields, in other case they           are TStringFields.</LI>
+<LI>
+soRangedNumericsAsBCD: </LI>
+<LI>
+soRangedFloatsAsBCD: </LI>
+</UL>
+</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="TSLOptions"></A>TSLOptions<CODE> = set of <A href="SLDataSet.html#TSLOption">TSLOption</A>;</CODE></TD>
+<TD>represents option set<P>Used by <CODE><A href="SLDataSet.TSLDataSet.html">TSLDataSet</A></CODE>.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="ESLRecNoError"></A>ESLRecNoError<CODE> = Exception;</CODE></TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE><H2>Variables</H2>
+<TABLE cellspacing=2 cellpadding=4 width=100%><TR bgcolor="#e0e0e0"><TH>Name</TH><TH>Description</TH></TR>
+<TR bgcolor=#efefef valign=top><TD><A name="__FunRecNo"></A>__FunRecNo<CODE>: <A href="SLDataSet.TSLFun_RecNo.html">TSLFun_RecNo</A>;</CODE></TD>
+<TD width=100%>Internal function for getting row number<P>.    You should not change it.</TD>
+</TR>
+</TABLE><H2>Authors</H2>
+<P>Michal Zaborowski <<A href="mailto:michal.zaborowski@wp.pl">michal.zaborowski@wp.pl</A>></P>
+<P>Paul DIAS GONCALVES <<A href="mailto:padigon@altern.org">padigon@altern.org</A>></P>
+<HR noshade size=1><EM>Generated by <A href="http://pasdoc.sourceforge.net/">PasDoc 0.8.7</A> on N 16- lis 2003 16:05:17</EM>
+</BODY>
+</HTML>

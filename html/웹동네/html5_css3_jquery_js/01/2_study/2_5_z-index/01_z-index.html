@@ -1,0 +1,39 @@
+<!document html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>z-index</title>
+		<style>
+			.front{
+				position:absolute;
+				top:10px;
+				z-index:1;
+				width:130px;
+				height:130px;
+				background:rgb(240,240,240);
+				font-size:0.75em;
+			}
+			.back{
+				position:absolute; 
+				top:50px;
+				left:50px;
+				z-index:-1;
+				width:130px;
+				height:130px;
+				background:rgb(60, 132, 198);
+			}
+			/*back에 들어가는 글자*/
+			.back_font{
+				position:relative;
+				top:80px;
+				left:6px;
+				color:white;
+				font-size:0.75em;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="front">front<br/>z-index:1;</div>
+		<div class="back"><p class="back_font">back<br/>z-index:-1;</p></div>
+	</body>
+</html>

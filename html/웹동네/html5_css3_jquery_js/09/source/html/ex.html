@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>  
+<title></title>
+<style>
+* {margin:0; padding:0; list-style:none}
+</style>
+</head>
+
+<body>
+
+<span data-job="student" data-sex="female" data-age="34">남희숙</span>
+<span data-job="fighter" data-sex="male" data-age="27">최정동</span>
+<span data-job="model" data-sex="female" data-age="21">이아연</span>
+
+<script type="text/javascript">
+
+var nam = document.querySelector("[data-age='34']");
+console.log( nam );		// <span data-job="student" data-sex="female" data-age="34">남희숙</span>
+nam.dataset.area = "gangnam";
+console.log( nam.dataset.job);	// gangnam
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

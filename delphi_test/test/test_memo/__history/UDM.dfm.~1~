@@ -1,0 +1,5 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 313
+  Width = 530
+end

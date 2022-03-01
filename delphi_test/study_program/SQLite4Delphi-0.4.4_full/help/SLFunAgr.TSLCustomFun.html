@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="PasDoc 0.8.7">
+<TITLE>SLFunAgr: Class TSLCustomFun</TITLE>
+<LINK rel="StyleSheet" href="SQLite4Delphi.css">
+</HEAD>
+<BODY bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor="e0e0e0">
+<TD><A href="AllUnits.html"><CENTER>Units</CENTER></A></TD>
+<TD><A href="ClassHierarchy.html"><CENTER>Class Hierarchy</CENTER></A></TD>
+<TD><A href="AllClasses.html"><CENTER>Classes, Interfaces and Objects</CENTER></A></TD>
+<TD><A href="AllTypes.html"><CENTER>Types</CENTER></A></TD>
+<TD><A href="AllVariables.html"><CENTER>Variables</CENTER></A></TD>
+<TD><A href="AllConstants.html"><CENTER>Constants</CENTER></A></TD>
+<TD><A href="AllFunctions.html"><CENTER>Functions and Procedures</CENTER></A></TD>
+<TD><A href="AllIdentifiers.html"><CENTER>Identifiers</CENTER></A></TD>
+<TD><A href="GVUses.html"><CENTER></CENTER></A></TD>
+<TD><A href="GVClasses.html"><CENTER></CENTER></A></TD>
+</TR>
+</TABLE>
+<A name="TSLCustomFun"></A><H1>Class TSLCustomFun</H1>
+<H2>Unit</H2>
+<A href="SLFunAgr.html">SLFunAgr</A><BR><H2>Declaration</H2>
+<P><CODE>type TSLCustomFun = class()</CODE></P><H2>Description</H2>
+Base class for functions and aggregations<P>This class is registered in <CODE>TFunArgManager</CODE>, so both functions and    aggregations can be stored in one manager. When <CODE><A href="SLFunAgr.TSLCustomFun.html#Active">Active</A></CODE>    is true function's object is registered in.<A name=@Fields></A><H2>Fields</H2>
+<TABLE cellspacing=2 cellpadding=4 width=100%><TR bgcolor="#e0e0e0"><TH>&nbsp;</TH><TH>Name</TH><TH>Description</TH></TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><A name="FActive"></A><CODE>FActive</CODE></TD>
+<TD width=100%>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><A name="FDB"></A><CODE>FDB</CODE></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><A name="FFunName"></A><CODE>FFunName</CODE></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><A name="FHandle"></A><CODE>FHandle</CODE></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><A name="FResType"></A><CODE>FResType</CODE></TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE><H2>Methods</H2>
+<H3>Overview</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><CODE>function <A href="SLFunAgr.TSLCustomFun.html#AggregateContext"><B>AggregateContext</B></A> (aFunObject: TObject; nBytes: Integer): Pointer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLFunAgr.TSLCustomFun.html#AggregateCount"><B>AggregateCount</B></A> (aFunObject: TObject): Pointer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>constructor <A href="SLFunAgr.TSLCustomFun.html#Create"><B>Create</B></A> (AOwner: TComponent); override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>destructor <A href="SLFunAgr.TSLCustomFun.html#Destroy"><B>Destroy</B></A>; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLFunAgr.TSLCustomFun.html#Loaded"><B>Loaded</B></A>; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLFunAgr.TSLCustomFun.html#SetActive"><B>SetActive</B></A> (const aValue: Boolean); virtual; abstract;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLFunAgr.TSLCustomFun.html#SetDB"><B>SetDB</B></A> (const aValue: <A href="SLDB.TSLDatabase.html">TSLDatabase</A>);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLFunAgr.TSLCustomFun.html#SetResultDouble"><B>SetResultDouble</B></A> (aFunObject: TObject; const aRes: Double);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLFunAgr.TSLCustomFun.html#SetResultError"><B>SetResultError</B></A> (aFunObject: TObject; const aRes: String);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLFunAgr.TSLCustomFun.html#SetResultInt"><B>SetResultInt</B></A> (aFunObject: TObject; const aRes: Integer);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>procedure <A href="SLFunAgr.TSLCustomFun.html#SetResultString"><B>SetResultString</B></A> (aFunObject: TObject; const aRes: String);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLFunAgr.TSLCustomFun.html#UserData"><B>UserData</B></A> (aFunObject: TObject): Pointer;</CODE></TD>
+</TR>
+</TABLE>
+<H3>Description</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="AggregateContext"></A><CODE>function <B>AggregateContext</B> (aFunObject: TObject; nBytes: Integer): Pointer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="AggregateCount"></A><CODE>function <B>AggregateCount</B> (aFunObject: TObject): Pointer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Create"></A><CODE>constructor <B>Create</B> (AOwner: TComponent); override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Destroy"></A><CODE>destructor <B>Destroy</B>; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="Loaded"></A><CODE>procedure <B>Loaded</B>; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="SetActive"></A><CODE>procedure <B>SetActive</B> (const aValue: Boolean); virtual; abstract;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="SetDB"></A><CODE>procedure <B>SetDB</B> (const aValue: <A href="SLDB.TSLDatabase.html">TSLDatabase</A>);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SetResultDouble"></A><CODE>procedure <B>SetResultDouble</B> (aFunObject: TObject; const aRes: Double);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SetResultError"></A><CODE>procedure <B>SetResultError</B> (aFunObject: TObject; const aRes: String);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SetResultInt"></A><CODE>procedure <B>SetResultInt</B> (aFunObject: TObject; const aRes: Integer);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SetResultString"></A><CODE>procedure <B>SetResultString</B> (aFunObject: TObject; const aRes: String);</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="UserData"></A><CODE>function <B>UserData</B> (aFunObject: TObject): Pointer;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<H2>Properties</H2>
+<H3>Overview</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><CODE>property <A href="SLFunAgr.TSLCustomFun.html#Active"><B>Active</B></A>: Boolean;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLFunAgr.TSLCustomFun.html#Database"><B>Database</B></A>: <A href="SLDB.TSLDatabase.html">TSLDatabase</A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLFunAgr.TSLCustomFun.html#FunName"><B>FunName</B></A>: String;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLFunAgr.TSLCustomFun.html#Handle"><B>Handle</B></A>: Pointer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD><CODE>property <A href="SLFunAgr.TSLCustomFun.html#ResultType"><B>ResultType</B></A>: <A href="SLFunAgr.html#TSLFunResType">TSLFunResType</A>;</CODE></TD>
+</TR>
+</TABLE>
+<H3>Description</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="Active"></A><CODE>property <B>Active</B>: Boolean;</CODE></TD>
+</TR>
+</TABLE>
+<P>abstract(function/aggregation is registered in SQLite engine / DB        There is no deactivation API function so once activated function will        be active until dabtabase deactivation.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="Database"></A><CODE>property <B>Database</B>: <A href="SLDB.TSLDatabase.html">TSLDatabase</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>abstract(Database in which function is registered (created))</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="FunName"></A><CODE>property <B>FunName</B>: String;</CODE></TD>
+</TR>
+</TABLE>
+<P>abstract(Name of function / aggregation used in query)</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Handle"></A><CODE>property <B>Handle</B>: Pointer;</CODE></TD>
+</TR>
+</TABLE>
+<P>abstract(Pointer used by SQLite to recognise function)</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="published.gif" alt="Published"></TD>
+<TD width=100%><A name="ResultType"></A><CODE>property <B>ResultType</B>: <A href="SLFunAgr.html#TSLFunResType">TSLFunResType</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<HR noshade size=1><EM>Generated by <A href="http://pasdoc.sourceforge.net/">PasDoc 0.8.7</A> on N 16- lis 2003 16:05:18</EM>
+</BODY>
+</HTML>

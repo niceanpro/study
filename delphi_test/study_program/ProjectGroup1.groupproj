@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{AFBB69FA-51B2-495D-AB96-5BFF31528AB3}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="MemoryKing.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="C:\Users\Public\Documents\RAD Studio\12.0\Samples\Delphi\VCL\Docking\dockex.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="MemoryKing">
+        <MSBuild Projects="MemoryKing.dproj"/>
+    </Target>
+    <Target Name="MemoryKing:Clean">
+        <MSBuild Projects="MemoryKing.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MemoryKing:Make">
+        <MSBuild Projects="MemoryKing.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="dockex">
+        <MSBuild Projects="C:\Users\Public\Documents\RAD Studio\12.0\Samples\Delphi\VCL\Docking\dockex.dproj"/>
+    </Target>
+    <Target Name="dockex:Clean">
+        <MSBuild Projects="C:\Users\Public\Documents\RAD Studio\12.0\Samples\Delphi\VCL\Docking\dockex.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="dockex:Make">
+        <MSBuild Projects="C:\Users\Public\Documents\RAD Studio\12.0\Samples\Delphi\VCL\Docking\dockex.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="MemoryKing;dockex"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="MemoryKing:Clean;dockex:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="MemoryKing:Make;dockex:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,63 @@
+unit UDM;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DBXMSSQL, Data.DB, Datasnap.DBClient,
+  SimpleDS, Data.SqlExpr, Data.SqlTimSt;
+
+type
+  TDM = class(TDataModule)
+    SQLConnection1: TSQLConnection;
+    Insa: TSimpleDataSet;
+    InsaSource: TDataSource;
+
+
+    Dept: TSimpleDataSet;
+    DeptSource: TDataSource;
+    procedure InsaNewRecord(DataSet: TDataSet);
+    procedure InsaBeforeInsert(DataSet: TDataSet);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+{
+    InsaID: TIntegerField;
+    InsaNAME: TStringField;
+    InsaAGE: TSmallintField;
+    InsaDEPT_CODE: TStringField;
+    InsaCLASS: TStringField;
+    InsaIPSA_DATE: TSQLTimeStampField;
+    InsaSALARY: TIntegerField;
+    InsaPHOTO: TBlobField;
+    InsaGRADE: TStringField;
+    InsaTax: TFloatField;
+}
+  end;
+
+var
+  DM: TDM;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses Uinsa;
+
+{$R *.dfm}
+
+procedure TDM.InsaBeforeInsert(DataSet: TDataSet);
+begin
+  InsaForm.DBEdit1.SetFocus;
+end;
+
+procedure TDM.InsaNewRecord(DataSet: TDataSet);
+begin
+{
+  InsaIpsa_date.value := DateTimetoSQLTimeStamp(now);
+  InsaSalary.Value := 3000000;
+  InsaGrade.Value := '1';
+}
+end;
+
+end.

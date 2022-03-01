@@ -1,0 +1,18 @@
+Delpy에서 string
+1.0 s:string : Shortstring
+2.0 ~2009 : AnsiString
+2009~현재 : UnicodeString
+
+매개변수 전달 방법
+1. 값으로 넘기는 경우 : call by value
+	function add(x, y : integer):integer;
+
+2. 상수값으로 넘기는 방법 : call by const
+	function add(const x, y : integer):integer;
+
+3. 참조값으로 넘기는 방법 : call by reference
+	function add(var x, y : integer):integer;
+
+4. out값으로 뽑아내는 방법 
+	function add(out x, y : integer):integer;
+

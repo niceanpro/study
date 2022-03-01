@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>08 풀스크린 슬라이더</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="css/common.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            var itemOnNum = 1;
+            var timer = setInterval(onTimer, 10000);
+
+            var audio;
+
+            $(document).ready(function() {
+                changeItem(1);
+
+                var audio;
+                audio = new Audio("music/bgm01.mp3");
+                audio.volume = 0.5;
+                audio.loop = true;
+                audio.play();
+
+            });
+            function onTimer() {
+                if(itemOnNum < 4) {
+                    itemOnNum++;
+                } else {
+                    itemOnNum = 1;
+                }
+
+                changeItem(itemOnNum);
+            }
+
+            function changeItem($arg) {
+                $(".item").removeClass("on");
+
+                var selector = "#item" + $arg;
+                $(selector).addClass("on");
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <ul>
+                <li>
+                    <div class="item" id="item1">
+                        <div class="bgImage"></div>
+                        <div class="typography">
+                            <h1>Hope is a waking dream.</h1>
+                            <h2> I want to enjoy things and have fun and live like every day is the last day</h2>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item" id="item2">
+                        <div class="bgImage"></div>
+                        <div class="typography">
+                            <h1>Life is a zoo in a jungle.</h1>
+                            <h2>The only thing I'm afraid of is wasting the rest of my life with you guys.</h2>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item" id="item3">
+                        <div class="bgImage"></div>
+                        <div class="typography">
+                            <h1>Be gentle with the young.</h1>
+                            <h2>The only thing I'm afraid of is wasting the rest of my life with you guys.</h2>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item" id="item4">
+                        <div class="bgImage"></div>
+                        <div class="typography">
+                            <h1>Great hopes make great men.</h1>
+                            <h2>In spite of everything. I till believe that people are really good at heart.</h2>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
+

@@ -1,0 +1,15 @@
+D:\study\WPF\HelloWorld1\HelloWorld1\bin\Debug\HelloWorld1.exe.config
+D:\study\WPF\HelloWorld1\HelloWorld1\bin\Debug\HelloWorld1.exe
+D:\study\WPF\HelloWorld1\HelloWorld1\bin\Debug\HelloWorld1.pdb
+D:\study\WPF\HelloWorld1\HelloWorld1\obj\Debug\HelloWorld1.csprojResolveAssemblyReference.cache
+D:\study\WPF\HelloWorld1\HelloWorld1\obj\Debug\MainWindow.g.cs
+D:\study\WPF\HelloWorld1\HelloWorld1\obj\Debug\App.g.cs
+D:\study\WPF\HelloWorld1\HelloWorld1\obj\Debug\HelloWorld1_MarkupCompile.cache
+D:\study\WPF\HelloWorld1\HelloWorld1\obj\Debug\HelloWorld1_MarkupCompile.lref
+D:\study\WPF\HelloWorld1\HelloWorld1\obj\Debug\MainWindow.baml
+D:\study\WPF\HelloWorld1\HelloWorld1\obj\Debug\HelloWorld1.g.resources
+D:\study\WPF\HelloWorld1\HelloWorld1\obj\Debug\HelloWorld1.Properties.Resources.resources
+D:\study\WPF\HelloWorld1\HelloWorld1\obj\Debug\HelloWorld1.csproj.GenerateResource.cache
+D:\study\WPF\HelloWorld1\HelloWorld1\obj\Debug\HelloWorld1.csproj.CoreCompileInputs.cache
+D:\study\WPF\HelloWorld1\HelloWorld1\obj\Debug\HelloWorld1.exe
+D:\study\WPF\HelloWorld1\HelloWorld1\obj\Debug\HelloWorld1.pdb

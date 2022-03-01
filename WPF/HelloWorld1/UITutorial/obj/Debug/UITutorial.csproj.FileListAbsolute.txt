@@ -1,0 +1,15 @@
+D:\study\WPF\HelloWorld1\UITutorial\bin\Debug\UITutorial.exe.config
+D:\study\WPF\HelloWorld1\UITutorial\bin\Debug\UITutorial.exe
+D:\study\WPF\HelloWorld1\UITutorial\bin\Debug\UITutorial.pdb
+D:\study\WPF\HelloWorld1\UITutorial\obj\Debug\UITutorial.csprojResolveAssemblyReference.cache
+D:\study\WPF\HelloWorld1\UITutorial\obj\Debug\MainWindow.g.cs
+D:\study\WPF\HelloWorld1\UITutorial\obj\Debug\App.g.cs
+D:\study\WPF\HelloWorld1\UITutorial\obj\Debug\UITutorial_MarkupCompile.cache
+D:\study\WPF\HelloWorld1\UITutorial\obj\Debug\UITutorial_MarkupCompile.lref
+D:\study\WPF\HelloWorld1\UITutorial\obj\Debug\MainWindow.baml
+D:\study\WPF\HelloWorld1\UITutorial\obj\Debug\UITutorial.g.resources
+D:\study\WPF\HelloWorld1\UITutorial\obj\Debug\UITutorial.Properties.Resources.resources
+D:\study\WPF\HelloWorld1\UITutorial\obj\Debug\UITutorial.csproj.GenerateResource.cache
+D:\study\WPF\HelloWorld1\UITutorial\obj\Debug\UITutorial.csproj.CoreCompileInputs.cache
+D:\study\WPF\HelloWorld1\UITutorial\obj\Debug\UITutorial.exe
+D:\study\WPF\HelloWorld1\UITutorial\obj\Debug\UITutorial.pdb

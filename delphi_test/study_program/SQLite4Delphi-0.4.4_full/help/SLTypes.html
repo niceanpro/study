@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="PasDoc 0.8.7">
+<TITLE>SLTypes</TITLE>
+<LINK rel="StyleSheet" href="SQLite4Delphi.css">
+</HEAD>
+<BODY bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor="e0e0e0">
+<TD><A href="AllUnits.html"><CENTER>Units</CENTER></A></TD>
+<TD><A href="ClassHierarchy.html"><CENTER>Class Hierarchy</CENTER></A></TD>
+<TD><A href="AllClasses.html"><CENTER>Classes, Interfaces and Objects</CENTER></A></TD>
+<TD><A href="AllTypes.html"><CENTER>Types</CENTER></A></TD>
+<TD><A href="AllVariables.html"><CENTER>Variables</CENTER></A></TD>
+<TD><A href="AllConstants.html"><CENTER>Constants</CENTER></A></TD>
+<TD><A href="AllFunctions.html"><CENTER>Functions and Procedures</CENTER></A></TD>
+<TD><A href="AllIdentifiers.html"><CENTER>Identifiers</CENTER></A></TD>
+<TD><A href="GVUses.html"><CENTER></CENTER></A></TD>
+<TD><A href="GVClasses.html"><CENTER></CENTER></A></TD>
+</TR>
+</TABLE>
+<H1>Unit SLTypes</H1>
+<H2>Description</H2>
+The <CODE>SLTypes</CODE> - base constatns, types<H2>Types</H2>
+<TABLE cellspacing=2 cellpadding=4 width=100%><TR bgcolor="#e0e0e0"><TH>Name</TH><TH>Description</TH></TR>
+<TR bgcolor=#efefef valign=top><TD><A name="ESQLiteError"></A>ESQLiteError<CODE> = Exception;</CODE></TD>
+<TD width=100%>Exception class<P>All exceptions of SQLite are called with this class.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="PPChar"></A>PPChar<CODE> = ^PChar;</CODE></TD>
+<TD>for D5 copatibility</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="TPCharArray"></A>TPCharArray<CODE> = array [0 .. MaxInt div 16 - 1] of PChar;</CODE></TD>
+<TD>for D5 copatibility</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="PPCharArray"></A>PPCharArray<CODE> = ^<A href="SLTypes.html#TPCharArray">TPCharArray</A>;</CODE></TD>
+<TD>for D5 copatibility</TD>
+</TR>
+</TABLE><H2>Constants</H2>
+<TABLE cellspacing=2 cellpadding=4 width=100%><TR bgcolor="#e0e0e0"><TH>Name</TH><TH>Description</TH></TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_OK"></A>SQLITE_OK<CODE>         =  0;</CODE></TD>
+<TD width=100%>Successful result.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_ERROR"></A>SQLITE_ERROR<CODE>      =  1;</CODE></TD>
+<TD>SQL error or missing database.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_INTERNAL"></A>SQLITE_INTERNAL<CODE>   =  2;</CODE></TD>
+<TD>An internal logic error in SQLite.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_PERM"></A>SQLITE_PERM<CODE>       =  3;</CODE></TD>
+<TD>Access permission denied.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_ABORT"></A>SQLITE_ABORT<CODE>      =  4;</CODE></TD>
+<TD>Callback routine requested an abort.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_BUSY"></A>SQLITE_BUSY<CODE>       =  5;</CODE></TD>
+<TD>The database file is locked.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_LOCKED"></A>SQLITE_LOCKED<CODE>     =  6;</CODE></TD>
+<TD>A table in the database is locked.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_NOMEM"></A>SQLITE_NOMEM<CODE>      =  7;</CODE></TD>
+<TD>A malloc() failed.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_READONLY"></A>SQLITE_READONLY<CODE>   =  8;</CODE></TD>
+<TD>Attempt to write a readonly database.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_INTERRUPT"></A>SQLITE_INTERRUPT<CODE>  =  9;</CODE></TD>
+<TD>Operation terminated by sqlite_interrupt().</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_IOERR"></A>SQLITE_IOERR<CODE>      = 10;</CODE></TD>
+<TD>Some kind of disk I/O error occurred.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_CORRUPT"></A>SQLITE_CORRUPT<CODE>    = 11;</CODE></TD>
+<TD>The database disk image is malformed.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_NOTFOUND"></A>SQLITE_NOTFOUND<CODE>   = 12;</CODE></TD>
+<TD>(Internal Only) Table or record not found.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_FULL"></A>SQLITE_FULL<CODE>       = 13;</CODE></TD>
+<TD>Insertion failed because database is full.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_CANTOPEN"></A>SQLITE_CANTOPEN<CODE>   = 14;</CODE></TD>
+<TD>Unable to open the database file.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_PROTOCOL"></A>SQLITE_PROTOCOL<CODE>   = 15;</CODE></TD>
+<TD>Database lock protocol error.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_EMPTY"></A>SQLITE_EMPTY<CODE>      = 16;</CODE></TD>
+<TD>(Internal Only) Database table is empty.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_SCHEMA"></A>SQLITE_SCHEMA<CODE>     = 17;</CODE></TD>
+<TD>The database schema changed.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_TOOBIG"></A>SQLITE_TOOBIG<CODE>     = 18;</CODE></TD>
+<TD>Too much data for one row of a table.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_CONSTRAINT"></A>SQLITE_CONSTRAINT<CODE> = 19;</CODE></TD>
+<TD>Abort due to contraint violation.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_MISMATCH"></A>SQLITE_MISMATCH<CODE>   = 20;</CODE></TD>
+<TD>Data type mismatch.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_ROW"></A>SQLITE_ROW<CODE>        = 100;</CODE></TD>
+<TD>sqlite_step() has another row ready</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_DONE"></A>SQLITE_DONE<CODE>       = 101;</CODE></TD>
+<TD>sqlite_step() has finished executing</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITEDLL"></A>SQLITEDLL<CODE>: PChar  = 'libsqlite.so';</CODE></TD>
+<TD>Name of DLL with engine<P>You have to put it in the search path.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="COMPONENT_TAB_NAME"></A>COMPONENT_TAB_NAME<CODE> = 'Data Access';</CODE></TD>
+<TD>used for registration components in IDE.</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_NUMERIC"></A>SQLITE_NUMERIC<CODE>     = -1;</CODE></TD>
+<TD>Numeric result of user function</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="SQLITE_TEXT"></A>SQLITE_TEXT<CODE>        = -2;</CODE></TD>
+<TD>Text result of user function</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="CRLF"></A>CRLF<CODE> = #13 + #10;</CODE></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="CR"></A>CR<CODE>   = #13;</CODE></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="LF"></A>LF<CODE>   = #10;</CODE></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="TAB"></A>TAB<CODE>  = #9;</CODE></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="NULL_TERMINATOR"></A>NULL_TERMINATOR<CODE> = #0;</CODE></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="LOOKUP_OPTIONS"></A>LOOKUP_OPTIONS<CODE>: TLocateOptions = [loCaseInsensitive];</CODE></TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE><H2>Variables</H2>
+<TABLE cellspacing=2 cellpadding=4 width=100%><TR bgcolor="#e0e0e0"><TH>Name</TH><TH>Description</TH></TR>
+<TR bgcolor=#efefef valign=top><TD><A name="__Alloc_count"></A>__Alloc_count<CODE>: Integer;</CODE></TD>
+<TD width=100%>&nbsp;</TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><A name="__Realloc_count"></A>__Realloc_count<CODE>: Integer;</CODE></TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE><H2>Author</H2>
+<P>Michal Zaborowski <<A href="mailto:michal.zaborowski@wp.pl">michal.zaborowski@wp.pl</A>></P>
+<HR noshade size=1><EM>Generated by <A href="http://pasdoc.sourceforge.net/">PasDoc 0.8.7</A> on N 16- lis 2003 16:05:18</EM>
+</BODY>
+</HTML>

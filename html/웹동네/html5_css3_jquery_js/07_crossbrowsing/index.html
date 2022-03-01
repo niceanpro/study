@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>07 폴라로이드 사진 갤러리</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="css/common.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            var overDeg = [];
+
+            $(document).ready(function() {
+                setItems();
+                rotateItems();
+                alignItems();
+            });
+            function setItems() {
+                // 마우스 오버 효과
+                $('.item').mouseover(function() {
+                    var targetRotate = "rotate(" + 0 + "deg)";
+                    $(this).css("-webkit-transform", targetRotate);
+                    $(this).css("transform", targetRotate);
+                    $(this).css("-moz-transform", targetRotate);
+                    $(this).css("-o-transform", targetRotate);
+                    $(this).css("-ms-transform", targetRotate);
+                });
+                // 마우스 아웃 효과
+                $('.item').mouseout(function() {
+                    var targetRotate = overDeg[$('.item').index($(this))];
+                    $(this).css("-webkit-transform", targetRotate);
+                    $(this).css("transform", targetRotate);
+                    $(this).css("-moz-transform", targetRotate);
+                    $(this).css("-o-transform", targetRotate);
+                    $(this).css("-ms-transform", targetRotate);
+                });
+            }
+
+            function rotateItems() {
+                // 전체 아이템 갯수
+                var max = $('.item').length;
+
+                // 아이템별로 셋팅
+                for ( i = 0; i < max; i++) {
+                    var sel = '.item:eq(' + i + ')';
+
+                    // 아이템의 랜덤한 각도 계산
+                    var targetRandom = (Math.random() * 90) - 45;
+                    var targetRotate = "rotate(" + targetRandom + "deg)";
+
+                    $(sel).css("-webkit-transform", targetRotate);
+                    $(sel).css("transform", targetRotate);
+                    $(sel).css("-moz-transform", targetRotate);
+                    $(sel).css("-o-transform", targetRotate);
+                    $(sel).css("-ms-transform", targetRotate);
+
+                    overDeg[i] = targetRotate;
+                }
+            }
+
+            function alignItems() {
+                // 전체 아이템 갯수
+                var max = $('.item').length;
+
+                // 위치 정렬을 위한 카운터 변수
+                var topCount = 0;
+                var leftCount = 0;
+
+                // 아이템별로 셋팅
+                for ( i = 0; i < max; i++) {
+                    var sel = '.item:eq(' + i + ')';
+
+                    // 각 아이템의 가로,세로 위치 계산
+                    var targetLeft = leftCount * 270;
+                    var targetTop = topCount * 350;
+
+                    // 아이템 애니메이션
+                    // 1. 위치 이동 애니메이션
+                    $(sel).delay((i + 1) * 100).animate({
+                        "left" : targetLeft,
+                        "top" : targetTop
+                    }, 1000);
+                    // 2. 카드 각도 설정 (CSS의 transition 속성에 의해 애니메이션이 실행된다)
+
+                    // 위치 정렬을 위해 카운터 변수 계산
+                    if ((i + 1) % 4 == 0) {
+                        leftCount = 0;
+                        topCount++;
+                    } else {
+                        leftCount++;
+                    }
+                }
+            }
+        </script>
+    </head>
+<body>
+    <div class="polaroidContainer">
+        <ul>
+            <li>
+                <div class="item">
+                    <img src="image/image01.jpg" alt="이미지1">
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <img src="image/image02.jpg" alt="이미지2">
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <img src="image/image03.jpg" alt="이미지3">
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <img src="image/image04.jpg" alt="이미지4">
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <img src="image/image05.jpg" alt="이미지5">
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <img src="image/image06.jpg" alt="이미지6">
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <img src="image/image07.jpg" alt="이미지7">
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <img src="image/image08.jpg" alt="이미지8">
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+.view {
+	position:relative; top:50px; left:200px;
+	width:400px; height:300px; background:#666;
+	-webkit-perspective: 600px;
+}
+.view .container {
+	-webkit-transform-style: preserve-3d; -webkit-transition:all 0.2s;
+	-webkit-transform-origin: left center;
+}
+.view .c1 {}
+.view .c2 {-webkit-transform: translate3d(100px,0,0);}
+.view .c3 {-webkit-transform: translate3d(100px,0,0);}
+.view .c4 {-webkit-transform: translate3d(100px,0,0);}
+
+.view .shadow {
+	width:100px; height:300px; position:absolute; z-index:1; opacity:0;
+	-webkit-transition:all 0.2s;
+}
+.view .s1 {
+	background:-webkit-linear-gradient(left, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3))
+}
+.view .s2 {
+	background:-webkit-linear-gradient(right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2))
+}
+.view .s3 {
+	background:-webkit-linear-gradient(left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0))
+}
+.view .s4 {
+	background:-webkit-linear-gradient(left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0))
+}
+
+.view .piece {
+	width:100px; height:300px; position:absolute;
+	background:url(../img/picture.png) no-repeat;
+}
+.view .p2 {background-position:-100px 0}
+.view .p3 {background-position:-200px 0}
+.view .p4 {background-position:-300px 0}
+
+
+.view:hover .c1 {
+	-webkit-transform: rotate3d(0, 1, 0, -50deg);
+}
+.view:hover .c2 {
+	-webkit-transform: translate3d(99px,0,0) rotate3d(0, 1, 0, 100deg);
+}
+.view:hover .c3 {
+	-webkit-transform: translate3d(99px,0,0) rotate3d(0, 1, 0, -100deg);
+}
+.view:hover .c4 {
+	-webkit-transform: translate3d(99px,0,0) rotate3d(0, 1, 0, 100deg);
+}
+.view:hover .shadow {
+	opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="view">
+	<div class="container c1">
+		<span class="shadow s1"></span>
+		<div class="piece p1">
+			
+			<div class="container c2">
+				<span class="shadow s2"></span>
+				<div class="piece p2">
+					
+					<div class="container c3">
+						<span class="shadow s3"></span>
+						<div class="piece p3">
+							
+							<div class="container c4">
+								<span class="shadow s4"></span>
+								<div class="piece p4">
+									
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

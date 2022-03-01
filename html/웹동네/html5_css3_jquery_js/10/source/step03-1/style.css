@@ -1,0 +1,62 @@
+﻿
+body{ background-image: url( ../images/bg_pattern.gif ) }
+
+#rouletteView{
+    margin                 : 40px auto;
+    position               : relative;
+    background             : white;
+    width                  : 520px;
+    height                 : 520px;
+    border-radius          : 50%;
+    border                 : 5px solid white;
+}
+
+
+#image-panel {
+    width                  : 100%;
+    height                 : 100%;
+    position               : absolute;
+    -webkit-transition     : -webkit-transform 0.5s ease-in-out;
+}
+
+#image-panel img{
+    position                   : absolute;
+    padding                    : 5px;
+    margin-top                 : -50px;
+    left                       : 50%;
+    margin-left                : -155px;
+    -webkit-transform-origin   : 50% 100%;
+    -webkit-mask-box-image     : url( ../images/mask.svg );
+}
+
+#image-panel img:nth-child(2)   { -webkit-transform:rotate(60deg); }
+#image-panel img:nth-child(3)   { -webkit-transform:rotate(120deg); }
+#image-panel img:nth-child(4)   { -webkit-transform:rotate(180deg); }
+#image-panel img:nth-child(5)   { -webkit-transform:rotate(240deg); }
+#image-panel img:nth-child(6)   { -webkit-transform:rotate(300deg); }
+
+/*
+svg패널 스타일
+*/
+#svg-panel{
+    position               : absolute;  
+}
+#svg-panel path:hover {
+    cursor                 : pointer;
+}
+            
+#select-image-panel{ 
+    position               : absolute;
+    background-image       : url( ../images/pic1.png );
+    background-position    : center;
+    top                    : 50%;
+    left                   : 50%;
+    margin-left            : -160px;
+    margin-top             : -160px;
+    width                  : 300px;
+    height                 : 300px;
+    border-radius          : 50%;
+    border                 : 10px solid white;
+    -webkit-transition     : background-image 0.5s;
+}
+

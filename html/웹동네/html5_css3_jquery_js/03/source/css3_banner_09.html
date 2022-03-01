@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS3 Banner</title>
+        <style type="text/css">
+            /*
+             1단계 - html 구조 잡기
+             2단계 - CSS 초기화하기
+             3단계 - 배너 컨테이너 크기 잡아주기
+             4단계 - 배너 이미지 위치 정렬시키기
+             5단계 - 각각의 선택된 버튼 활성화 상태 표현하기
+             6단계 - 버튼 모양 만들기
+             7단계 - 각각의 선택된 버튼 활성화 상태 표현하기
+             8단계 - 라디오버튼 감추기, label z-index 추가
+             9단계 - 선택된 버튼에 해당하는 이미지 보이게하기
+             */
+
+            /* CSS 초기화 */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            img {
+                border: 0;
+            }
+            ol, ul {
+                list-style: none;
+            }
+            body {
+                background: #eee;
+                font-size: 12px;
+                font-family: 돋움;
+            }
+
+            /* 배너 컨테이너 크기잡기*/
+            section.container {
+                position: relative;
+                width: 300px;
+                height: 100px;
+                top: 100px;
+                margin: 0 auto;
+                border: 10px solid #fff;
+                box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            }
+            /* 배너 이미지 마스크 영역*/
+            section ul.banner_mask {
+                overflow: hidden;
+                position: absolute;
+                width: 300px;
+                height: 100px;
+            }
+            /*이미지 초기위치 잡기*/
+            section ul.banner_mask li {
+                position: absolute;
+                top: 0px;
+                left: 300px;
+            }
+            /*라벨 버튼*/
+            section.container label {
+                float: left;
+                position: relative;
+                left: 210px;
+                top: 5px;
+                width: 16px;
+                height: 16px;
+                margin-left: 5px;
+                background: #e0e0e0;
+                line-height: 16px;
+                text-align: center;
+                cursor: pointer;
+                z-index: 1000;
+            }
+
+            /*선택된 라벨 버튼 활성화 적용*/
+            section.container input.banner_input1:checked ~ label.label_btn1,
+            section.container input.banner_input2:checked ~ label.label_btn2,
+            section.container input.banner_input3:checked ~ label.label_btn3,
+            section.container input.banner_input4:checked ~
+            label.label_btn4 {
+                background: #0088cc;
+                color: white;
+            }
+
+            /* 라디오 버튼 숨기기*/
+            section.container input {
+                display: none;
+            }
+
+            /* 선택된 배너 보이게하기*/
+            section.container input.banner_input1:checked ~ .banner_mask li:nth-child(1),
+            section.container input.banner_input2:checked ~ .banner_mask li:nth-child(2),
+            section.container input.banner_input3:checked ~ .banner_mask li:nth-child(3),
+            section.container input.banner_input4:checked ~
+            .banner_mask li:nth-child(4) {
+                -webkit-transition: left 0.5s ease-in-out;
+                left: 0px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <section class="container">
+            <input id="select1" name="radioBanner" type="radio" class="banner_input1" />
+            <label for="select1" class="label_btn1">1</label>
+            <input id="select2" name="radioBanner" type="radio" class="banner_input2" />
+            <label for="select2" class="label_btn2">2</label>
+            <input id="select3" name="radioBanner" type="radio" class="banner_input3" />
+            <label for="select3" class="label_btn3">3</label>
+            <input id="select4" name="radioBanner" type="radio" class="banner_input4" />
+            <label for="select4" class="label_btn4">4</label>
+            <ul class="banner_mask">
+                <li>
+                    <a href="#none"><img src="./images/1.jpg" alt="첫번째 배너이미지" /></a>
+                </li>
+                <li>
+                    <a href="#none"><img src="./images/2.jpg" alt="두번째 배너이미지" /></a>
+                </li>
+                <li>
+                    <a href="#none"><img src="./images/3.jpg" alt="세번재 배너이미지" /></a>
+                </li>
+                <li>
+                    <a href="#none"><img src="./images/4.jpg" alt="네번째 배너이미지" /></a>
+                </li>
+            </ul>
+        </section>
+    </body>
+</html>

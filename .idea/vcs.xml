@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/JSP_2.2/code/gs-spring-boot" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git/anproD/meis" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git/meis" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vue/lecture-vue" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vue/vue-news/vue-news" vcs="Git" />
+  </component>
+</project>

@@ -1,0 +1,169 @@
+{
+    // "editor.fontFamily": "'D2Coding ligature'", // "Courier New",
+    // "editor.fontLigatures": true,
+    "editor.wordWrap": "off",
+    "editor.suggestSelection": "first",
+    "editor.minimap.enabled": false,
+    "editor.parameterHints.cycle": true,
+    "editor.smoothScrolling": true,
+    "editor.formatOnPaste": true,
+    "editor.foldingStrategy": "indentation",
+    "editor.colorDecorators": true,
+    "editor.copyWithSyntaxHighlighting": true,
+    "editor.fastScrollSensitivity": 1,
+    "editor.multiCursorModifier": "alt",
+    "editor.lineNumbers": "relative",
+    "eslint.autoFixOnSave": true,
+    "files.autoSave": "afterDelay",
+    "html.format.indentInnerHtml": true,
+    "java.saveActions.organizeImports": true,
+    "java.codeGeneration.generateComments": true,
+    "java.codeGeneration.hashCodeEquals.useInstanceof": true,
+    "search.quickOpen.includeSymbols": true,
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "vim.camelCaseMotion.enable": true,
+    "vim.highlightedyank.enable": true,
+    "vim.hlsearch": true,
+    "vim.neovimPath": "C:\\Program files\\Neovim\\bin\\nvim.exe",
+    "vim.searchHighlightColor": "red",
+    "vim.sneak": true,
+    "vim.sneakUseIgnorecaseAndSmartcase": true,
+    "vim.useSystemClipboard": true,
+    "vim.visualstar": true,
+    "vim.overrideCopy": true,
+    "vim.highlightedyank.color": "rgba(124, 247, 42, 0.7)",
+    "vim.highlightedyank.duration": 500,
+    "vim.leader": "\\",
+    "vim.easymotion": true,
+    "vim.foldfix": true,
+    "vim.incsearch": true,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.view.alwaysShowHeaderActions": true,
+    "workbench.activityBar.visible": true,
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "workbench.tree.indent": 8,
+    "window.zoomLevel": 0,
+    // better align
+    "alignment.operatorPadding": "right", // "left" | "right"
+    "alignment.indentBase": "firstline", // "firstline" | "activeline" | "dontchange"
+    "alignment.surroundSpace": {
+        "colon": [
+            1,
+            1
+        ], // The first number specify how much space to add to the left, can be negative.
+        // The second number is how much space to the right, can be negative.
+        "assignment": [
+            1,
+            1
+        ], // The same as above.
+        "arrow": [
+            1,
+            1
+        ], // The same as above.
+        "comment": 2 // Special how much space to add between the trailing comment and the code.
+        // If this value is negative, it means don't align the trailing comment.
+    },
+    // vim key binding
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "<C-h>"
+            ],
+            "after": [
+                "<Left>"
+            ]
+        },
+        {
+            "before": [
+                "<C-j>"
+            ],
+            "after": [
+                "<Down>"
+            ]
+        },
+        {
+            "before": [
+                "<C-k>"
+            ],
+            "after": [
+                "<Up>"
+            ]
+        },
+        {
+            "before": [
+                "<C-l>"
+            ],
+            "after": [
+                "<Right>"
+            ]
+        },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        //  tab간의 생성된 순서대로 이동
+        {
+            "before": [
+                "<C-h>"
+            ],
+            "after": [
+                "gT"
+            ]
+            // "commands": [
+            //     ":tabn 1"
+            // ]
+        },
+        {
+            "before": [
+                "<C-l>"
+            ],
+            "commands": [
+                ":tabp 1"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // {
+        //     "before": [
+        //         ">"
+        //     ],
+        //     "commands": [
+        //         "editor.action.indentLines"
+        //     ]
+        // },
+        // {
+        //     "before": [
+        //         "<"
+        //     ],
+        //     "commands": [
+        //         "editor.action.outdentLines"
+        //     ]
+        // },
+        {
+            "before": [
+                "<leader>",
+                "v",
+                "i",
+                "m"
+            ],
+            "commands": [
+                {
+                    "command": "git.clone",
+                    "args": [
+                        "https://github.com/VSCodeVim/Vim.git"
+                    ]
+                }
+            ]
+        },
+        {
+            "before": [
+                "p",
+            ],
+            "after": [
+                "p",
+                "g",
+                "v",
+                "y"
+            ]
+        }
+    ],
+}

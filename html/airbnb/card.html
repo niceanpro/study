@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        font-family: 'Gril Sans', 'Grill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      .card__box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+
+      .card {
+        border: 1px solid black;
+      }
+
+      .card__img1 {
+        background-image: url("http://a0.muscache.com/4ea/air/v2/pictures/8b7519ec-2c82-4c09-8233-fd4d2715bbf9.jpg?t=r:w375-h250-sfit,e:fjpg-c80");
+        height: 70px;
+        background-size: 100% 100%;
+      }
+      .card__img2 {
+        background-image: url("https://a0.muscache.com/4ea/air/v2/pictures/a77ee672-e790-4362-8cc5-52bec1371ece.jpg?t=r:w375-h250-sfit,e:fjpg-c80");
+        height: 70px;
+        background-size: 100% 100%;
+      }
+      .card__img3 {
+        background-image: url("https://a0.muscache.com/4ea/air/v2/pictures/38f2bfd6-1f4d-46d7-babf-61657deef302.jpg?t=r:w375-h250-sfit,e:fjpg-c80");
+        height: 70px;
+        background-size: 100% 100%;
+      }
+      .card__img4 {
+        background-image: url("https://a0.muscache.com/4ea/air/v2/pictures/da2d8e97-90b7-409f-94ac-5ab0327c289b.jpg?t=r:w375-h250-sfit,e:fjpg-c80");
+        height: 70px;
+        background-size: 100% 100%;
+      }
+
+      .card { 
+          display: grid;
+          grid-template-columns: 2fr 3fr;
+      }
+
+      .card__title {
+          display: grid;
+          align-items: center;
+          font-weight: 600;
+          margin: 0 0 0 10px
+      }
+
+      .title {
+        font-size: 25px;
+        font-weight: 800;
+        color: rgb(68, 66, 66);
+        margin: 0 0 13px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="title">에어비엔비 둘러보기</div>
+      <div class="card__box">
+        <div class="card">
+          <div class="card__img1">
+            <div class="card__title">
+              <span>숙소 및 부티크 호텔</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img2">
+            <div class="card__title">
+              <span>트립</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img3">
+            <div class="card__title">
+              <span>어드벤처</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img4">
+            <div class="card__title">
+              <span>레스토랑</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

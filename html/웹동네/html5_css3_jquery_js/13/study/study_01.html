@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>캔버스 사용하기 위한 준비</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script>
+
+	$( document ).ready( function( event) {
+		var canvas = $("#canvas" )[ 0 ];
+		var context = canvas.getContext( "2d" );
+		alert( "canvas : " + canvas + "\n" + "context : " + context );
+    });
+    
+</script>
+
+<style type="text/css">
+
+*{ margin:0; padding:0; }
+
+</style>
+</head>
+<body>
+	<div>
+		<canvas width="250" height="250" id="canvas"></canvas>
+    </div>
+</body>
+</html>

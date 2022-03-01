@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+  <script type="text/javascript" src="index1.js"></script>
+
+
+    <script>
+      const load = () => {
+        console.log("load event detected!");
+      } 
+      window.onload = load; 
+
+
+      window.onpopstate = function(event) {
+  alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
+  console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+};
+
+
+history.pushState({page: 1}, "title 1", "?page=1");
+history.pushState({page: 2}, "title 2", "?page=2");
+//history.replaceState({page: 3}, "title 3", "?page=3");
+//history.back(); // alerts "loca
+tion: http://example.com/example.html?page=1, state: {"page":1}"
+//history.back(); // alerts "location: http://example.com/example.html, state: null
+
+
+
+    </script>
+
+
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+  </div>
+
+
+  <div id="app-2">
+    <span v-bind:title="message">
+      내 위에 잠시 마우스를 올리면 동적으로 바인딩 된 title을 볼 수 있습니다!
+    </span>
+  </div>
+
+
+  <div id="app-3">
+  <p v-if="seen">이제 나를 볼 수 있어요</p>
+  </div>
+
+
+  <div id="app-4">
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
+  </div>
+
+
+  <div id="app-5">
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">메시지 뒤집기</button>
+  </div>
+
+
+
+  <div id="app-6">
+    <p>{{ message }}</p>
+    <input v-model="message">
+  </div>
+
+
+  <script type="text/javascript" src="index.js"></script>
+
+
+</body>
+</html>

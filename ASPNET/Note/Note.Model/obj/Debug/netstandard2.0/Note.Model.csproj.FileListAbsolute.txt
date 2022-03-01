@@ -1,0 +1,9 @@
+D:\study\ASPNET\Note\Note.Model\bin\Debug\netstandard2.0\Note.Model.deps.json
+D:\study\ASPNET\Note\Note.Model\bin\Debug\netstandard2.0\Note.Model.dll
+D:\study\ASPNET\Note\Note.Model\bin\Debug\netstandard2.0\Note.Model.pdb
+D:\study\ASPNET\Note\Note.Model\obj\Debug\netstandard2.0\Note.Model.csprojResolveAssemblyReference.cache
+D:\study\ASPNET\Note\Note.Model\obj\Debug\netstandard2.0\Note.Model.csproj.CoreCompileInputs.cache
+D:\study\ASPNET\Note\Note.Model\obj\Debug\netstandard2.0\Note.Model.AssemblyInfoInputs.cache
+D:\study\ASPNET\Note\Note.Model\obj\Debug\netstandard2.0\Note.Model.AssemblyInfo.cs
+D:\study\ASPNET\Note\Note.Model\obj\Debug\netstandard2.0\Note.Model.dll
+D:\study\ASPNET\Note\Note.Model\obj\Debug\netstandard2.0\Note.Model.pdb

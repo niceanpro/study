@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-web-app1",
+  "version": "0.0.0",
+  "description": "NodejsWebApp1",
+  "main": "app.js",
+  "author": "anpro",
+  "devDependencies": {
+    "@types/node": "^6.0.87",
+    "lite-server": "^2.3.0"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "license": "ISC"
+}

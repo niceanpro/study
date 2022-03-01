@@ -1,0 +1,4 @@
+﻿  man.cpp
+d:\study\vc\algorithm\path\path\path\man.cpp(32): warning C4018: '<': signed/unsigned mismatch
+  path.vcxproj -> D:\study\vc\algorithm\path\path\Debug\path.exe
+  path.vcxproj -> D:\study\vc\algorithm\path\path\Debug\path.pdb (Partial PDB)

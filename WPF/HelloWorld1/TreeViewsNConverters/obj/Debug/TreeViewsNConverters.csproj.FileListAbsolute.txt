@@ -1,0 +1,15 @@
+D:\study\WPF\HelloWorld1\TreeViewsNConverters\bin\Debug\TreeViewsNConverters.exe.config
+D:\study\WPF\HelloWorld1\TreeViewsNConverters\bin\Debug\TreeViewsNConverters.exe
+D:\study\WPF\HelloWorld1\TreeViewsNConverters\bin\Debug\TreeViewsNConverters.pdb
+D:\study\WPF\HelloWorld1\TreeViewsNConverters\obj\Debug\TreeViewsNConverters.csprojResolveAssemblyReference.cache
+D:\study\WPF\HelloWorld1\TreeViewsNConverters\obj\Debug\MainWindow.g.cs
+D:\study\WPF\HelloWorld1\TreeViewsNConverters\obj\Debug\App.g.cs
+D:\study\WPF\HelloWorld1\TreeViewsNConverters\obj\Debug\TreeViewsNConverters_MarkupCompile.cache
+D:\study\WPF\HelloWorld1\TreeViewsNConverters\obj\Debug\TreeViewsNConverters_MarkupCompile.lref
+D:\study\WPF\HelloWorld1\TreeViewsNConverters\obj\Debug\MainWindow.baml
+D:\study\WPF\HelloWorld1\TreeViewsNConverters\obj\Debug\TreeViewsNConverters.g.resources
+D:\study\WPF\HelloWorld1\TreeViewsNConverters\obj\Debug\TreeViewsNConverters.Properties.Resources.resources
+D:\study\WPF\HelloWorld1\TreeViewsNConverters\obj\Debug\TreeViewsNConverters.csproj.GenerateResource.cache
+D:\study\WPF\HelloWorld1\TreeViewsNConverters\obj\Debug\TreeViewsNConverters.csproj.CoreCompileInputs.cache
+D:\study\WPF\HelloWorld1\TreeViewsNConverters\obj\Debug\TreeViewsNConverters.exe
+D:\study\WPF\HelloWorld1\TreeViewsNConverters\obj\Debug\TreeViewsNConverters.pdb

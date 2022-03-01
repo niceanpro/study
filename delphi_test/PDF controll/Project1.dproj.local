@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.125,=C:\Users\changjun\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.046,E:\delphi_연습\PDF controll\Unit1.dfm=C:\Users\changjun\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.372,=C:\Users\changjun\Documents\RAD Studio\10.0\Imports\AcroPDFLib_TLB.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.046,E:\delphi_연습\PDF controll\Unit1.pas=C:\Users\changjun\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.295,=C:\Users\changjun\Documents\RAD Studio\10.0\Imports\DebenuPDFLibrary64Lite1012_TLB.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.281,E:\delphi_연습\PDF controll\Project1.dproj=C:\Users\changjun\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

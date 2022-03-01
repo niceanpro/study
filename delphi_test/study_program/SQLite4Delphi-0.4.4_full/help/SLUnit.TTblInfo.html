@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="PasDoc 0.8.7">
+<TITLE>SLUnit: Class TTblInfo</TITLE>
+<LINK rel="StyleSheet" href="Help Project.css">
+</HEAD>
+<BODY bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor="e0e0e0">
+<TD><A href="AllUnits.html"><CENTER>Units</CENTER></A></TD>
+<TD><A href="ClassHierarchy.html"><CENTER>Class Hierarchy</CENTER></A></TD>
+<TD><A href="AllClasses.html"><CENTER>Classes, Interfaces and Objects</CENTER></A></TD>
+<TD><A href="AllTypes.html"><CENTER>Types</CENTER></A></TD>
+<TD><A href="AllVariables.html"><CENTER>Variables</CENTER></A></TD>
+<TD><A href="AllConstants.html"><CENTER>Constants</CENTER></A></TD>
+<TD><A href="AllFunctions.html"><CENTER>Functions and Procedures</CENTER></A></TD>
+<TD><A href="AllIdentifiers.html"><CENTER>Identifiers</CENTER></A></TD>
+<TD><A href="GVUses.html"><CENTER></CENTER></A></TD>
+<TD><A href="GVClasses.html"><CENTER></CENTER></A></TD>
+</TR>
+</TABLE>
+<A name="TTblInfo"></A><H1>Class TTblInfo</H1>
+<H2>Unit</H2>
+<A href="SLUnit.html">SLUnit</A><BR><H2>Declaration</H2>
+<P><CODE>type TTblInfo = class()</CODE></P><H2>Description</H2>
+table information.<P>Use: <br>       <CODE><A href="SLUnit.TSLDataBase.html#TableCount">TableCount</A></CODE> to get number of tables. <br>       <CODE><A href="SLUnit.TSLDataBase.html#Table">Table</A></CODE> to get a table from defined by index.<H2>Methods</H2>
+<H3>Overview</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><CODE>constructor <A href="SLUnit.TTblInfo.html#Create"><B>Create</B></A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>destructor <A href="SLUnit.TTblInfo.html#Destroy"><B>Destroy</B></A>; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLUnit.TTblInfo.html#GetDefaultsSQL"><B>GetDefaultsSQL</B></A> (aStrs: TStringList): String;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLUnit.TTblInfo.html#GetIndexInfo"><B>GetIndexInfo</B></A> (const anIdxName: String): <A href="SLUnit.TIdxInfo.html">TIdxInfo</A>;</CODE></TD>
+</TR>
+</TABLE>
+<H3>Description</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Create"></A><CODE>constructor <B>Create</B>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Destroy"></A><CODE>destructor <B>Destroy</B>; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="GetDefaultsSQL"></A><CODE>function <B>GetDefaultsSQL</B> (aStrs: TStringList): String;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="GetIndexInfo"></A><CODE>function <B>GetIndexInfo</B> (const anIdxName: String): <A href="SLUnit.TIdxInfo.html">TIdxInfo</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<H2>Properties</H2>
+<H3>Overview</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><CODE>property <A href="SLUnit.TTblInfo.html#Field"><B>Field</B></A>[const Idx: Integer]: <A href="SLUnit.TTblField.html">TTblField</A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLUnit.TTblInfo.html#FieldCount"><B>FieldCount</B></A>: Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLUnit.TTblInfo.html#IdName"><B>IdName</B></A>: String;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLUnit.TTblInfo.html#Index"><B>Index</B></A>[const Idx: Integer]: <A href="SLUnit.TIdxInfo.html">TIdxInfo</A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLUnit.TTblInfo.html#IndexCount"><B>IndexCount</B></A>: Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLUnit.TTblInfo.html#RootPage"><B>RootPage</B></A>: Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLUnit.TTblInfo.html#SQL"><B>SQL</B></A>: String;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLUnit.TTblInfo.html#TblName"><B>TblName</B></A>: String;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>property <A href="SLUnit.TTblInfo.html#Typ"><B>Typ</B></A>: String;</CODE></TD>
+</TR>
+</TABLE>
+<H3>Description</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Field"></A><CODE>property <B>Field</B>[const Idx: Integer]: <A href="SLUnit.TTblField.html">TTblField</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>Access to field defined by it's position.           See also <CODE><A href="SLUnit.TTblField.html">TTblField</A></CODE>.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="FieldCount"></A><CODE>property <B>FieldCount</B>: Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>Number of fields.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="IdName"></A><CODE>property <B>IdName</B>: String;</CODE></TD>
+</TR>
+</TABLE>
+<P>Table identifier, mostly the same as TblName.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Index"></A><CODE>property <B>Index</B>[const Idx: Integer]: <A href="SLUnit.TIdxInfo.html">TIdxInfo</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>Access to index defined by it's position.           See also <CODE><A href="SLUnit.TIdxInfo.html">TIdxInfo</A></CODE>.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="IndexCount"></A><CODE>property <B>IndexCount</B>: Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>Number of indices.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="RootPage"></A><CODE>property <B>RootPage</B>: Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>First page in file with data of the table.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="SQL"></A><CODE>property <B>SQL</B>: String;</CODE></TD>
+</TR>
+</TABLE>
+<P>SQL string (DDL) that was used to create table.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="TblName"></A><CODE>property <B>TblName</B>: String;</CODE></TD>
+</TR>
+</TABLE>
+<P>Table name.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Typ"></A><CODE>property <B>Typ</B>: String;</CODE></TD>
+</TR>
+</TABLE>
+<P>Type, can be table or view.</P>
+<HR noshade size=1><EM>Generated by <A href="http://pasdoc.sourceforge.net/">PasDoc 0.8.7</A> on So 11- paü 2003 15:29:16</EM>
+</BODY>
+</HTML>

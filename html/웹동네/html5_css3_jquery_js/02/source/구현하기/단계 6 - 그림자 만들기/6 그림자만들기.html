@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+
+/* a태그 마우스오버 */
+a,a:hover {
+	text-decoration: none;
+	}
+	
+/* 기본틀 */
+.btnAqua {
+	display: inline-block;
+	width: 176px;
+	position: relative;
+	padding: 15px 0;
+	height: 16px;
+	border-radius:16px;
+	-moz-border-radius: 16px;
+	-webkit-border-radius: 16px;	
+	background-color: #1a79db;
+	background-image: 
+		-webkit-linear-gradient(top, rgba(0,239,253,0)50%, rgba(0,239,253,.3)75%, rgba(0,239,253,0.8)98%, rgba(0,239,253,0.3)),
+		-webkit-linear-gradient(top, rgba(2,83,194,1), rgba(51,163,255,1));	
+	box-shadow:
+		0px 4px 3px -3px rgba(19,67,126,0.9),/* 1. 짙고 좁은 그림자.  -3px 안쪽으로 넣어준다. 투명도 90% */
+		0px 4px 8px 1px rgba(19,67,126,0.4);/* 2. 옅고 넓은 그림자.  투명도 40%  */
+	}
+
+
+/* 광택효과 */
+.btnAqua span {
+	position: absolute;/* 위치를 고정하기 위해 absolute로 지정 */
+	top: 1px;
+	left: 4px;
+	width: 168px;
+	height: 1px;/* 패딩으로 높이 값을 조절하므로 최소값지정 */
+	padding: 11px 0;/* padding으로 광택효과의 높이 값을 지정*/
+	border-radius: 13px;
+	-moz-border-radius: 13px;
+	-webkit-border-radius: 13px;
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.9), rgba(255,255,255,0.4)50%, rgba(255,255,255,0.05));
+	}
+	
+</style>
+</head>
+
+<body>
+
+<a class="btnAqua" href="#">
+	<span></span> 		
+</a>
+
+
+</body>
+</html>

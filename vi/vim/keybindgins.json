@@ -1,0 +1,5 @@
+// Place your key bindings in this file to override the defaults
+[
+    { "key": "ctrl+k ctrl+m",          "command": "workbench.action.editor.changeLanguageMode" },
+    { "key": "ctrl+alt+=",             "command": "wwm.aligncode",              "when": "editorTextFocus && !editorReadonly" }
+]

@@ -1,0 +1,215 @@
+unit UnitProBank;
+
+interface
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
+  Data.DBXMSSQL, Data.FMTBcd, Data.SqlExpr, Data.DB;
+const
+maxCnt = 10000;
+
+type
+    TRecord = record
+        check : Integer;
+        num : Integer;
+        rtype : String;
+        pattern : String;
+        engsnt : String;
+        korsnt : String;
+        book : String;
+        chapter : String;
+        qstcnt : Integer;
+        succnt : Integer;
+        exclude : Integer;
+        procedure Clear;
+        procedure UpdateDB(aissuc: Integer; const SQLQuery_pro: TSQLQuery);
+        procedure UpdateExceptDB(sel: Integer; const SQLQuery_pro: TSQLQuery);
+    end;
+
+    TBank = record
+        SQLQuery_pro: TSQLQuery;
+
+        typeCnt : Integer;  // 문제유형총갯수
+        typeStr : String;   // 문제유형문제
+
+        typeSql : String;
+        patternSql : String;
+        searchSql : String;
+        isexcludeSql : String;
+
+        totCnt : Integer;   // 출제문제총수
+        idxCnt : Integer;   // 진행Index
+        sucCnt : Integer;   // 진행성공갯수
+
+        questions : array of TRecord;
+        procedure Init(const aSQLQuery_pro: TSQLQuery);
+        procedure SetValue(cnt: Integer; aisexcludeSql, atypeSql, apatternSql, asearchSql : String);
+        procedure ReSet;
+        procedure Clear;
+        procedure UpdateDB(aissuc: Integer);
+        procedure UpdateExceptDB(sel: Integer);
+
+        function  OneQuestion : Integer;
+    end;
+
+
+implementation
+
+procedure TRecord.Clear;
+begin
+        check := 0;
+        num := 0;
+        rtype := '';
+        pattern := '';
+        engsnt := '';
+        korsnt := '';
+        book := '';
+        chapter := '';
+        qstcnt := 0;
+        succnt := 0;
+end;
+
+
+procedure TRecord.UpdateDB(aissuc: Integer; const SQLQuery_pro: TSQLQuery);
+var
+    tsuccnt, issuc : Integer;
+    sql : String;
+begin
+    issuc := aissuc;
+    tsuccnt := succnt;
+    if issuc = 1 then
+        Inc(tsuccnt);
+
+    sql := 'update study_master set qstcnt = ' + IntToStr(qstcnt+1);
+    sql := sql + ', succnt = ' + IntToStr(tsuccnt);
+    sql := sql + ' where num = ' + IntToStr(num);
+    SQLQuery_pro.Close;
+    SQLQuery_pro.SQL.Text := sql;
+    SQLQuery_pro.ExecSQL;
+    SQLQuery_pro.Close;
+end;
+
+
+procedure TRecord.UpdateExceptDB(sel: Integer; const SQLQuery_pro: TSQLQuery);
+var
+    sql : String;
+begin
+    sql := 'update study_master set exclude = ' + IntToStr(sel);
+    sql := sql + ' where num = ' + IntToStr(num);
+    SQLQuery_pro.Close;
+    SQLQuery_pro.SQL.Text := sql;
+    SQLQuery_pro.ExecSQL;
+    SQLQuery_pro.Close;
+end;
+
+procedure TBank.Init(const aSQLQuery_pro: TSQLQuery);
+begin
+    SQLQuery_pro := aSQLQuery_pro;
+end;
+
+procedure TBank.SetValue(cnt: Integer; aisexcludeSql, atypeSql, apatternSql, asearchSql: String);
+begin
+    typeCnt := cnt;
+    isexcludeSql := aisexcludeSql;
+    typeSql := atypeSql;
+    patternSql := apatternSql;
+    searchSql := asearchSql;
+end;
+
+procedure TBank.Clear;
+var
+    i: Integer;
+begin
+    totCnt := 0;
+    idxCnt := -1;
+    sucCnt := 0;
+
+    for i := 0 to Length(questions) - 1  do
+    begin
+        questions[i].Clear;
+    end;
+end;
+
+procedure TBank.ReSet;
+var
+    sql : String;
+    idx : Integer;
+    count : Integer;
+begin
+    // 자료 가져오고
+
+    if typeCnt > maxCnt then
+        typeCnt := maxCnt;
+
+    sql := 'select top ' + IntToStr(typeCnt) + ' * from ( ';
+    sql := sql + '( select *, (0) as ratio from study_master';
+    sql := sql + ' where qstcnt = 0 and type = ''' + typeStr;
+    sql := sql + ''' ) union all ';
+    sql := sql + '( select top ' + IntToStr(typeCnt);
+    sql := sql + ' *, (succnt*10000/qstcnt) as ratio';
+    sql := sql + ' from study_master where qstcnt != 0 and type = ''';
+    sql := sql + typeStr + ''') ) as b order by ratio';
+
+    SQLQuery_pro.Close;
+    SQLQuery_pro.SQL.Text := sql;
+    SQLQuery_pro.Open;
+
+    count := 0;
+    SQLQuery_pro.First;
+    while not SQLQuery_pro.Eof do
+    begin
+        Inc(count);
+        SQLQuery_pro.Next;
+    end;
+
+    SetLength(questions, count);
+    SQLQuery_pro.First;
+    Clear;
+    idx := 0;
+    while not SQLQuery_pro.Eof do
+    begin
+        questions[idx].check := 0;
+        questions[idx].num := SQLQuery_pro.FieldByName('num').AsInteger;
+        questions[idx].rtype := SQLQuery_pro.FieldByName('type').AsString;
+        questions[idx].pattern := SQLQuery_pro.FieldByName('pattern').AsString;
+        questions[idx].engsnt := SQLQuery_pro.FieldByName('engsnt').AsString;
+        questions[idx].korsnt := SQLQuery_pro.FieldByName('korsnt').AsString;
+        questions[idx].book := SQLQuery_pro.FieldByName('book').AsString;
+        questions[idx].chapter := SQLQuery_pro.FieldByName('chapter').AsString;
+        questions[idx].qstcnt := SQLQuery_pro.FieldByName('qstcnt').AsInteger;
+        questions[idx].succnt := SQLQuery_pro.FieldByName('succnt').AsInteger;
+        questions[idx].exclude := SQLQuery_pro.FieldByName('exclude').AsInteger;
+        Inc(idx);
+        SQLQuery_pro.Next;
+    end;
+    SQLQuery_pro.Close;
+
+    totCnt := idx;
+end;
+
+procedure TBank.UpdateDB(aissuc: Integer);
+begin
+    if aissuc = 1 then
+        Inc(sucCnt);
+
+    questions[idxCnt].UpdateDB(aissuc, SQLQuery_pro);
+end;
+
+
+procedure TBank.UpdateExceptDB(sel: Integer);
+begin
+    questions[idxCnt].UpdateExceptDB(sel, SQLQuery_pro);
+end;
+
+function TBank.OneQuestion : Integer;
+begin
+    if ( idxCnt + 1 < totCnt) then
+    begin
+        Inc(idxCnt);
+        Result := 1;
+    end
+    else
+    begin
+        Result := 0;
+    end;
+end;
+end.

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.020,=D:\delphi_test\test\ServerContainerUnit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.373,=D:\delphi_test\test\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.237,=D:\delphi_test\test\Unit1.pas</Transaction>
+    <Transaction>2015-06-23 05:19:43.423,=D:\delphi_test\test\Unit1.pas</Transaction>
+    <Transaction>2015-06-23 05:20:59.760,D:\delphi_test\test\MyTest\MenuTest\UMenuTest.pas=D:\delphi_test\test\Unit1.pas</Transaction>
+    <Transaction>2015-06-23 05:20:59.760,D:\delphi_test\test\MyTest\MenuTest\UMenuTest.dfm=D:\delphi_test\test\Unit1.dfm</Transaction>
+    <Transaction>2015-06-23 05:21:05.981,D:\delphi_test\test\MyTest\MenuTest\Project1.dproj=D:\delphi_test\test\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

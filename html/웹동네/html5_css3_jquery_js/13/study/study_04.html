@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>합성옵션 알아보기</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script>
+
+	$( document ).ready( function( event) {
+		var canvas = $("#canvas" )[ 0 ];
+		var context = canvas.getContext( "2d" );
+		
+		$( "#select" ).bind( "change", chnageItem );
+		render( "source-over" );
+		
+		function chnageItem( event ){
+			var type = event.target.value;
+			render( type );
+		}
+		
+		function render( type ){
+			canvas.width = canvas.width;
+			context.fillStyle = "red";
+			context.fillRect( 50, 50, 100, 100 );
+			context.globalCompositeOperation = type;
+			context.fillStyle = "blue";
+			context.fillRect( 100, 100, 100, 100 );
+		}
+    });
+    
+</script>
+
+<style type="text/css">
+
+*{ margin:0; padding:0; }
+
+</style>
+</head>
+<body>
+	<div>
+		<canvas width="250" height="250" id="canvas"></canvas>
+		<select id="select">
+			<option value="source-over">source-over</option>
+			<option value="source-in">source-in</option>
+			<option value="source-out">source-out</option>
+			<option value="source-atop">source-atop</option>
+			<option value="destination-over">destination-over</option>
+			<option value="destination-in">destination-in</option>
+			<option value="destination-out">destination-out</option>
+			<option value="destination-atop">destination-atop</option>
+			<option value="lighter">lighter</option>
+			<option value="darker">darker</option>
+			<option value="copy">copy</option>
+			<option value="xor">xor</option>
+		</select>
+    </div>
+</body>
+</html>

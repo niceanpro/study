@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+
+div {
+	margin:30px;	
+	}
+
+/* 예제 1 */
+.ex01{
+	width: 300px;
+	height: 150px;
+	background-color:; /* background-image에서 alpha 값을 주었으니 배경색을 넣는다면 투과되어 보이게 될 것입니다. 그러므로 넣지 않겠습니다. */
+	background-image:
+		-webkit-linear-gradient(top,/* 그라데이션 방향 지정 (top -> bottom 방향) */
+			rgb(255,255,0),
+			rgba(255,110,2,0.1)			
+		);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255,255,0)), to(rgba(255,110,2,0.1)));
+	background-image: -webkit-linear-gradient(top, rgb(255,255,0), rgba(255,110,2,0.1));
+	background-image:    -moz-linear-gradient(top, rgb(255,255,0), rgba(255,110,2,0.1));
+	background-image:     -ms-linear-gradient(top, rgb(255,255,0), rgba(255,110,2,0.1)); 
+	background-image:      -o-linear-gradient(top, rgb(255,255,0), rgba(255,110,2,0.1)); 
+	background-image:         linear-gradient(to bottom, rgb(255,255,0), rgba(255,110,2,0.1)); 
+	}
+
+
+/* 예제 2 */
+.ex02{	
+	width: 300px;
+	height: 150px;
+	background-color: #8cfbff;
+	background-image:
+		-webkit-linear-gradient(45deg,
+			hotpink 20%,/* 20%까지 hotpink, 21%부터 다음컬러시작 */
+			rgb(255,255,0) 60%,/* 60%까지 rgb(255,255,0), 61%부터 #8cfbff 시작 */
+			#8cfbff	/* End Color */
+			);	
+	background-image: -webkit-gradient(linear, 45deg, color-stop(20%,hotpink), color-stop(60%,rgb(255,255,0)), to(#8cfbff));
+	background-image: -webkit-linear-gradient(45deg, hotpink 20%, rgb(255,255,0) 60%, #8cfbff);
+	background-image:    -moz-linear-gradient(45deg, hotpink 20%, rgb(255,255,0) 60%, #8cfbff);
+	background-image:     -ms-linear-gradient(45deg, hotpink 20%, rgb(255,255,0) 60%, #8cfbff);
+	background-image:      -o-linear-gradient(45deg, hotpink 20%, rgb(255,255,0) 60%, #8cfbff);
+	background-image:         linear-gradient(45deg, hotpink 20%, rgb(255,255,0) 60%, #8cfbff);
+	}
+	
+</style>
+</head>
+
+<body>
+            
+<div class="ex01"></div>
+
+<div class="ex02"></div>
+
+</body>
+</html>

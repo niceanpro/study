@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>  
+<title></title>
+<style>
+* {margin:0; padding:0; list-style:none}
+body {background:url(../img/bg_back.png);}
+
+ul.donut {position:absolute; top:71px; left:20px; width:280px; height:281px}
+
+ul.donut li {position:absolute}
+ul.donut li:nth-child(1) {background:url(../img/pie0.png) no-repeat; top:0px; left:33px; width:107px; height:89px}
+ul.donut li:nth-child(2) {background:url(../img/pie1.png) no-repeat; top:0px; left:140px; width:108px; height:89px}
+ul.donut li:nth-child(3) {background:url(../img/pie2.png) no-repeat; top:54px; left:204px; width:76px; height:115px}
+ul.donut li:nth-child(4) {background:url(../img/pie3.png) no-repeat; top:158px; left:178px; width:98px; height:106px}
+ul.donut li:nth-child(5) {background:url(../img/pie4.png) no-repeat; top:213px; left:78px; width:125px; height:68px}
+ul.donut li:nth-child(6) {background:url(../img/pie5.png) no-repeat; top:158px; left:4px; width:98px; height:107px}
+ul.donut li:nth-child(7) {background:url(../img/pie6.png) no-repeat; top:53px; left:0px; width:76px; height:115px}
+ul.donut li img {opacity:0; -webkit-transition:all 0.7s 0s}
+
+div.bannerMask {
+	position:absolute; width:163px; height:163px; 
+	top:131px; left:80px; z-index:10 
+	border:2px solid blue
+}
+ul.centerBanner {}
+ul.centerBanner li {
+	position:absolute; width:163px; height:163px; 
+	text-indent:-1000px; overflow:hidden; 
+	border:1px solid red
+}
+ul.centerBanner li:nth-child(1) {
+	background:url(../img/bnnr0.png) 45px no-repeat; left:0
+}
+ul.centerBanner li:nth-child(2) {
+	background:url(../img/bnnr1.png) 45px no-repeat; left:163px
+}
+ul.centerBanner li:nth-child(3) {
+	background:url(../img/bnnr2.png) 45px no-repeat; left:326px
+}
+ul.centerBanner li:nth-child(4) 
+	{background:url(../img/bnnr3.png) 45px no-repeat; left:489px
+}
+ul.centerBanner li:nth-child(5) {
+	background:url(../img/bnnr4.png) 45px no-repeat; left:652px
+}
+ul.centerBanner li:nth-child(6) {
+	background:url(../img/bnnr5.png) 45px no-repeat; left:815px
+}
+ul.centerBanner li:nth-child(7) {
+	background:url(../img/bnnr6.png) 45px no-repeat; left:978px
+}
+
+/* motion */
+#donut.motion0 {-webkit-transform:rotate(25.7deg);}
+#donut.motion1 {-webkit-transform:rotate(-25.7deg);}
+#donut.motion2 {-webkit-transform:rotate(-77.1deg);}
+#donut.motion3 {-webkit-transform:rotate(-128.5deg);}
+#donut.motion4 {-webkit-transform:rotate(-180deg);}
+#donut.motion5 {-webkit-transform:rotate(-231.4deg);}
+#donut.motion6 {-webkit-transform:rotate(-282.8deg);}
+
+</style>
+</head>
+<body>
+
+<div class="bannerMask">
+	<ul id="centerBanner" class="centerBanner">
+		<li>menu0</li>
+		<li>menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+		<li>menu4</li>
+		<li>menu5</li>
+		<li>menu6</li>
+	</ul>
+</div>
+
+<ul class="donut" id="donut">
+	<li><img src="../img/pie0_ov.png" alt=""></li>
+	<li><img src="../img/pie1_ov.png" alt=""></li>
+	<li><img src="../img/pie2_ov.png" alt=""></li>
+	<li><img src="../img/pie3_ov.png" alt=""></li>
+	<li><img src="../img/pie4_ov.png" alt=""></li>
+	<li><img src="../img/pie5_ov.png" alt=""></li>
+	<li><img src="../img/pie6_ov.png" alt=""></li>
+</ul>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset=utf-8 />
+  <title>animation 예제</title>
+  <style>
+
+div.box1 {
+	width:100px;
+	height:50px;
+	background:red;
+	-webkit-animation:myfirst1 2s ease;
+}
+
+ @-webkit-keyframes myfirst1 {
+ 	from {width: 100px;}
+	to {width: 300px;}
+}
+
+div.box2 {
+	width:100px;
+	height:50px;
+	background:orange;
+	-webkit-animation:myfirst2 2s ease;
+}
+
+ @-webkit-keyframes myfirst2 {
+	 0% {width: 100px;}
+	 40% {width: 150px;}
+	 60% {width:  70px;}
+	 100% {width: 300px;}
+}
+
+</style>
+  </head>
+
+<body>
+	<div class="box1"> box1 </div>
+	<div class="box2"> box2 </div>
+</body>
+
+</html>

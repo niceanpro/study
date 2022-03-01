@@ -1,0 +1,411 @@
+PasDoc 0.8.7 [2003-05-01|DELPHI 5|MSWindows|32]
+Documentation generator for Pascal source
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Info[1]:    Starting Source File Parsing ...
+Info[2]:    Now parsing file SLDataSet.pas...
+Info[2]:    Now parsing file SLDB.pas...
+Info[2]:    Now parsing file SLEngine.pas...
+Info[2]:    Now parsing file SLTypes.pas...
+Info[2]:    ... 4 Source File(s) parsed
+Info[2]:    Creating links ...
+Info[2]:    ...  links created
+Info[2]:    Expanding descriptions ...
+Info[2]:    ... Descriptions expanded
+Info[2]:    Writing Docs for unit "SLDataSet"
+Info[2]:    Writing Docs for unit "SLDB"
+Info[2]:    Writing Docs for unit "SLEngine"
+Info[2]:    Writing Docs for unit "SLTypes"
+Info[1]:    Done, worked 00:13 minutes(s)
+PasDoc 0.8.7 [2003-05-01|DELPHI 5|MSWindows|32]
+Documentation generator for Pascal source
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Info[1]:    Starting Source File Parsing ...
+Info[2]:    Now parsing file .\source\SLDataSet.pas...
+Fatal Error: .\source\SLDataSet.pas(16): could not open include file SLDefs.pas
+PasDoc 0.8.7 [2003-05-01|DELPHI 5|MSWindows|32]
+Documentation generator for Pascal source
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Info[1]:    Starting Source File Parsing ...
+Info[2]:    Now parsing file .\source\SLDataSet.pas...
+Fatal Error: .\source\SLDataSet.pas(16): could not open include file SLDefs.pas
+PasDoc 0.8.7 [2003-05-01|DELPHI 5|MSWindows|32]
+Documentation generator for Pascal source
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Warning[1]: No files found for "", skipping
+Info[1]:    Starting Source File Parsing ...
+Info[2]:    Now parsing file SLDataSet.pas...
+Info[2]:    Now parsing file SLDB.pas...
+Info[2]:    Now parsing file SLEngine.pas...
+Info[2]:    Now parsing file SLTypes.pas...
+Info[2]:    ... 4 Source File(s) parsed
+Info[2]:    Creating links ...
+Info[2]:    ...  links created
+Info[2]:    Expanding descriptions ...
+Info[2]:    ... Descriptions expanded
+Info[2]:    Writing Docs for unit "SLDataSet"
+Info[2]:    Writing Docs for unit "SLDB"
+Info[2]:    Writing Docs for unit "SLEngine"
+Info[2]:    Writing Docs for unit "SLTypes"
+Info[1]:    Done, worked 00:10 minutes(s)
+PasDoc 0.8.7 [2003-05-01|DELPHI 5|MSWindows|32]
+Documentation generator for Pascal source
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Warning[1]: No files found for "", skipping
+Warning[1]: No files found for "--graphviz-class", skipping
+Info[1]:    Starting Source File Parsing ...
+Info[2]:    Now parsing file SLDataSet.pas...
+Info[2]:    Now parsing file SLDB.pas...
+Info[2]:    Now parsing file SLEngine.pas...
+Info[2]:    Now parsing file SLTypes.pas...
+Info[2]:    ... 4 Source File(s) parsed
+Info[2]:    Creating links ...
+Info[2]:    ...  links created
+Info[2]:    Expanding descriptions ...
+Info[2]:    ... Descriptions expanded
+Info[2]:    Writing Docs for unit "SLDataSet"
+Info[2]:    Writing Docs for unit "SLDB"
+Info[2]:    Writing Docs for unit "SLEngine"
+Info[2]:    Writing Docs for unit "SLTypes"
+Info[1]:    Done, worked 00:13 minutes(s)
+PasDoc 0.8.7 [2003-05-01|DELPHI 5|MSWindows|32]
+Documentation generator for Pascal source
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Warning[1]: No files found for "", skipping
+Info[1]:    Starting Source File Parsing ...
+Info[2]:    Now parsing file SLDataSet.pas...
+Info[2]:    Now parsing file SLDB.pas...
+Info[2]:    Now parsing file SLEngine.pas...
+Info[2]:    Now parsing file SLTypes.pas...
+Info[2]:    ... 4 Source File(s) parsed
+Info[2]:    Creating links ...
+Info[2]:    ...  links created
+Info[2]:    Expanding descriptions ...
+Info[2]:    ... Descriptions expanded
+Info[2]:    Writing Docs for unit "SLDataSet"
+Info[2]:    Writing Docs for unit "SLDB"
+Info[2]:    Writing Docs for unit "SLEngine"
+Info[2]:    Writing Docs for unit "SLTypes"
+Info[1]:    Done, worked 00:14 minutes(s)
+PasDoc 0.8.7 [2003-05-01|DELPHI 5|MSWindows|32]
+Documentation generator for Pascal source
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Warning[1]: No files found for "", skipping
+Info[1]:    Starting Source File Parsing ...
+Info[2]:    Now parsing file SLDataSet.pas...
+Info[2]:    Now parsing file SLDB.pas...
+Info[2]:    Now parsing file SLEngine.pas...
+Info[2]:    Now parsing file SLTypes.pas...
+Info[2]:    ... 4 Source File(s) parsed
+Info[2]:    Creating links ...
+Info[2]:    ...  links created
+Info[2]:    Expanding descriptions ...
+Info[2]:    ... Descriptions expanded
+Info[2]:    Writing Docs for unit "SLDataSet"
+Info[2]:    Writing Docs for unit "SLDB"
+Info[2]:    Writing Docs for unit "SLEngine"
+Info[2]:    Writing Docs for unit "SLTypes"
+Info[1]:    Done, worked 00:12 minutes(s)
+PasDoc 0.8.7 [2003-05-01|DELPHI 5|MSWindows|32]
+Documentation generator for Pascal source
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Warning[1]: No files found for "", skipping
+Info[1]:    Starting Source File Parsing ...
+Info[2]:    Now parsing file SLDataSet.pas...
+Info[2]:    Now parsing file SLDB.pas...
+Info[2]:    Now parsing file SLEngine.pas...
+Info[2]:    Now parsing file SLTypes.pas...
+Info[2]:    Now parsing file SLFunAggr.pas...
+Info[2]:    ... 5 Source File(s) parsed
+Info[2]:    Creating links ...
+Info[2]:    ...  links created
+Info[2]:    Expanding descriptions ...
+Info[2]:    ... Descriptions expanded
+Info[2]:    Writing Docs for unit "SLDataSet"
+Info[2]:    Writing Docs for unit "SLDB"
+Info[2]:    Writing Docs for unit "SLEngine"
+Info[2]:    Writing Docs for unit "SLFunAggr"
+Info[2]:    Writing Docs for unit "SLTypes"
+Info[1]:    Done, worked 00:16 minutes(s)
+PasDoc 0.8.7 [2003-05-01|DELPHI 5|MSWindows|32]
+Documentation generator for Pascal source
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Warning[1]: No files found for "", skipping
+Info[1]:    Starting Source File Parsing ...
+Info[2]:    Now parsing file SLDataSet.pas...
+Info[2]:    Now parsing file SLDB.pas...
+Info[2]:    Now parsing file SLEngine.pas...
+Info[2]:    Now parsing file SLTypes.pas...
+Info[2]:    Now parsing file SLFunAggr.pas...
+Info[2]:    ... 5 Source File(s) parsed
+Info[2]:    Creating links ...
+Info[2]:    ...  links created
+Info[2]:    Expanding descriptions ...
+Info[2]:    ... Descriptions expanded
+Info[2]:    Writing Docs for unit "SLDataSet"
+Info[2]:    Writing Docs for unit "SLDB"
+Info[2]:    Writing Docs for unit "SLEngine"
+Info[2]:    Writing Docs for unit "SLFunAggr"
+Info[2]:    Writing Docs for unit "SLTypes"
+Info[1]:    Done, worked 00:15 minutes(s)
+PasDoc 0.8.7 [2003-05-01|DELPHI 5|MSWindows|32]
+Documentation generator for Pascal source
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Warning[1]: No files found for "", skipping
+Info[1]:    Starting Source File Parsing ...
+Info[2]:    Now parsing file SLDataSet.pas...
+Info[2]:    Now parsing file SLDB.pas...
+Info[2]:    Now parsing file SLEngine.pas...
+Info[2]:    Now parsing file SLTypes.pas...
+Info[2]:    Now parsing file SLFunAggr.pas...
+Info[2]:    ... 5 Source File(s) parsed
+Info[2]:    Creating links ...
+Info[2]:    ...  links created
+Info[2]:    Expanding descriptions ...
+Info[2]:    ... Descriptions expanded
+Info[2]:    Writing Docs for unit "SLDataSet"
+Info[2]:    Writing Docs for unit "SLDB"
+Info[2]:    Writing Docs for unit "SLEngine"
+Info[2]:    Writing Docs for unit "SLFunAggr"
+Info[2]:    Writing Docs for unit "SLTypes"
+Info[1]:    Done, worked 00:10 minutes(s)
+PasDoc 0.8.7 [2003-05-01|DELPHI 5|MSWindows|32]
+Documentation generator for Pascal source
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Warning[1]: No files found for "", skipping
+Info[1]:    Starting Source File Parsing ...
+Info[2]:    Now parsing file SLDataSet.pas...
+Info[2]:    Now parsing file SLDB.pas...
+Info[2]:    Now parsing file SLEngine.pas...
+Info[2]:    Now parsing file SLTypes.pas...
+Info[2]:    Now parsing file SLFunAggr.pas...
+Info[2]:    ... 5 Source File(s) parsed
+Info[2]:    Creating links ...
+Info[2]:    ...  links created
+Info[2]:    Expanding descriptions ...
+Warning[1]: Could not resolve "TSLDatabase.UserData" (SLFunAggr.TFunArgManager)
+Info[2]:    ... Descriptions expanded
+Info[2]:    Writing Docs for unit "SLDataSet"
+Info[2]:    Writing Docs for unit "SLDB"
+Info[2]:    Writing Docs for unit "SLEngine"
+Info[2]:    Writing Docs for unit "SLFunAggr"
+Info[2]:    Writing Docs for unit "SLTypes"
+Info[1]:    Done, worked 00:11 minutes(s)
+PasDoc 0.8.7 [2003-05-01|DELPHI 5|MSWindows|32]
+Documentation generator for Pascal source
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Warning[1]: No files found for "", skipping
+Info[1]:    Starting Source File Parsing ...
+Info[2]:    Now parsing file SLDataSet.pas...
+Info[2]:    Now parsing file SLDB.pas...
+Info[2]:    Now parsing file SLEngine.pas...
+Info[2]:    Now parsing file SLTypes.pas...
+Info[2]:    Now parsing file SLFunAggr.pas...
+Info[2]:    ... 5 Source File(s) parsed
+Info[2]:    Creating links ...
+Info[2]:    ...  links created
+Info[2]:    Expanding descriptions ...
+Info[2]:    ... Descriptions expanded
+Info[2]:    Writing Docs for unit "SLDataSet"
+Info[2]:    Writing Docs for unit "SLDB"
+Info[2]:    Writing Docs for unit "SLEngine"
+Info[2]:    Writing Docs for unit "SLFunAggr"
+Info[2]:    Writing Docs for unit "SLTypes"
+Info[1]:    Done, worked 00:15 minutes(s)
+PasDoc 0.8.7 [2003-05-01|DELPHI 5|MSWindows|32]
+Documentation generator for Pascal source
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Warning[1]: No files found for "", skipping
+Info[1]:    Starting Source File Parsing ...
+Info[2]:    Now parsing file SLDataSet.pas...
+Info[2]:    Now parsing file SLDB.pas...
+Info[2]:    Now parsing file SLEngine.pas...
+Info[2]:    Now parsing file SLTypes.pas...
+Info[2]:    Now parsing file SLFunAggr.pas...
+Info[2]:    ... 5 Source File(s) parsed
+Info[2]:    Creating links ...
+Info[2]:    ...  links created
+Info[2]:    Expanding descriptions ...
+Info[2]:    ... Descriptions expanded
+Info[2]:    Writing Docs for unit "SLDataSet"
+Info[2]:    Writing Docs for unit "SLDB"
+Info[2]:    Writing Docs for unit "SLEngine"
+Info[2]:    Writing Docs for unit "SLFunAggr"
+Info[2]:    Writing Docs for unit "SLTypes"
+Info[1]:    Done, worked 00:10 minutes(s)
+PasDoc 0.8.7 [2003-05-01|DELPHI 5|MSWindows|32]
+Documentation generator for Pascal source
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Warning[1]: No files found for "", skipping
+Info[1]:    Starting Source File Parsing ...
+Info[2]:    Now parsing file SLDataSet.pas...
+Info[2]:    Now parsing file SLDB.pas...
+Info[2]:    Now parsing file SLEngine.pas...
+Info[2]:    Now parsing file SLTypes.pas...
+Info[2]:    Now parsing file SLFunAgr.pas...
+Info[2]:    ... 5 Source File(s) parsed
+Info[2]:    Creating links ...
+Info[2]:    ...  links created
+Info[2]:    Expanding descriptions ...
+Warning[1]: Could not resolve "TSLFunction.Active" (SLFunAgr.TSLFunction)
+Info[2]:    ... Descriptions expanded
+Info[2]:    Writing Docs for unit "SLDataSet"
+Info[2]:    Writing Docs for unit "SLDB"
+Info[2]:    Writing Docs for unit "SLEngine"
+Info[2]:    Writing Docs for unit "SLFunAgr"
+Info[2]:    Writing Docs for unit "SLTypes"
+Info[1]:    Done, worked 00:19 minutes(s)
+PasDoc 0.8.7 [2003-05-01|DELPHI 5|MSWindows|32]
+Documentation generator for Pascal source
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Warning[1]: No files found for "", skipping
+Info[1]:    Starting Source File Parsing ...
+Info[2]:    Now parsing file SLDataSet.pas...
+Info[2]:    Now parsing file SLDB.pas...
+Info[2]:    Now parsing file SLEngine.pas...
+Info[2]:    Now parsing file SLTypes.pas...
+Info[2]:    Now parsing file SLFunAgr.pas...
+Info[2]:    ... 5 Source File(s) parsed
+Info[2]:    Creating links ...
+Info[2]:    ...  links created
+Info[2]:    Expanding descriptions ...
+Warning[1]: Could not resolve "TFunArgManager" (SLFunAgr.TSLCustomFun)
+Warning[2]: Found non-link tag when expanding descriptions of "Handle" in unit SLFunAgr
+Warning[2]: Found non-link tag when expanding descriptions of "Active" in unit SLFunAgr
+Warning[2]: Found non-link tag when expanding descriptions of "Database" in unit SLFunAgr
+Warning[2]: Found non-link tag when expanding descriptions of "FunName" in unit SLFunAgr
+Warning[2]: Found non-link tag when expanding descriptions of "ParamCount" in unit SLFunAgr
+Warning[2]: Found non-link tag when expanding descriptions of "OnFunction" in unit SLFunAgr
+Warning[1]: Could not resolve "TSLDatabase.SetResultString" (SLFunAgr.TSLFunction.OnFunction)
+Warning[1]: Could not resolve "TSLDatabase.SetResultInt" (SLFunAgr.TSLFunction.OnFunction)
+Warning[1]: Could not resolve "TSLDatabase.SetResultDouble" (SLFunAgr.TSLFunction.OnFunction)
+Warning[1]: Could not resolve "TSLDatabase.SetResultError" (SLFunAgr.TSLFunction.OnFunction)
+Info[2]:    ... Descriptions expanded
+Info[2]:    Writing Docs for unit "SLDataSet"
+Info[2]:    Writing Docs for unit "SLDB"
+Info[2]:    Writing Docs for unit "SLEngine"
+Info[2]:    Writing Docs for unit "SLFunAgr"
+Info[2]:    Writing Docs for unit "SLTypes"
+Info[1]:    Done, worked 00:18 minutes(s)
+PasDoc 0.8.7 [2003-05-01|DELPHI 5|MSWindows|32]
+Documentation generator for Pascal source
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Warning[1]: No files found for "", skipping
+Info[1]:    Starting Source File Parsing ...
+Info[2]:    Now parsing file SLDataSet.pas..PasDoc 0.8.7 [2003-05-01|DELPHI 5|MSWindows|32]
+Documentation generator for Pascal source
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Warning[1]: No files found for "", skipping
+Info[1]:    Starting Source File Parsing ...
+Info[2]:    Now parsing file SLDataSet.pas...
+Info[2]:    Now parsing file SLDB.pas...
+Info[2]:    Now parsing file SLEngine.pas...
+Info[2]:    Now parsing file SLTypes.pas...
+Info[2]:    Now parsing file SLFunAgr.pas...
+Info[2]:    ... 5 Source File(s) parsed
+Info[2]:    Creating links ...
+Info[2]:    ...  links created
+Info[2]:    Expanding descriptions ...
+Warning[1]: Could not resolve "TFunArgManager" (SLFunAgr.TSLCustomFun)
+Warning[2]: Found non-link tag when expanding descriptions of "Handle" in unit SLFunAgr
+Warning[2]: Found non-link tag when expanding descriptions of "Active" in unit SLFunAgr
+Warning[2]: Found non-link tag when expanding descriptions of "Database" in unit SLFunAgr
+Warning[2]: Found non-link tag when expanding descriptions of "FunName" in unit SLFunAgr
+Warning[2]: Found non-link tag when expanding descriptions of "ParamCount" in unit SLFunAgr
+Warning[2]: Found non-link tag when expanding descriptions of "OnFunction" in unit SLFunAgr
+Warning[1]: Could not resolve "TSLDatabase.SetResultString" (SLFunAgr.TSLFunction.OnFunction)
+Warning[1]: Could not resolve "TSLDatabase.SetResultInt" (SLFunAgr.TSLFunction.OnFunction)
+Warning[1]: Could not resolve "TSLDatabase.SetResultDouble" (SLFunAgr.TSLFunction.OnFunction)
+Warning[1]: Could not resolve "TSLDatabase.SetResultError" (SLFunAgr.TSLFunction.OnFunction)
+Info[2]:    ... Descriptions expanded
+Info[2]:    Writing Docs for unit "SLDataSet"
+Info[2]:    Writing Docs for unit "SLDB"
+Info[2]:    Writing Docs for unit "SLEngine"
+Info[2]:    Writing Docs for unit "SLFunAgr"
+Info[2]:    Writing Docs for unit "SLTypes"
+Info[1]:    Done, worked 00:26 minutes(s)
+PasDoc 0.8.7 [2003-05-01|DELPHI 5|MSWindows|32]
+Documentation generator for Pascal source
+
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Warning[1]: No files found for "", skipping
+Info[1]:    Starting Source File Parsing ...
+Info[2]:    Now parsing file SLDataSet.pas...
+Info[2]:    Now parsing file SLDB.pas...
+Info[2]:    Now parsing file SLEngine.pas...
+Info[2]:    Now parsing file SLTypes.pas...
+Info[2]:    Now parsing file SLFunAgr.pas...
+Info[2]:    ... 5 Source File(s) parsed
+Info[2]:    Creating links ...
+Info[2]:    ...  links created
+Info[2]:    Expanding descriptions ...
+Warning[1]: Could not resolve "TFunArgManager" (SLFunAgr.TSLCustomFun)
+Warning[2]: Found non-link tag when expanding descriptions of "Handle" in unit SLFunAgr
+Warning[2]: Found non-link tag when expanding descriptions of "Active" in unit SLFunAgr
+Warning[2]: Found non-link tag when expanding descriptions of "Database" in unit SLFunAgr
+Warning[2]: Found non-link tag when expanding descriptions of "FunName" in unit SLFunAgr
+Warning[2]: Found non-link tag when expanding descriptions of "ParamCount" in unit SLFunAgr
+Warning[2]: Found non-link tag when expanding descriptions of "OnFunction" in unit SLFunAgr
+Warning[1]: Could not resolve "TSLDatabase.SetResultString" (SLFunAgr.TSLFunction.OnFunction)
+Warning[1]: Could not resolve "TSLDatabase.SetResultInt" (SLFunAgr.TSLFunction.OnFunction)
+Warning[1]: Could not resolve "TSLDatabase.SetResultDouble" (SLFunAgr.TSLFunction.OnFunction)
+Warning[1]: Could not resolve "TSLDatabase.SetResultError" (SLFunAgr.TSLFunction.OnFunction)
+Info[2]:    ... Descriptions expanded
+Info[2]:    Writing Docs for unit "SLDataSet"
+Info[2]:    Writing Docs for unit "SLDB"
+Info[2]:    Writing Docs for unit "SLEngine"
+Info[2]:    Writing Docs for unit "SLFunAgr"
+Info[2]:    Writing Docs for unit "SLTypes"
+Info[1]:    Done, worked 00:30 minutes(s)

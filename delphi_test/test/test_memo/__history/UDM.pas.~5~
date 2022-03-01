@@ -1,0 +1,79 @@
+unit UDM;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DBXMSSQL, Data.DB, Datasnap.DBClient,
+  SimpleDS, Data.SqlExpr, Data.SqlTimSt, Dialogs;
+
+type
+  TDM = class(TDataModule)
+    SQLConnection1: TSQLConnection;
+    Insa: TSimpleDataSet;
+    InsaSource: TDataSource;
+
+
+    Dept: TSimpleDataSet;
+    DeptSource: TDataSource;
+    procedure InsaNewRecord(DataSet: TDataSet);
+    procedure InsaBeforeInsert(DataSet: TDataSet);
+    procedure InsaAfterApplyUpdates(Sender: TObject; var OwnerData: OleVariant);
+    procedure InsaSourceStateChange(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+{
+    InsaID: TIntegerField;
+    InsaNAME: TStringField;
+    InsaAGE: TSmallintField;
+    InsaDEPT_CODE: TStringField;
+    InsaCLASS: TStringField;
+    InsaIPSA_DATE: TSQLTimeStampField;
+    InsaSALARY: TIntegerField;
+    InsaPHOTO: TBlobField;
+    InsaGRADE: TStringField;
+    InsaTax: TFloatField;
+}
+  end;
+
+var
+  DM: TDM;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses Uinsa;
+
+{$R *.dfm}
+
+procedure TDM.InsaAfterApplyUpdates(Sender: TObject; var OwnerData: OleVariant);
+begin
+  ShowMessage('등록/편집 완료');
+end;
+
+procedure TDM.InsaBeforeInsert(DataSet: TDataSet);
+begin
+  InsaForm.DBEdit1.SetFocus;
+end;
+
+procedure TDM.InsaNewRecord(DataSet: TDataSet);
+begin
+{
+  InsaIpsa_date.value := DateTimetoSQLTimeStamp(now);
+  InsaSalary.Value := 3000000;
+  InsaGrade.Value := '1';
+}
+end;
+
+procedure TDM.InsaSourceStateChange(Sender: TObject);
+begin
+  InsaForm.Button1.Enabled := Dm.Insa.State = dsBrowse;
+  InsaForm.Button2.Enabled := Dm.Insa.State = dsBrowse;
+  InsaForm.Button3.Enabled := Dm.Insa.State in [dsInsert, dsEdit];
+  InsaForm.Button4.Enabled := Dm.Insa.State in [dsInsert, dsEdit];
+
+end;
+
+end.

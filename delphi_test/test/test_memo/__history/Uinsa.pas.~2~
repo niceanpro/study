@@ -1,0 +1,106 @@
+unit Uinsa;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.Grids,
+  Vcl.DBGrids, Vcl.ComCtrls;
+
+type
+  TInsaForm = class(TForm)
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    TabSheet3: TTabSheet;
+    TabControl1: TTabControl;
+    DBGrid1: TDBGrid;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    SpeedButton4: TSpeedButton;
+    SpeedButton5: TSpeedButton;
+    Label1: TLabel;
+    Label2: TLabel;
+    ComboBox1: TComboBox;
+    Edit1: TEdit;
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton2Click(Sender: TObject);
+    procedure SpeedButton3Click(Sender: TObject);
+    procedure SpeedButton4Click(Sender: TObject);
+    procedure ComboBox1Change(Sender: TObject);
+    procedure Edit1Change(Sender: TObject);
+    procedure TabControl1Change(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  InsaForm: TInsaForm;
+
+implementation
+
+{$R *.dfm}
+
+uses UDM;
+
+procedure TInsaForm.ComboBox1Change(Sender: TObject);
+begin
+  case ComboBox1.ItemIndex of
+    0:Dm.Insa.IndexName := 'i_id';
+    1:Dm.Insa.IndexName := 'i_name';
+    2:Dm.Insa.IndexName := 'i_dept';
+  end;
+end;
+
+procedure TInsaForm.Edit1Change(Sender: TObject);
+begin
+  Dm.Insa.IndexFieldNames := 'name';
+  Dm.Insa.FindNearest([Edit1.Text]);
+
+  // if dm.insa.FindKey([edit1.text]) then
+  // if dm.Insa.locate('name', edit1.text, [loCaseInsesitive, loPartialKey]) then
+end;
+
+procedure TInsaForm.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := caFree;
+end;
+
+procedure TInsaForm.SpeedButton1Click(Sender: TObject);
+begin
+  DM.Insa.First;
+end;
+
+procedure TInsaForm.SpeedButton2Click(Sender: TObject);
+begin
+  if not DM.Insa.Bof then
+    DM.Insa.Prior;
+end;
+
+procedure TInsaForm.SpeedButton3Click(Sender: TObject);
+begin
+  if not DM.Insa.Eof then
+    Dm.Insa.Next;
+end;
+
+procedure TInsaForm.SpeedButton4Click(Sender: TObject);
+begin
+  Dm.Insa.Last;
+end;
+
+procedure TInsaForm.TabControl1Change(Sender: TObject);
+begin
+  if TabControl1.TabIndex = 0 then
+    Dm.Insa.Filtered := false
+  else
+  begin
+      Dm.Insa.Filtered := true;
+      Dm.Insa.Filter := 'CLASS = ' + '''' + TabControl1.Tabs[TabControl1.TabIndex] + '''';
+  end;
+end;
+
+end.

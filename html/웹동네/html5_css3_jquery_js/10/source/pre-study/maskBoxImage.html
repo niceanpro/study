@@ -1,0 +1,20 @@
+﻿
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>mask-box-image테스트</title>
+		<meta charset="utf-8" />
+		<style>
+			/* webkit의 mask속성을 이용해 이미지에 마스크 적용 */
+			#maskItem {
+				-webkit-mask-box-image: url( ../images/mask.svg );
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<img src="../images/pic1.png" alt="" />
+		<img id="maskItem" src="../images/pic1.png" width="400" height="400" />
+	</body>
+</html>

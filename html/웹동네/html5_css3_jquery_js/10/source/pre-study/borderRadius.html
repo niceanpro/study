@@ -1,0 +1,77 @@
+﻿
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BorderRadius 테스트</title>
+		<meta charset="utf-8" />
+
+		<style>
+			body {
+				background: black;
+				margin: 0;
+				padding: 0;
+			}
+
+			/* 좌측 상단 모서리 */
+			#box {
+				width: 40px;
+				height: 40px;
+				border-top-left-radius: 30px;
+				background: red;
+			}
+
+			/* 좌측 하단 모서리 */
+			#box2 {
+				width: 40px;
+				height: 40px;
+				border-bottom-left-radius: 40px;
+				background: yellow;
+			}
+
+			/* 우측 상단 모서리 */
+			#box3 {
+				position: absolute;
+				top: 0px;
+				left: 40px;
+				width: 40px;
+				height: 40px;
+				border-top-right-radius: 30px;
+				background: green;
+			}
+
+			/* 우측 하단 모서리 */
+			#box4 {
+				position: absolute;
+				top: 40px;
+				left: 40px;
+				width: 40px;
+				height: 40px;
+				border-bottom-right-radius: 40px;
+				background: blue;
+			}
+
+			/* 퍼센트를 이용한 모서리 처리 */
+			#box5 {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				background: blue;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div id="box"></div>
+
+		<div id="box2"></div>
+
+		<div id="box3"></div>
+
+		<div id="box4"></div>
+
+		<div id="box5"></div>
+
+	</body>
+</html>

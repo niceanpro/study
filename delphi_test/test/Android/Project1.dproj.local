@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.049,=D:\delphi_test\test\AppletModule1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.020,=D:\delphi_test\test\ServerContainerUnit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.373,=D:\delphi_test\test\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.237,=D:\delphi_test\test\Unit1.pas</Transaction>
+    <Transaction>2015-06-27 06:36:59.989,=D:\delphi_test\test\Unit1.pas</Transaction>
+    <Transaction>2015-06-27 18:05:16.867,D:\delphi_test\test\Android\Unit1.pas=D:\delphi_test\test\Unit1.pas</Transaction>
+    <Transaction>2015-06-27 18:05:16.867,D:\delphi_test\test\Android\Unit1.fmx=D:\delphi_test\test\Unit1.fmx</Transaction>
+    <Transaction>2015-06-27 18:05:21.339,D:\delphi_test\test\Android\Project1.dproj=D:\delphi_test\test\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

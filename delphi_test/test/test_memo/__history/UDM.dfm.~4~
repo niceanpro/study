@@ -1,0 +1,145 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 313
+  Width = 530
+  object SQLConnection1: TSQLConnection
+    ConnectionName = 'SampleConnection'
+    DriverName = 'MSSQL'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverName=MSSQL'
+      'SchemaOverride=%.dbo'
+      'DriverUnit=Data.DBXMSSQL'
+      
+        'DriverPackageLoader=TDBXDynalinkDriverLoader,DBXCommonDriver200.' +
+        'bpl'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXDynalinkDriverLoader,Borla' +
+        'nd.Data.DbxCommonDriver,Version=20.0.0.0,Culture=neutral,PublicK' +
+        'eyToken=91d62ebb5b0d1b1b'
+      
+        'MetaDataPackageLoader=TDBXMsSqlMetaDataCommandFactory,DbxMSSQLDr' +
+        'iver200.bpl'
+      
+        'MetaDataAssemblyLoader=Borland.Data.TDBXMsSqlMetaDataCommandFact' +
+        'ory,Borland.Data.DbxMSSQLDriver,Version=20.0.0.0,Culture=neutral' +
+        ',PublicKeyToken=91d62ebb5b0d1b1b'
+      'LibraryName=dbxmss.dll'
+      'VendorLib=sqlncli10.dll'
+      'VendorLibWin64=sqlncli10.dll'
+      'HostName=localhost'
+      'Database=jspdb'
+      'MaxBlobSize=-1'
+      'LocaleCode=0000'
+      'IsolationLevel=ReadCommitted'
+      'OSAuthentication=False'
+      'PrepareSQL=True'
+      'User_Name=anpro'
+      'Password=anali'
+      'BlobSize=-1'
+      'ErrorResourceFile='
+      'OS Authentication=False'
+      'Prepare SQL=False')
+    Connected = True
+    Left = 32
+    Top = 24
+  end
+  object Insa: TSimpleDataSet
+    Active = True
+    Aggregates = <>
+    Connection = SQLConnection1
+    DataSet.CommandText = 'INSA'
+    DataSet.CommandType = ctTable
+    DataSet.MaxBlobSize = 1
+    DataSet.Params = <>
+    FieldDefs = <
+      item
+        Name = 'ID'
+        ChildDefs = <
+          item
+            Name = 'InsaID'
+            DataType = ftInteger
+          end>
+        DataType = ftString
+        Size = 20
+      end
+      item
+        Name = 'NAME'
+        DataType = ftString
+        Size = 20
+      end
+      item
+        Name = 'AGE'
+        DataType = ftInteger
+      end
+      item
+        Name = 'DEPT_CODE'
+        DataType = ftString
+        Size = 20
+      end
+      item
+        Name = 'CLASS'
+        DataType = ftString
+        Size = 20
+      end
+      item
+        Name = 'IPSA_DATE'
+        DataType = ftDate
+      end
+      item
+        Name = 'SALARY'
+        DataType = ftInteger
+      end
+      item
+        Name = 'PHOTO'
+        DataType = ftBlob
+        Size = 1
+      end
+      item
+        Name = 'GRADE'
+        DataType = ftInteger
+      end>
+    IndexDefs = <
+      item
+        Name = 'i_id'
+        Fields = 'id'
+      end
+      item
+        Name = 'i_name'
+        Fields = 'name'
+      end
+      item
+        Name = 'i_dept'
+        Fields = 'dept_code'
+      end>
+    IndexFieldNames = 'id'
+    Params = <>
+    StoreDefs = True
+    BeforeInsert = InsaBeforeInsert
+    OnNewRecord = InsaNewRecord
+    Left = 128
+    Top = 24
+  end
+  object InsaSource: TDataSource
+    DataSet = Insa
+    Left = 200
+    Top = 24
+  end
+  object Dept: TSimpleDataSet
+    Active = True
+    Aggregates = <>
+    Connection = SQLConnection1
+    DataSet.CommandText = 'DEPT'
+    DataSet.CommandType = ctTable
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 128
+    Top = 88
+  end
+  object DeptSource: TDataSource
+    DataSet = Dept
+    Left = 200
+    Top = 88
+  end
+end

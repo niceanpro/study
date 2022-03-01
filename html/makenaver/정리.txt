@@ -1,0 +1,27 @@
+* == != 는 사용하지 말자
+undefined는 컴이 넣은 값 즉 초기화 한적이 없음
+빈 값을 넣을 때는 null을 넣음
+문자열은 "" '' `` 을 이용해서 만듬
+
+Number(prompt('답?'))
+
+객체.프로퍼티
+객체['프로퍼티']
+변수 = '프로퍼티'
+객체[객체]
+
+Array.isArray()
+Math, Number, Boolean, window, document
+대문자로 시작하면 생성자 있음
+
+무한 반복을 끄고 싶은면 shift + esc
+
+window
+  document
+
+console.dir(document)  객체 형식으로 볼 수 있음
+
+버튼.addEventListener('click', function 콜백함수() {} );
+enter 키를 받으려면 form tag로 감싸면 된다.
+폼은 enter를 받아서 다른 창으로 넘기는게 기본 동작
+그걸 멈추게 하려면 이벤트를 받아서 이벤트.preventDefault();

@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="PasDoc 0.8.7">
+<TITLE>SLUnit: Class TSLEngine</TITLE>
+<LINK rel="StyleSheet" href="Help Project.css">
+</HEAD>
+<BODY bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor="e0e0e0">
+<TD><A href="AllUnits.html"><CENTER>Units</CENTER></A></TD>
+<TD><A href="ClassHierarchy.html"><CENTER>Class Hierarchy</CENTER></A></TD>
+<TD><A href="AllClasses.html"><CENTER>Classes, Interfaces and Objects</CENTER></A></TD>
+<TD><A href="AllTypes.html"><CENTER>Types</CENTER></A></TD>
+<TD><A href="AllVariables.html"><CENTER>Variables</CENTER></A></TD>
+<TD><A href="AllConstants.html"><CENTER>Constants</CENTER></A></TD>
+<TD><A href="AllFunctions.html"><CENTER>Functions and Procedures</CENTER></A></TD>
+<TD><A href="AllIdentifiers.html"><CENTER>Identifiers</CENTER></A></TD>
+<TD><A href="GVUses.html"><CENTER></CENTER></A></TD>
+<TD><A href="GVClasses.html"><CENTER></CENTER></A></TD>
+</TR>
+</TABLE>
+<A name="TSLEngine"></A><H1>Class TSLEngine</H1>
+<H2>Unit</H2>
+<A href="SLUnit.html">SLUnit</A><BR><H2>Declaration</H2>
+<P><CODE>type TSLEngine = class()</CODE></P><H2>Description</H2>
+engine representation<P>.         SQLite API + databeses management. It is possible to have more then one         engine at a time. Application can for example use databases with different         page sizes.<H2>Methods</H2>
+<H3>Overview</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><CODE>constructor <A href="SLUnit.TSLEngine.html#Create"><B>Create</B></A> (aConnect: Boolean = True; const aLibName: String = '');</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>destructor <A href="SLUnit.TSLEngine.html#Destroy"><B>Destroy</B></A>; override;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD><CODE>procedure <A href="SLUnit.TSLEngine.html#DoLog"><B>DoLog</B></A> (const aText: String);</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLUnit.TSLEngine.html#Encoding"><B>Encoding</B></A>: String;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLUnit.TSLEngine.html#ErrorString"><B>ErrorString</B></A> (const anErrNo: Integer): String;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLUnit.TSLEngine.html#GetDB"><B>GetDB</B></A> (const anIndex: Integer): <A href="SLUnit.TSLDataBase.html">TSLDataBase</A>;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLUnit.TSLEngine.html#GetDBCount"><B>GetDBCount</B></A>: Integer;</CODE></TD>
+</TR>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD><CODE>function <A href="SLUnit.TSLEngine.html#Version"><B>Version</B></A>: String;</CODE></TD>
+</TR>
+</TABLE>
+<H3>Description</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Create"></A><CODE>constructor <B>Create</B> (aConnect: Boolean = True; const aLibName: String = '');</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Destroy"></A><CODE>destructor <B>Destroy</B>; override;</CODE></TD>
+</TR>
+</TABLE>
+<P>&nbsp;</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="protected.gif" alt="Protected"></TD>
+<TD width=100%><A name="DoLog"></A><CODE>procedure <B>DoLog</B> (const aText: String);</CODE></TD>
+</TR>
+</TABLE>
+<P>Calling log event for the text.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Encoding"></A><CODE>function <B>Encoding</B>: String;</CODE></TD>
+</TR>
+</TABLE>
+<P><a href="http://www.sqlite.org/c_interface.html" target="_new">http://www.sqlite.org/c_interface.html</a> 3.7 encoding used by engine.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="ErrorString"></A><CODE>function <B>ErrorString</B> (const anErrNo: Integer): String;</CODE></TD>
+</TR>
+</TABLE>
+<P>Converts error number to string</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="GetDB"></A><CODE>function <B>GetDB</B> (const anIndex: Integer): <A href="SLUnit.TSLDataBase.html">TSLDataBase</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>Database defined by specified index.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="GetDBCount"></A><CODE>function <B>GetDBCount</B>: Integer;</CODE></TD>
+</TR>
+</TABLE>
+<P>Number of databases.</P>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="Version"></A><CODE>function <B>Version</B>: String;</CODE></TD>
+</TR>
+</TABLE>
+<P><a href="http://www.sqlite.org/c_interface.html" target="_new">http://www.sqlite.org/c_interface.html</a> 3.6 library version.</P>
+<H2>Properties</H2>
+<H3>Overview</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><CODE>property <A href="SLUnit.TSLEngine.html#OnLog"><B>OnLog</B></A>: <A href="SLUnit.html#TLogEvent">TLogEvent</A>;</CODE></TD>
+</TR>
+</TABLE>
+<H3>Description</H3>
+<TABLE cellspacing=2 cellpadding=4 width=100%>
+<TR bgcolor=#efefef valign=top><TD><IMG src="public.gif" alt="Public"></TD>
+<TD width=100%><A name="OnLog"></A><CODE>property <B>OnLog</B>: <A href="SLUnit.html#TLogEvent">TLogEvent</A>;</CODE></TD>
+</TR>
+</TABLE>
+<P>For every call of engine application can log.</P>
+<HR noshade size=1><EM>Generated by <A href="http://pasdoc.sourceforge.net/">PasDoc 0.8.7</A> on So 11- paü 2003 15:29:16</EM>
+</BODY>
+</HTML>

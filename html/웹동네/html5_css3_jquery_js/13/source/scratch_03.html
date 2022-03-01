@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>scratch canvas step 03</title>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+	
+	/*
+	#step_01
+	-레이아웃 구성
+	
+	#step_02
+	-커버이미지 캔버스에 그리기
+	
+	#step_03
+	-당첨 또는 꽝을 결정해서 해당 결과 이미지 로드하기
+	*/
+	
+	
+	$( document ).ready( function( event ) {
+		
+		var $coverCanvas;
+		var $coverImg;
+		var coverContext;
+		var isWin;
+		
+		loadCover();
+		
+		function loadCover(){
+			$coverImg = $( "<img></img>")
+			$coverImg.attr( "src", "img/cover.png" );
+			$coverImg.bind( "load", startup );
+		}
+		
+		function startup(){
+			$coverCanvas = $( "#coverCanvas" );
+			coverContext = $coverCanvas[ 0 ].getContext( "2d" );
+			coverContext.drawImage( $coverImg[ 0 ], 0, 0 );
+			
+			isWin = Math.round( Math.random() );
+			var resultURL = ( isWin == 1 ) ? "img/result_win.png" : "img/result_lose.png";
+			$( "#resultImg" ).attr( "src", resultURL );
+		}
+    });
+    
+</script>
+<style type="text/css">
+
+*{ margin:0; padding:0; position: absolute; }
+
+</style>
+</head>
+<body>
+	<div>
+		<img width="500" height="300" id="resultImg"/>
+		<canvas width="500" height="300" id="coverCanvas"></canvas>
+    </div>
+</body>
+</html>

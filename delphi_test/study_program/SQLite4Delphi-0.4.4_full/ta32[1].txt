@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=ISO-8859-2">
+<TITLE>Strona Raport - TeleAdreson ONLINE</TITLE>
+</HEAD>
+<BODY BGCOLOR="#cccccc">
+
+<form method="post" action="/cgi-bin/ta32.cgi">
+<input type="hidden" name="searchtext" value="">
+<input type="hidden" name="polish" value="yes">
+<input type="hidden" name="database" value="TADRES/ADDR.">
+<input type="hidden" name="menuitem" value="searchname">
+<input type="hidden" name="helpflag" value="searchnohelp">
+<input type="hidden" name="wojtext" value="14">
+<input type="hidden" name="obrotrange_min" value="0">
+<input type="hidden" name="obrotrange_max" value="1000000000">
+<input type="hidden" name="rokrange_min" value="0">
+<input type="hidden" name="rokrange_max" value="9999">
+<input type="hidden" name="liczbarange_min" value="0">
+<input type="hidden" name="liczbarange_max" value="1000000000">
+<input type="hidden" name="listreportstat" value="report">
+<input type="hidden" name="vindexfirst" value="1430803">
+<input type="hidden" name="recordnumberlast" value="1">
+<input type="hidden" name="vindexsecond" value="1245215">
+<input type="hidden" name="vindex" value="1430803">
+<input type="hidden" name="recordnumber" value="1">
+<input type="hidden" name="y4k" value="1430803,714303,50604,1201003,80004,514902,1656701,1953204,26703,462603,662901,15104,1021701,2091203,872803,2103601,993604,1009702,2286504,746904,233804,513901,1858303,1368403,161502,2094104,1485303,319304,1526603,17901,250503,1923502,183503,1350002,794504,1292604,2054603,728304,2288304,849104,838601,19801,467101,690602,434704,1100502,3078903,108902,1216204,1216303,1301801,1784301,1277302,1797302,782202,757103,2267902,2244102,857803,1053804,857501,2290302,738204,425402,2095904,2096001,1700404,1603602,1332203,301601,461202,902101,515904,949402,1290502,1407301,1379903,281102,1239003,629802,1118001,468901,1019404,1007601,904902,2006102,1680602,1612604,158401,1540101,1492902,784502,356704,1012004,1623704,90502,1688204,374901,1632004,688201,260804,530601,2217504,1690801,353002,215103,69804,184901,103601,554901,209701,644704,2105103,1237003,729602,219803,2366104,2325604,2288303,2285602,953101,924302,417101,382703,1570102,1528202,1527402,1457001,295504,131303,1429601,1393404,669403,1262302,236803,1139704,1037702,49303,1021403,1650702,1644404,1635501,1635404,782003,65404,1607503,1573302,2260903,1665804,1013104,1641603,773901,1692302,751604,1153904">
+<input type="hidden" name="currenthtmlpage" value="ReportPage">
+<table width="100%" bgcolor="#cccccc" bordercolor="#cccccc" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%" bgcolor="#ddddc0">
+<table width="100%" cellpadding="2" cellspacing="2">
+<tr>
+<td width="100%" valign="center" align="left" bgcolor="#ddddc0">
+<font face="Helvetica CE,Helvetica,Arial CE,Arial" color="#000000">
+Rekord nr 001
+</font>
+</td>
+<td valign="top" align="left" bgcolor="#ddddc0">
+<font face="Helvetica CE,Helvetica,Arial CE,Arial" size="1">
+<input type="submit" name="add" value="Dopisz">
+</font>
+</td>
+<td valign="top" align="left" bgcolor="#ddddc0">
+<font face="Helvetica CE,Helvetica,Arial CE,Arial" size="1">
+<input type="submit" name="del" value="Usuń">
+</font>
+</td>
+<td valign="top" align="left" bgcolor="#ddddc0">
+<font face="Helvetica CE,Helvetica,Arial CE,Arial" size="1">
+<input type="submit" name="modify" value="Zmień">
+</font>
+</td>
+<td valign="top" align="left" bgcolor="#ddddc0">
+<font face="Helvetica CE,Helvetica,Arial CE,Arial" size="1">
+<input type="submit" name="previous" value="Poprzedni">
+</font>
+</td>
+<td valign="top" align="left" bgcolor="#ddddc0">
+<font face="Helvetica CE,Helvetica,Arial CE,Arial" size="1">
+<input type="submit" name="next" value="Następny">
+</font>
+</td>
+<td valign="top" align="left" bgcolor="#ddddc0">
+<font face="Helvetica CE,Helvetica,Arial CE,Arial" size="1">
+<input type="submit" name="list" value="Lista">
+</font>
+</td>
+<td valign="top" align="left" bgcolor="#ddddc0">
+<font face="Helvetica CE,Helvetica,Arial CE,Arial" size="1">
+<input type="submit" name="return" value="Powrót">
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="5">
+<tr>
+<td width="100%" valign="top" align="left">
+<font face="Courier">
+<pre><a href="http://www.teleadreson.com.pl/r.php?k=5&r=http://www.101studio.com.pl"><img src="/pub/zlcLD003670b.JPG" border="0"></a>
+<b>&#149 </b>Reklama, poligrafia, druk, opakowania, DTP, naświetlanie, skanowanie,
+<b>  </b>skład i łamanie tekstu
+<b>&#149 </b>Przygotowanie do druku, introligatornia, wydawanie książek, magazynów,
+<b>  </b>strony www
+<b>&#149 </b>Drukarnia, drukarnie, fotografia reklamowa, flash, foldery,
+<b>  </b>kalendarze, plakaty, katalogi
+<b>&#149 </b>Ulotki, inserty, blistry, lakierowanie UV, falcowanie, sztancowanie
+<hr size="3" align="center"><b>Nazwa firmy       : </b>101 Studio DTP
+<b>Nazwa skrócona    : </b>101 Studio Tęgi
+<b>Ulica, numer      : </b>Łotewska 17/1
+<b>Miasto            : </b>Warszawa
+<b>Kod pocztowy      : </b>03-918
+<b>Osoby kontaktowe  : </b>kier. oddz. Jacek Siwierski
+<b>Nowe województwo  : </b>mazowieckie
+<b>Powiat            : </b>warszawski
+<b>Gmina             : </b>Warszawa
+<b>Stare województwo : </b>warszawskie
+<b>Telefon(y)        : </b>(22)6160503
+<b>Fax(y)            : </b>(22)6160503
+<b>Email             : </b><a href=mailto:d.chober@101studio.com.pl>d.chober@101studio.com.pl</a>
+<b>WWW               : </b><a href="http://www.teleadreson.com.pl/r.php?k=7&r=http://www.101studio.com.pl">http://www.101studio.com.pl</a>
+<b>Forma własności   : </b>prywatna
+<b>Forma prawna      : </b>spółka cywilna
+<b>Zatrudnienie      : </b>50
+<b>Rok założenia     : </b>1991
+<b>Obrót roczny      : </b> 
+<b>NACE (EKD)        : </b>22.24    Składanie tekstów
+<b>                    </b>22.22    Poligrafia (bez druku gazet)
+<b>                    </b>22.11.1  Wydawanie książek
+<b>                    </b>22.15    Wydawanie fotografii, sztychów, kart
+<b>                             </b>pocztowych, rozkładów, druków, plakatów
+<b>                             </b>i reprodukcji oraz innych wydawnictw
+<b>                             </b>o małych nakładach
+<b>                    </b>74.4     Reklama
+<b>                    </b>21.21    Produkcja papieru i tektury falistej oraz
+<b>                             </b>produkcja opakowań z papieru i tektury
+<b>SIC               : </b>2791     Skład drukarski
+<b>                    </b>2759     Druk komercyjny, osobno nie wymieniony
+<b>                    </b>7336     Komercyjne projektowanie graficzne
+<b>                             </b>i plastyczne
+<b>                    </b>2731     Wydawanie i druk książek
+<b>                    </b>2741     Różnorodne zakłady wydawnicze
+<b>                    </b>7319     Usługi reklamowe, osobno nie wymienione
+<b>                    </b>2671     Opakowania z papieru powlekanego
+<b>                             </b>i laminowanego, produkcja
+</pre>
+</font>
+</td>
+</tr>
+</table>
+<table width="100%" bgcolor="#cccccc" bordercolor="#cccccc" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%" bgcolor="#ddddc0">
+<table width="100%" cellpadding="2" cellspacing="2">
+<tr>
+<td width="100%" valign="center" align="left" bgcolor="#ddddc0">
+<font face="Helvetica CE,Helvetica,Arial CE,Arial" color="#000000">
+Rekord nr 001
+</font>
+</td>
+<td valign="top" align="left" bgcolor="#ddddc0">
+<font face="Helvetica CE,Helvetica,Arial CE,Arial" size="1">
+<input type="submit" name="add" value="Dopisz">
+</font>
+</td>
+<td valign="top" align="left" bgcolor="#ddddc0">
+<font face="Helvetica CE,Helvetica,Arial CE,Arial" size="1">
+<input type="submit" name="del" value="Usuń">
+</font>
+</td>
+<td valign="top" align="left" bgcolor="#ddddc0">
+<font face="Helvetica CE,Helvetica,Arial CE,Arial" size="1">
+<input type="submit" name="modify" value="Zmień">
+</font>
+</td>
+<td valign="top" align="left" bgcolor="#ddddc0">
+<font face="Helvetica CE,Helvetica,Arial CE,Arial" size="1">
+<input type="submit" name="previous" value="Poprzedni">
+</font>
+</td>
+<td valign="top" align="left" bgcolor="#ddddc0">
+<font face="Helvetica CE,Helvetica,Arial CE,Arial" size="1">
+<input type="submit" name="next" value="Następny">
+</font>
+</td>
+<td valign="top" align="left" bgcolor="#ddddc0">
+<font face="Helvetica CE,Helvetica,Arial CE,Arial" size="1">
+<input type="submit" name="list" value="Lista">
+</font>
+</td>
+<td valign="top" align="left" bgcolor="#ddddc0">
+<font face="Helvetica CE,Helvetica,Arial CE,Arial" size="1">
+<input type="submit" name="return" value="Powrót">
+</font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" align="left">
+<font size="1">
+(C) Copyright by <a href="http://www.teleadreson.com.pl/">TeleAdreson</a>
+</font>
+</td>
+<td valign="top" align="right">
+<font size="1">
+<a href="http://www.teleadreson.com.pl/Licencja.html">Warunki Umowy Licencyjnej</a>
+</font>
+</td>
+</tr>
+</table>
+</form>
+</BODY>
+</HTML>
+
