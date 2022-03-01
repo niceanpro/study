@@ -226,7 +226,10 @@ Text Objects
 
 	u : undo
 	U : 마지막 작업한 줄만 undo
-	ctrl+R : redo
+	ctrl+R : redo     in vscode에서 ctrl + shift + z
+	undo 				in vscode에서 ctrl + z
+
+	
 	
 
 	다중라인 동시 편집
