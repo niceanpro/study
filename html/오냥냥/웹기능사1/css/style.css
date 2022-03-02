@@ -25,6 +25,7 @@ body {
 
 /* gnd  */
 header {
+  position: relative;
   width: 100%;
   height: 100px;
   background: gold;
@@ -32,14 +33,35 @@ header {
 header h1 {
   float: left;
   width: 250px;
-  height: 100px;
+  height: 40px;
+  margin-top: 50px;
+  text-align: center;
+  background: red;
+}
+header img {
+  float: left;
+  width: 250px;
+  height: 40px;
   background: red;
 }
 header .gnb {
+  position: absolute;
+  top: 60px;
+  left: 250px;
   float: left;
   width: 750px;
   height: 100px;
   background: lime;
+}
+.gnb_bg {
+  position: absolute;
+  top: 40px;
+  left: -250px;
+  width: 1000px;
+  height:120px;
+  background: #ddd;
+  z-index: 9;
+  display: none;
 }
 .main__menu {
   float: left;
@@ -250,6 +272,66 @@ header .gnb {
   opacity: 0.5;
 }
 
+
+
+/* 모달팝업 */
+#modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%; 
+  height: 100%;
+   background: rgba(0, 0, 0, 0.7);
+   display: none;
+}
+.modal_pop{
+  position: absolute;
+  top:200px;
+  left:50%;
+  transform: translate(-50%, 0);
+  width: 350px;
+  height: 300px;
+  background: #fff;
+}
+.modal_title {
+  width: 350px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  background: #48487d;
+  text-align: center;
+  font-weight: bold;
+}
+.modal_body {
+  padding: 30px;
+  text-align: justify;
+}
+.modal_btn {
+  position: absolute;
+  bottom: 10px;
+  right:10px;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  background: #48487d;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.modal_btn:hover {
+  background: #fabd43;
+}
+#modal.active {
+  display: block;
+}
+
+/* foo
+/* footer */ /* footer */
+
+
+
 footer {
   width: 100%;
   height: 100px;
@@ -260,11 +342,39 @@ footer {
   float:left;
   width: 700px;
   height:100px;
-  background: tomato;
+  line-height: 100px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  background: #48487d;
 }
 .fo__gnb{
   float:left;
   width: 300px;
   height:100px;
   background: gold;
+}
+.gnb__footer {
+  width:300px;
+  height:50px;
+  background: tomato;
+}
+.gnb__footer ul li {
+  float:left;
+  margin: 3px 12px;
+  line-height: 47px;
+}
+.gnb__footer ul li:hover {
+  font-weight: bold;
+}
+select{
+  width: 280px;
+  height:30px;
+  margin: 8px;
+}
+
+.site__footer {
+  width:300px;
+  height:50px;
+  background: skyblue;
 }

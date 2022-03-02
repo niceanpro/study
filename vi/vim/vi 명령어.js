@@ -329,6 +329,11 @@ Text Objects
 	ctrl + tab : 같은 화면의 tab간 이동
 
 
+* 화면 크기
+	ctrl + w, = : 화면 크기동일하게 조정
+	ctrl + w, < : 화면 화면은 한단위 작게 조절
+	ctrl + w, > : 화면 화면을 한단위 크게 조절
+
 
 	* ctrl + W : 창닫기
 	ctrl + F4 : 창닫기
