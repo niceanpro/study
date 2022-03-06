@@ -1,0 +1,68 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+// Figma Logo Variables
+$logo-family: 'Roboto', sans-serif;
+$logo-weight: 500;
+$logo-width: 150px;
+$logo-color: #222;
+$logo-spacing: 3px;
+
+
+
+/* Figma logo */
+.figma {
+  border: 1px solid #000;
+  width: $logo-width;
+  text-align: center;
+
+  > span {
+    text-align: center;
+    display: block;
+    margin-bottom: 5px;
+    font-family: $logo-family;
+    font-weight: $logo-weight;
+    color: $logo-color;
+    font-size: $logo-width/3;
+    letter-spacing: $logo-spacing;
+  }
+
+  .shape{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    span{
+      background-color: blue;
+      width: $logo-width/2;
+      height: $logo-width/2;
+
+      &:nth-child(1){
+        background-color: #f24E1E;
+        border-radius: 50% 0 0 50%;
+      }
+      &:nth-child(2){
+        background-color: #FF7262;
+        border-radius: 0 50% 50% 0;
+      }
+      &:nth-child(3){
+        background-color: #A259ff;
+        border-radius: 50% 0 0 50%;
+      }
+      &:nth-child(4){
+        background-color: #1abcfe;
+        border-radius: 50%;
+      }
+      &:nth-child(5){
+        background-color: #0acf83;
+        border-radius: 50% 0 50% 50%;
+      }
+    }
+  }
+}

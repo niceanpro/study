@@ -1,33 +1,33 @@
 $(document).ready(function () {
   // gnb메뉴 (개별로 하나씩 보일 때)
-  // $(".main__menu").mouseover(function () {
-  //   $(this).find(".sub__menu").stop().slideDown(300);
+  // $(".main_menu").mouseover(function () {
+  //   $(this).find(".sub_menu").stop().slideDown(300);
   // });
 
-  // $(".main__menu").mouseout(function () {
-  //   $(this).find(".sub__menu").stop().slideUp(300);
+  // $(".main_menu").mouseout(function () {
+  //   $(this).find(".sub_menu").stop().slideUp(300);
   // });
 
   // gnb메뉴 (백그라운드 화면과 해당 선택만 같이 내려옴)
-  // $(".main__menu").mouseover(function () {
+  // $(".main_menu").mouseover(function () {
   //   $(".gnb_bg").stop().slideDown(300);
-  //   $(this).find(".sub__menu").stop().slideDown(300);
+  //   $(this).find(".sub_menu").stop().slideDown(300);
   // });
 
-  // $(".main__menu").mouseout(function () {
+  // $(".main_menu").mouseout(function () {
   //   $(".gnb_bg").stop().slideUp(300);
-  //   $(this).find(".sub__menu").stop().slideUp(300);
+  //   $(this).find(".sub_menu").stop().slideUp(300);
   // });
 
   // gnb메뉴 (백그라운드 화면과 해당 선택만 같이 내려옴)
-  $(".main__menu").mouseover(function () {
+  $(".main_menu").mouseover(function () {
     $(".gnb_bg").stop().slideDown(300);
-    $(".sub__menu").stop().slideDown(300);
+    $(".sub_menu").stop().slideDown(300);
   });
 
-  $(".main__menu").mouseout(function () {
+  $(".main_menu").mouseout(function () {
     $(".gnb_bg").stop().slideUp(300);
-    $(".sub__menu").stop().slideUp(300);
+    $(".sub_menu").stop().slideUp(300);
   });
 
 
@@ -75,11 +75,11 @@ $(document).ready(function () {
     }, 3000);
 
   // 탭메뉴
-  $(".tab__1").click(function () {
+  $(".tab_1").click(function () {
     $(".notice").css("display", "block");
     $(".gallery").css("display", "none");
   });
-  $(".tab__2").click(function () {
+  $(".tab_2").click(function () {
     $(".notice").css("display", "none");
     $(".gallery").css("display", "block");
   });

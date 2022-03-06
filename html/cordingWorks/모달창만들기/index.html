@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style type="text/css">
+    .loading {
+      border: 1px solid red;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+    .loading span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #000;
+      border-radius: 50%;
+      animation: show 1s linear infinite;
+    }
+    .loading span:nth-child(1) {
+      animation-delay: 0s;
+      background-color: crimson;
+    }
+    .loading span:nth-child(2) {
+      animation-delay: 0.2s;
+      background-color: dodgerblue;
+    }
+    .loading span:nth-child(3) {
+      animation-delay: 0.4s;
+      background-color: yellowgreen;
+    }
+    @keyframes show {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loading"><span></span><span></span><span></span></div>
+ 
+  <!-- 
+    5가지 기능
+    1. 레이아웃 만들기
+    2. 슬라이드
+    3. 공지사항/갤러리 ( 별도/탭메뉴) ( 그냥 만들면 됨 /  화면 만들고 jquery들어감 )
+    4. 네비게이션
+    5. 레이어팝업 ( 화면만들고 jquery로 show, hide해 주면 됨 )
+   -->
+
+   <!-- 공지사항 / 갤러리 별도 . 배너 -->
+   <!-- 
+     * 별도 제작 시   - 와이어프레임 *
+     section.items
+      article.news
+        .tab-inner
+          .btn
+            span
+          .tab
+            ( a>b )*5
+      article.gallery
+        .gallery-inner
+          .btn
+            span
+          .tab
+            ( a>img ) * 3
+
+     * tab  제작 시 *
+     section.items
+      article.news
+        .tab-inner
+          .btn
+            span * 2
+          .tabs
+            .tab1
+              ( a>b )*5
+            .tab2
+              ( a>img ) * 3
+          -->
+
+
+  <!-- 네비게이션
+
+    -->
+   <section class="items">
+     <article class="news">
+       <div class="tab-inner">
+         <div class="btn">
+           <span></span>
+           <div class="tab"><a href=""><b></b></a><a href=""><b></b></a><a href=""><b></b></a><a href=""><b></b></a><a href=""><b></b></a></div>
+         </div>
+       </div>
+
+     </article>
+     <article class="gallery"></article>
+     <article class="banner"></article>
+   </section>
+
+</body>
+</html>

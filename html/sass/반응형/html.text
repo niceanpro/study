@@ -1,0 +1,53 @@
+*. 전체 선택자(Global Selector) : 모든 html 요소를 선택하는 선택자( font-family, box-sizing : border-box; , outlne)
+
+* {
+    font-family:    ;
+    box-sizing : border-box;
+    outline: none;
+}
+
+*. 태그와 함계 사용하는 선택자 (예 : settion.about)
+  - 레이아웃 설계할때 쓰이는 태그와 함께 사용
+
+*. 
+
+
+*** SCSS ***
+1. 비주얼 스튜디오 코드에서 scss시작
+2. 선턱자 중첩(Nesting) @ 주석(Comment)
+3. 중첩(Nesting) - 부모 선택자 참조(&)
+4. 중복 선택자(Duplicate Sibling Selector)
+5. 중첩(Nesting) - 부모 요소 참조 특수 선택자 /중첩 벗어나기 @at-root / css 속성 단축형
+6. 변수(Variables) 사용하기 / [참고] css 에서 변수 선언하고 사용하기
+7. 외부파일 scss로 가져오기 (@import)
+8. scss에서 연산(Operation)사용하기 - 산술연산자, 비교 연산자, 논리연산자
+9. 그룹 재사용 선언(@mixin / 선언된 @mixin 을 사용 @include / @mixin에 매개 변수, 인수 )
+10. 선택자의 스타일을 가져오는 @extend / 플레이스홀더 선택자 % / @content 컨텐츠블록
+11. 조건문 if / 다중 조건문 @if, @else if, @else
+12. 반복문 @for / 반복문 @each / 데이터 타입 ( Data Type )
+13. scss 에서 사용할 수 있는 내장 함수( Built-in Functions ) - map - get과 배열을 활용한 변수
+
+scss 이론 활용 예제
+1. 조건문 @ifㄹ를 활용해 모바일에서 패딩 조절하기
+2. 조건문  @if 를 활용해 가상 클래스 after에 문자열 출력
+3. 주요 css 선택자, 주요 가상 클래스를 활용하기
+4. @import 로 reset.scss연결하기
+5. @mixin을 중첩 활용해서 텍스트 서식 설정하기
+6. @mxin 배열(Array)에 인수 사용하고 @include 로 인수 반환하기
+7. 자주 사용하는 이펙트를 @mixin 만들고 @include로 재사용
+8. 특정 선택자 css속성 가져오는 @extend를 활용해 css디자인 재사용
+9. 플레이스 홀드(%) 선택자로 css 선택자를 연결선택자로 정리하기
+10. @mixin에 매개변수를 활용해서 다양한  Border Radius 만들기
+11. 선택자 중첩(Nesting) 키워드 & 를 사용해 html레이아웃 구조 만들기
+
+Flex 
+1. 부모에서 쓰는 속성
+  - display : flex /justify-content / align-items /flex-direction
+  - flex-wrap /aligin-content
+2. 자식에서 쓰는 속성
+  - flex-grow / flex-shrink /flex-basis /flex /order / align-self
+  - 자식요소 사용하는 마진(margin) 속성
+3. Flex적용 예제
+  - 레이아웃 1 : 수직중앙 수평중앙 중첩해서 사용하기
+  - 레이아웃 2 : 보모자식으로 중첩된 div를 가조 배치하기
+  - 레이아웃 3 : 
