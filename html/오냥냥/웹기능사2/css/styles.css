@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  font-family: "맑은고딕"; background: #fff; color: #222328;
+  font-size: 18px;
+}
+
+#wrap{
+  width: 1000px;
+  height: 650px;
+  background: tan;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+ul{
+  list-style: none;
+}
+
+
+header {
+  float: left;
+  width: 250px;
+  height: 650px;
+  background: #fff;
+}
+
+h1 {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 80px;
+}
+h1  img {
+  position: absolute; 
+  top:0px; 
+  left:0px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.gnb {
+  width: 250px;
+  height: 570px;
+  background: orange;
+}
+
+.main_menu > a {
+  width: 200px;
+  height: 40px;
+  background: #a95050;
+  line-height: 40px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+}
+.main_menu > a:hover {
+  background: #6d1111;
+}
+
+.sub_menu  {
+  display: none;
+}
+.sub_menu   li {
+  width: 200px;
+  height: 40px;
+  background: #ddd;
+  line-height: 40px;
+  text-align: center;
+  margin: auto;
+}
+.sub_menu > li:hover {
+  background: #ccc;
+  font-weight: bold;
+}
+
+.container{
+  float: left;
+  width: 750px;
+  height: 550px;
+  background: skyblue;
+}
+
+.slide{
+  position: relative;
+  width: 750px;
+  height: 350px;
+  background: pink;
+  overflow: hidden;
+}
+.slider li {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.slider li  img {
+  /* position: absolute;
+  top: 0px;
+  left: 0px; */
+  width: 750px;
+  height: 350px;
+}
+.slider li span {
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 40px;
+}
+
+
+.contents{
+  width: 750px;
+  height: 250px;
+  background: lime;
+}
+.notice{
+  float: left;
+  width: 250px;
+ height: 200px; 
+ background: #fff;
+}
+.gallery{
+  float: left;
+  width: 250px;
+ height: 200px; 
+ background: pink;
+}
+.shotcut{
+  position: relative;
+  float: left;
+  width: 250px;
+ height: 200px; 
+ background: blue;
+}
+.shotcut img {
+  width: 250px;
+  height: 180px;
+  margin-top: 20px;
+}
+/* .shotcut span {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 150px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  line-height: 40px;;
+  text-align: center;
+  border-radius: 50px;
+} */
+
+
+footer{
+  float: left;
+  width: 750px;
+  height: 100px;
+  background: gold;
+}

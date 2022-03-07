@@ -1,0 +1,475 @@
+{
+  // ng."terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "editor.wordWrap": "off",
+  "editor.minimap.enabled": false,
+  "editor.parameterHints.cycle": true,
+  "editor.smoothScrolling": true,
+  "editor.foldingStrategy": "auto",
+  "editor.colorDecorators": true,
+  "editor.copyWithSyntaxHighlighting": true,
+  "editor.multiCursorModifier": "alt",
+  // "eslint.autoFixOnSave": true,
+  "html.format.indentInnerHtml": true,
+  "search.quickOpen.includeSymbols": true,
+  // "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  // "workbench.iconTheme": "vscode-icons",
+  "workbench.view.alwaysShowHeaderActions": true,
+  "workbench.activityBar.visible": true,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.tree.indent": 8,
+
+  // 커서 속도가 느려서 추가
+  "editor.mouseWheelScrollSensitivity": 0,
+  "editor.fastScrollSensitivity": 0,
+
+  // better align
+  "alignment.operatorPadding": "right", // "left" | "right"
+  "alignment.indentBase": "firstline", // "firstline" | "activeline" | "dontchange"
+  "alignment.surroundSpace": {
+    "colon": [1, 1], // The first number specify how much space to add to the left, can be negative.
+    // The second number is how much space to the right, can be negative.
+    "assignment": [1, 1], // The same as above.
+    "arrow": [1, 1], // The same as above.
+    "comment": 2 // Special how much space to add between the trailing comment and the code.
+    // If this value is negative, it means don't align the trailing comment.
+  },
+
+  // Vim
+  "vim.camelCaseMotion.enable": true,
+  "vim.highlightedyank.enable": true,
+  "vim.hlsearch": true,
+  "vim.searchHighlightColor": "red",
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.visualstar": true,
+  "vim.overrideCopy": true,
+  "vim.highlightedyank.color": "rgba(124, 247, 42, 0.7)",
+  "vim.highlightedyank.duration": 500,
+  "vim.leader": "<space>",
+  "vim.showcmd": true,
+  "vim.showmodename": true,
+  "vim.easymotion": true,
+  "vim.foldfix": true,
+  "vim.incsearch": true,
+  "vim.diableExtension": false,
+  "vim.vimrc.path": "c:\\home\\.vimrc",
+  "vim.vimrc.enable": true,
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "C:\\tools\\neovim\\Neovim\\bin\\nvim.exe",
+  "vim.neovimConfigPath": "C:\\Users\\nicea\\.config\\nvim\\.vimrc",
+  "vim.statusBarColorControl": false,
+  "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
+  "vim.statusBarColors.insert": "#BF616A",
+  "vim.statusBarColors.visual": "#B48EAD",
+  "vim.statusBarColors.visualline": "#B48EAD",
+  "vim.statusBarColors.visualblock": "#A3BE8C",
+  "vim.statusBarColors.replace": "#D08770",
+  // "vim.statusBarColors.commandlineinprogress": "#607ACC",
+  // "vim.statusBarColors.searchinprogressmode": "#B07A00",
+  "vim.statusBarColors.easymotionmode": "#207ACC",
+  "vim.statusBarColors.easymotioninputmode": "#207ACC",
+  // vim key binding
+  "vim.handleKeys": {
+    // "<C-a>": false,
+    // "<C-f>": false,
+  },
+  "vim.otherModesKeyBindingsNonRecursive": [],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["g", "D"],
+      "commands": ["editor.action.revealDefinitionAside"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["<C-h>"],
+      "after": ["<Left>"]
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<Down>"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<Up>"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<Right>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["C-k", "z"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.toggleZenMode",
+          "args": []
+        }
+      ]
+    },
+    // 세로 편집을 위해 양보 ( 붙여넣기는 ctrl + shift + v로 설정 )
+    // {
+    //   "before": ["C-v"],
+    //   "after": ["'", "<Shift-8>", "p"]
+    // },
+    {
+      "before": ["C-n"],
+      "after": [],
+      "commands": [
+        {
+          "command": "explorer.newFile",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["C-Space"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.triggerSuggest",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [":", "w"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.files.save",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["leader", "w"],
+      "after": ["leader", "leader", "leader", "b", "d", "w"]
+    },
+    {
+      "before": ["leader", "l"],
+      "after": ["leader", "leader", "leader", "b", "d", "j", "k"]
+    },
+    {
+      "before": ["leader", "s"],
+      "after": ["leader", "leader", "2", "s"]
+    },
+    {
+      "before": ["<leader>", "/"],
+      "after": [],
+      "commands": [
+        {
+          "command": ":nohl",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "q"],
+      "after": [
+        // 매크로 저장하는 부분
+        "<ESC>",
+        "q",
+        "r",
+        "A",
+        "<ENTER>",
+        "#",
+        "r",
+        "e",
+        "g",
+        "i",
+        "o",
+        "n",
+        " ",
+        "\"",
+        "n",
+        "a",
+        "m",
+        "e",
+        "\"",
+        "<ENTER>",
+        "#",
+        "e",
+        "n",
+        "d",
+        "r",
+        "e",
+        "g",
+        "i",
+        "o",
+        "n",
+        "<ENTER>",
+        "<ESC>",
+        "k",
+        "k",
+        "w",
+        "w",
+        "w",
+        "q",
+        "<ESC>",
+        "q",
+        "a",
+        ":",
+        "'",
+        "a",
+        ",",
+        "'",
+        "b",
+        " ",
+        "s",
+        "/",
+        "\\",
+        "\\",
+        "/",
+        "\\",
+        "\\",
+        "\\",
+        "\\",
+        "/",
+        "g",
+        "e",
+        "<ENTER>",
+        ":",
+        "'",
+        "a",
+        ",",
+        "'",
+        "b",
+        " ",
+        "s",
+        "/",
+        "\"",
+        "/",
+        "\\",
+        "\\",
+        "\"",
+        "/",
+        "g",
+        "e",
+        "<ENTER>",
+        ":",
+        "'",
+        "a",
+        ",",
+        "'",
+        "b",
+        " ",
+        "s",
+        "/",
+        "^",
+        "/",
+        "\t",
+        "\t",
+        "\t",
+        "\t",
+        "s",
+        "w",
+        ".",
+        "W",
+        "r",
+        "i",
+        "t",
+        "e",
+        "L",
+        "i",
+        "n",
+        "e",
+        "(",
+        "\"",
+        "/",
+        "g",
+        "e",
+        "<ENTER>",
+        ":",
+        "'",
+        "a",
+        ",",
+        "'",
+        "b",
+        " ",
+        "s",
+        "/",
+        "\\",
+        "r",
+        "/",
+        "\"",
+        ")",
+        ";",
+        "<ENTER>",
+        ":",
+        "'",
+        "a",
+        ",",
+        "'",
+        "b",
+        " ",
+        "s",
+        "/",
+        "\t",
+        "/",
+        " ",
+        " ",
+        "  ",
+        " ",
+        "/",
+        "g",
+        "e",
+        "<ENTER>",
+        ": ",
+        "n",
+        "o",
+        "h",
+        "<ENTER>",
+        "q"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<C-v>"],
+      "after": ["\"", "*", "p"]
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": ["leader", "w"],
+      "after": ["leader", "leader", "leader", "b", "d", "w"]
+    },
+    {
+      "before": ["leader", "l"],
+      "after": ["leader", "leader", "leader", "b", "d", "j", "k"]
+    },
+    {
+      "before": ["leader", "s"],
+      "after": ["leader", "leader", "2", "s"]
+    },
+    {
+      "before": ["<leader>", "/"],
+      "after": [],
+      "commands": [
+        {
+          "command": ":nohl",
+          "args": []
+        }
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [],
+  "vim.operatorPendingModeKeyBindings": [],
+
+  "vim.neovimUseConfigFile": true,
+  "vim.sneak": true,
+  "vim.sneakReplacesF": true,
+  "vim.sneakUseIgnorecaseAndSmartcase": true,
+
+  //    "liveServer.Settings.port":5500,
+  //"liveServer.settings.donotShowInfoMsg": true,
+  "editor.wrappingIndent": "indent",
+  "editor.codeLens": false, // reference count
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#8FBCBB",
+    "statusBar.noFolderBackground": "#8FBCBB",
+    "statusBar.debuggingBackground": "#8FBCBB",
+    "statusBar.foreground": "#434C5E"
+  },
+  "tabnine.experimentalAutoImports": true,
+  "git.autofetch": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.lineNumbers": "on",
+  "vscode-neovim.textDecorationsAtTop": true,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "files.autoSave": "afterDelay",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontFamily": "CookieRunBlack, CookieRun, Consolas, 'Courier New', monospace",
+  "editor.fontSize": 15,
+  "editor.tabSize": 2,
+
+  // for Zen Mode
+  "zenMode.hideStatusBar": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideActivityBar": false,
+  "zenMode.fullScreen": false,
+  "zenMode.restore": true,
+  "zenMode.hideTabs": false,
+
+  // prettier
+  "prettier.configPath": "c:/home",
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+
+  "eslint.validate": [
+    "vue",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.workingDirectories": [
+    // 보통 이렇게 디렉토리 설정을 안해서 자동고침이 안된다
+    {
+      "mode": "auto"
+    }
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true, // eslint
+    "source.fixAll.stylelint": true // Stylelint
+  },
+
+  // formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "window.zoomLevel": 1,
+
+  // intelliSense
+  // Controls if quick suggestions should show up while typing
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  // Controls whether suggestions should be accepted on commit characters. For example, in JavaScript, the semi-colon (`;`) can be a commit character that accepts a suggestion and types that character.
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  // Controls if suggestions should be accepted on 'Enter' - in addition to 'Tab'. Helps to avoid ambiguity between inserting new lines or accepting suggestions. The value 'smart' means only accept a suggestion with Enter when it makes a textual change
+  "editor.acceptSuggestionOnEnter": "on",
+  // Controls the delay in ms after which quick suggestions will show up.
+"editor.quickSuggestionsDelay": 10,
+// Controls if suggestions should automatically show up when typing trigger characters
+  "editor.suggestOnTriggerCharacters": true,
+  // Controls if pressing tab inserts the best suggestion and if tab cycles through other suggestions
+  "editor.tabCompletion": "off",
+  // Controls whether sorting favours words that appear close to the cursor
+  "editor.suggest.localityBonus": true,
+  // Controls how suggestions are pre-selected when showing the suggest list
+  "editor.suggestSelection": "recentlyUsed",
+  // Enable word based suggestions
+  "editor.wordBasedSuggestions": true,
+  // Enable parameter hints
+  "editor.parameterHints.enabled": true
+}

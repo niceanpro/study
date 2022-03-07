@@ -1,0 +1,45 @@
+body {
+  margin: 0px;
+
+}
+
+.container{
+display: grid;
+grid-template-areas: 
+  'headerheaderheader'
+  'menu main top'
+  'menu main aside'
+  'menu main bottom'
+  'footer footer footer' ;
+}
+.container div {
+  background-color:  skyblue;
+  padding: 20px;
+  border: 1px solid #000;
+}
+.header{
+  grid-area: header;
+}
+.menu{
+  grid-area: menu;
+
+}
+.main{
+  grid-area: main;
+
+}
+.top{
+  grid-area: top;
+
+}
+.aside{
+  grid-area: aside;
+
+}
+.bottom{
+  grid-area: bottom;
+}
+.footer{
+  grid-area: footer;
+
+}
