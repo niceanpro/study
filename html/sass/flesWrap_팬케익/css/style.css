@@ -1,9 +1,26 @@
 .parent{
-
+  display: flex;
+  justify-content: center;
+  /* flex-wrap: wrap; */
 }
 .child {
   font-size: 3em;
   background-color: greenyellow;
   text-align: center;
-  border-radius: 10px;
-}
+  border-radius: 5px;
+  margin: 5px;
+  line-height: 200px;
+  /* flex: 1; */
+  flex-grow: 1;
+  flex-basis: 300px;
+  }
+  @media(min-width: 768px) and (max-width: 1024px) {
+    .parent{
+      flex-wrap:wrap;
+    }
+  }
+  @media (max-width: 767px) {
+    .parent{
+      flex-wrap:wrap;
+    }
+  }

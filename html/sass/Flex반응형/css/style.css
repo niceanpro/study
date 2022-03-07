@@ -1,0 +1,18 @@
+
+header{
+  position: fixed;
+  width: 100%;
+}
+.inner{
+  width: 1300px;
+  margin: auto;
+}
+banner {
+  background-color: #000;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.lnb{
+
+}
