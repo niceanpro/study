@@ -52,7 +52,7 @@ $(document).ready(function () {
 
   // 탭메뉴
   $(".tab__1").click(function () {
-    $(".notice").css("display", "block");
+      $(".notice").css("display", "block");
     $(".gallery").css("display", "none");
   });
   $(".tab__2").click(function () {
