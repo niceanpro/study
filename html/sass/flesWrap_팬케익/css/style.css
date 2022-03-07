@@ -1,0 +1,9 @@
+.parent{
+
+}
+.child {
+  font-size: 3em;
+  background-color: greenyellow;
+  text-align: center;
+  border-radius: 10px;
+}
