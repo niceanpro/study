@@ -3,16 +3,56 @@ header{
   position: fixed;
   width: 100%;
 }
-.inner{
-  width: 1300px;
-  margin: auto;
-}
-banner {
-  background-color: #000;
+.banner {
+  background-color: #fff;
   height: 40px;
   display: flex;
   align-items: center;
 }
 .lnb{
+  width: 1300px;
+  margin: auto;
+  text-align: right;
+}
+.lnb a {
+  color: #ddd;
+  margin: 10px;
+}
+.lnb a:last-child {
+  margin: 0;
+}
+.lbn a em {
+  color: #bbb;
+  
+}
+nav {
+  width: 1300px;margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.logo{}
+.gnb{
+  display: flex;
+}
+.inner{
+  width: 1300px;
+  margin: auto;
+}
+banner {
+  background-color: #fff;
+
+  background-color: #000;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  color: rgba(12, 247, 4, 0.7)#b8c2c7#000#0a60f6#f66a0a;
+}
+.lnb
+lineaadient asdf
+{
 
 }
+
+/* Intro */
